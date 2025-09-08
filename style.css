@@ -1,152 +1,26 @@
-
-/* Basic Resets & Global Styles */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #2a2a2a, #0a0a0a); /* Dark ambient background */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    overflow: hidden; /* Prevent scroll if calculator slightly exceeds viewport on small screens */
-    color: #e0e0e0; /* Default text color */
-}
-
-/* Calculator Container */
-.calculator {
-    background-color: #1e1e1e; /* Darker calculator body */
-    border-radius: 20px; /* More rounded corners */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.05); /* Deeper shadow and inner glow */
-    padding: 25px;
-    width: 340px; /* Slightly wider */
-    max-width: 90vw; /* Responsive width */
-    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between display and buttons */
-    animation: fadeIn 1s ease-out forwards; /* Fade in animation */
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Display Area */
-.calculator-display {
-    width: calc(100% - 20px);
-    background-color: #0d0d0d; /* Even darker display background */
-    color: #00ff99; /* Neon green for display text */
-    font-size: 3.2em; /* Larger font */
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    text-align: right;
-    box-sizing: border-box;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; /* Handle long numbers */
-    box-shadow: inset 0 0 8px rgba(0, 255, 153, 0.4); /* Inner glow for display */
-    font-weight: lighter;
-    letter-spacing: 1px;
-}
-
-/* Buttons Grid */
-.calculator-buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px; /* Slightly increased gap */
-}
-
-/* Base Button Styles */
-.calculator-buttons button {
-    background-color: #333; /* Darker button background */
-    color: #e0e0e0; /* Light text on buttons */
-    border: none;
-    border-radius: 12px; /* More rounded button corners */
-    padding: 20px;
-    font-size: 1.6em; /* Slightly larger font */
-    cursor: pointer;
-    outline: none; /* Remove outline on focus */
-    transition: all 0.2s ease-in-out; /* Smooth transition for hover/active states */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -2px 0 rgba(0, 0, 0, 0.2); /* Subtle 3D effect */
-    will-change: transform, background-color, box-shadow; /* Optimize for animation */
-}
-
-/* Button Hover Effects (Ambient Glow) */
-.calculator-buttons button:hover {
-    background-color: #4a4a4a; /* Lighter on hover */
-    transform: translateY(-2px); /* Slight lift */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.2); /* Enhanced shadow & glow */
-}
-
-/* Button Active/Click Effects (Pressed State) */
-.calculator-buttons button:active {
-    transform: translateY(0); /* Press down */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(0, 0, 0, 0.3); /* Flattened shadow */
-    background-color: #2a2a2a; /* Even darker when pressed */
-}
-
-/* Operator Button Styles */
-.calculator-buttons .operator {
-    background-color: #f1a33c; /* Original orange for operators */
-    color: #1e1e1e; /* Darker text on orange buttons */
-    font-weight: bold;
-}
-
-.calculator-buttons .operator:hover {
-    background-color: #ffb157; /* Lighter orange on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 177, 87, 0.5); /* Orange glow */
-}
-
-.calculator-buttons .operator:active {
-    background-color: #d18d30; /* Darker orange when pressed */
-}
-
-/* Equal Sign Button Styles */
-.calculator-buttons .equal-sign {
-    background-color: #00cc66; /* Vibrant green for equals */
-    grid-column: span 2;
-    font-weight: bold;
-    font-size: 1.8em; /* Slightly larger for emphasis */
-}
-
-.calculator-buttons .equal-sign:hover {
-    background-color: #00e673; /* Lighter green on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 204, 102, 0.7); /* Green glow */
-}
-
-.calculator-buttons .equal-sign:active {
-    background-color: #00a352; /* Darker green when pressed */
-}
-
-/* Zero Button Styles */
-.calculator-buttons .zero-button {
-    grid-column: span 2;
-    text-align: left; /* Align 0 to the left within its span */
-    padding-left: 30px; /* Add some padding to push it left */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 400px) {
-    .calculator {
-        padding: 15px;
-        width: 95vw; /* Even more responsive on very small screens */
-        gap: 15px;
-    }
-
-    .calculator-display {
-        font-size: 2.5em; /* Adjust font size for smaller displays */
-        padding: 10px;
-    }
-
-    .calculator-buttons button {
-        padding: 15px;
-        font-size: 1.3em;
-        border-radius: 10px;
-    }
-
-    .calculator-buttons .equal-sign {
-        font-size: 1.5em;
-    }
-}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body { background:#0f172a; color:#fff; overflow-x:hidden; }
+header { position:fixed; top:0; left:0; width:100%; background:rgba(15,23,42,0.95); display:flex; justify-content:space-between; align-items:center; padding:15px 50px; z-index:1000; }
+header h1 { font-size:22px; font-weight:600; }
+nav ul { display:flex; list-style:none; }
+nav ul li { margin:0 15px; }
+nav ul li a { text-decoration:none; color:#fff; font-weight:500; transition:0.3s; }
+nav ul li a:hover { color:#38bdf8; }
+section { min-height:100vh; padding:120px 50px 80px; text-align:center; }
+#hero { display:flex; flex-direction:column; justify-content:center; align-items:center; background:linear-gradient(135deg,#0f172a,#1e293b); }
+#hero img { width:160px; height:160px; border-radius:50%; border:4px solid #38bdf8; margin-bottom:20px; }
+#hero h2 { font-size:36px; margin-bottom:10px; }
+#hero p { font-size:20px; color:#cbd5e1; }
+.btn { margin-top:20px; padding:10px 20px; border:none; border-radius:25px; background:#38bdf8; color:#0f172a; font-weight:600; cursor:pointer; transition:0.3s; }
+.btn:hover { background:#0ea5e9; }
+.projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:40px; }
+.project { background:#1e293b; border-radius:10px; overflow:hidden; transition:0.3s; }
+.project img { width:100%; height:180px; object-fit:cover; }
+.project h4 { padding:15px; }
+footer { background:#1e293b; padding:20px; text-align:center; }
+footer p { color:#94a3b8; }
+.dark-toggle { position:fixed; bottom:20px; right:20px; background:#38bdf8; border:none; border-radius:50%; width:50px; height:50px; cursor:pointer; }
+.dark { background:#f8fafc; color:#0f172a; }
+.dark header { background:#f8fafc; }
+.dark nav ul li a { color:#0f172a; }
+.dark .project, .dark footer { background:#e2e8f0; }
