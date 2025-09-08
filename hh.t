@@ -1,1 +1,0 @@
-https://replit.com/@sarbeswarpanda1/PandaFolio?mobileBridge=1&hideBottomBar=1&forceTheme=replitSpooky&errorTrace=78bbb8cd-38f1-455f-b210-457d6b4eecc2&vBonsai=2.147.3&mobileWebview=1&supportsUpsellBridge=1&permissionRequest=1&speechRecognition=1&workspace2=1&webviewBridge=1&storeReviewPrompt=1#client
