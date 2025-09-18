@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -18,7 +17,6 @@ import { useLoading } from './hooks/useLoading';
 import { CustomCursor } from "./components/ui/CustomCursor";
 import { ScrollToTop } from "./components/ui/ScrollToTop";
 import { GithubStarsButton } from "./components/ui/GithubStarsButton";
-import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const isLoading = useLoading();
@@ -44,7 +42,6 @@ function App() {
         <Footer />
         <ScrollToTop />
         <GithubStarsButton />
-        <Analytics />
       </div>
     </>
   );
