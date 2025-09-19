@@ -4,10 +4,10 @@ export function useLoading() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Increased duration to allow for the full animation sequence
+    // Short loading duration for better user experience
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3500); // 2s for animation + 1.5s for viewing the completed animation
+    }, 800); // Quick loading with simple spinner
 
     return () => clearTimeout(timer);
   }, []);
