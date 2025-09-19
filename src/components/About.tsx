@@ -49,9 +49,12 @@ const aboutSections = [
 export function About() {
   return (
     <SectionBackground>
-      <section id="about">
-        <div className="container mx-auto px-6">
-          <SectionTitle subtitle="Just a curious developer who loves turning ideas into reality (and debugging at 2 AM)">About Me</SectionTitle>
+      <section id="about" className="py-20 relative" aria-label="About Sarbeswar Panda">
+        <div className="container mx-auto px-6 relative z-10">
+          <SectionTitle>About Me</SectionTitle>
+          <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+            More than just a developer - I'm someone who believes in the power of technology to make a difference
+          </p>
 
           {/* Introduction */}
           <div className="max-w-5xl mx-auto mb-10 text-center">

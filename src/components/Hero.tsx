@@ -19,6 +19,7 @@ export function Hero() {
     <section
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      aria-label="Hero section with introduction and profile"
     >
       {/* Animated background with particles */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-slate-100/60 to-blue-50/60 dark:from-black dark:via-gray-950/60 dark:to-slate-950/60">
@@ -60,8 +61,11 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
             <img
               src="/assets/profile.webp"
-              alt="Sarbeswar Panda"
+              alt="Sarbeswar Panda - Full Stack Developer portrait"
               className="relative w-full max-w-lg mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
+              loading="eager"
+              width="400"
+              height="400"
             />
           </div>
 

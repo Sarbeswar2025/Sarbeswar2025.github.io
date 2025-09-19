@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://sarbeswarpanda.me/</loc>
+    <lastmod>2025-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sarbeswarpanda.me/assets/profile.webp</image:loc>
+      <image:title>Sarbeswar Panda - Full Stack Developer</image:title>
+      <image:caption>Professional headshot of Sarbeswar Panda, Full Stack Developer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarbeswarpanda.me/assets/portfolio.webp</image:loc>
+      <image:title>Portfolio Project Showcase</image:title>
+      <image:caption>Featured portfolio projects by Sarbeswar Panda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarbeswarpanda.me/assets/neocode.webp</image:loc>
+      <image:title>NeoCode Project</image:title>
+      <image:caption>NeoCode - Code editor project by Sarbeswar Panda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarbeswarpanda.me/assets/braineo.webp</image:loc>
+      <image:title>BrainEO Project</image:title>
+      <image:caption>BrainEO - AI project by Sarbeswar Panda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarbeswarpanda.me/assets/finneo.webp</image:loc>
+      <image:title>FinnEO Project</image:title>
+      <image:caption>FinnEO - Finance application by Sarbeswar Panda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarbeswarpanda.me/assets/placify.webp</image:loc>
+      <image:title>Placify Project</image:title>
+      <image:caption>Placify - Placement platform by Sarbeswar Panda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarbeswarpanda.me/assets/neocompiler.webp</image:loc>
+      <image:title>NeoCompiler Project</image:title>
+      <image:caption>NeoCompiler - Online compiler by Sarbeswar Panda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarbeswarpanda.me/assets/notesneo.webp</image:loc>
+      <image:title>NotesNeo Project</image:title>
+      <image:caption>NotesNeo - Note-taking application by Sarbeswar Panda</image:caption>
+    </image:image>
+  </url>
+</urlset>
