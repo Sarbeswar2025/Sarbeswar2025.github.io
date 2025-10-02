@@ -6,6 +6,7 @@ import { ThemeToggle } from './ui/ThemeToggle';
 import { useAnimatedLogo } from '../hooks/useAnimatedLogo';
 import { LoadingScreen } from './loading/LoadingScreen';
 import { motion } from 'framer-motion';
+import profileImage from '/assets/profile.webp';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +65,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-12 px-4">
           {/* Logo */}
           <div className="cursor-pointer" onClick={handleLogoClick}>
-            <img src="/assets/profile.webp" alt="Sarbeswar Panda" className="h-8 w-8 rounded-full object-cover" />
+            <img src={profileImage} alt="Sarbeswar Panda" className="h-8 w-8 rounded-full object-cover" />
           </div>
 
           {/* Desktop Navigation */}
