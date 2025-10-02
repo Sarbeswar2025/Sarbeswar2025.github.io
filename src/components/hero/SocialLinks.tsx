@@ -4,17 +4,17 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const links = [
 	{
-		href: 'https://github.com/decodewithdeepak',
+		href: 'https://github.com/Sarbeswarpanda04',
 		icon: <Github className="w-6 h-6 text-gray-900 dark:text-white" />,
 		label: 'GitHub',
 	},
 	{
-		href: 'https://linkedin.com/in/deepakmodi1',
+		href: 'https://www.linkedin.com/in/sarbeswar-panda/',
 		icon: <Linkedin className="w-6 h-6 text-[#0077B5]" />,
 		label: 'LinkedIn',
 	},
 	{
-		href: 'https://instagram.com/deepakmodi.io',
+		href: 'https://www.instagram.com/sarbeswar._.panda/',
 		icon: <Instagram className="w-6 h-6 text-[#E1306C]" />,
 		label: 'Instagram',
 	},
@@ -24,7 +24,7 @@ const links = [
 		label: 'WhatsApp',
 	},
 	{
-		href: 'https://x.com/deepakmodi_io',
+		href: 'https://x.com/Sarbeswar_0',
 		icon: <FaXTwitter className="w-6 h-6 text-gray-900 dark:text-white" />,
 		label: 'Twitter',
 	},

@@ -19,9 +19,9 @@ export const SEO_CONFIG = {
     'Software Engineer'
   ],
   author: 'Sarbeswar Panda',
-  twitterHandle: '@sarbeswar_panda',
-  linkedinUrl: 'https://linkedin.com/in/sarbeswar-panda',
-  githubUrl: 'https://github.com/Sarbeswar2025'
+  twitterHandle: '@Sarbeswar_0',
+  linkedinUrl: 'https://www.linkedin.com/in/sarbeswar-panda/',
+  githubUrl: 'https://github.com/Sarbeswarpanda04'
 };
 
 // Lazy loading configuration
@@ -41,9 +41,9 @@ export const optimizeImage = (src: string, alt: string, loading: 'lazy' | 'eager
 
 // Social media links for structured data
 export const SOCIAL_PROFILES = [
-  'https://github.com/Sarbeswar2025',
-  'https://linkedin.com/in/sarbeswar-panda',
-  'https://twitter.com/sarbeswar_panda'
+  'https://github.com/Sarbeswarpanda04',
+  'https://www.linkedin.com/in/sarbeswar-panda/',
+  'https://x.com/Sarbeswar_0'
 ];
 
 // Skills for structured data

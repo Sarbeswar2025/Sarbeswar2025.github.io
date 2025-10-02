@@ -28,11 +28,11 @@ export function GitHub() {
   const [user, setUser] = useState<UserProfile | null>(null);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/decodewithdeepak")
+    fetch("https://api.github.com/users/Sarbeswarpanda04")
       .then((response) => response.json())
       .then((data: UserProfile) => setUser(data));
 
-    fetch("https://api.github.com/users/decodewithdeepak/repos?sort=pushed&direction=desc&per_page=3")
+    fetch("https://api.github.com/users/Sarbeswarpanda04/repos?sort=pushed&direction=desc&per_page=3")
       .then((response) => response.json())
       .then((data) =>
         setRepos(

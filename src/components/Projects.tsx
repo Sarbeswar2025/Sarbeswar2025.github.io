@@ -41,7 +41,7 @@ const projects = [
     description: 'Built this because I was tired of hunting for notes everywhere! A platform where students can actually find and share quality notes by subject. No more "does anyone have notes?" in group chats 😄',
     image: '/assets/notesneo.webp',
     link: 'https://notesneo.vercel.app',
-    github: 'https://github.com/decodewithdeepak/notesneo',
+    github: 'https://github.com/Sarbeswarpanda04/notesneo',
     techStack: [
       techStacks.react,
       techStacks.tailwind,
@@ -54,7 +54,7 @@ const projects = [
     description: 'My attempt to create the coding platform I wish I had when starting DSA. Curated problem sheets, roadmaps, and a community where you can actually get help without feeling dumb.',
     image: '/assets/neocode.webp',
     link: 'https://neocoding.vercel.app',
-    github: 'https://github.com/decodewithdeepak/neocode',
+    github: 'https://github.com/Sarbeswarpanda04/neocode',
     techStack: [
       techStacks.react,
       techStacks.tailwind,
@@ -68,7 +68,7 @@ const projects = [
     description: 'Ever wanted to quickly test code without setting up your entire dev environment? This online compiler has your back! Multiple languages, themes, and even AI suggestions when you\'re stuck.',
     image: '/assets/neocompiler.webp',
     link: 'https://neocompiler.vercel.app',
-    github: 'https://github.com/decodewithdeepak/neo-compiler',
+    github: 'https://github.com/Sarbeswarpanda04/neo-compiler',
     techStack: [
       techStacks.next,
       techStacks.typescript,
@@ -83,7 +83,7 @@ const projects = [
     description: 'You\'re looking at it right now! 😉 This site went through like 5 redesigns before I was happy with it. Clean, responsive, and shows off my work while keeping things simple and professional.',
     image: '/assets/portfolio.webp',
     link: 'https://deepakmodi.vercel.app',
-    github: 'https://github.com/decodewithdeepak/portfolio',
+    github: 'https://github.com/Sarbeswarpanda04/portfolio',
     techStack: [
       techStacks.next,
       techStacks.react,
@@ -97,7 +97,7 @@ const projects = [
     description: 'Learning shouldn\'t be boring! Built this AI-powered platform to make studying actually engaging instead of just memorizing stuff for exams. Interactive courses and quizzes.',
     image: '/assets/braineo.webp',
     link: 'https://braineo.vercel.app',
-    github: 'https://github.com/decodewithdeepak/braineo',
+    github: 'https://github.com/Sarbeswarpanda04/braineo',
     techStack: [
       techStacks.react,
       techStacks.typescript,
@@ -110,7 +110,7 @@ const projects = [
     title: 'Placify',
     description: 'Built this during placement season when I realized how chaotic the whole process was. A platform that actually makes job hunting on campus less stressful with proper job listings.',
     image: '/assets/placify.webp',
-    github: 'https://github.com/decodewithdeepak/placify',
+    github: 'https://github.com/Sarbeswarpanda04/placify',
     techStack: [
       techStacks.next,
       techStacks.typescript,
@@ -124,7 +124,7 @@ const projects = [
     description: 'Too lazy to build a custom portfolio? Don\'t have time to code? I got you! This is a clean, modern template that developers can easily customize without writing a single line of code.',
     image: '/assets/neofolio.webp',
     link: 'https://neofolio.vercel.app',
-    github: 'https://github.com/decodewithdeepak/neofolio',
+    github: 'https://github.com/Sarbeswarpanda04/neofolio',
     techStack: [
       techStacks.react,
       techStacks.typescript,
@@ -138,7 +138,7 @@ const projects = [
     description: 'Investment advice shouldn\'t be rocket science! This AI-powered platform breaks down investing for beginners - just tell it your goals, risk tolerance, and budget, and you are good to go.',
     image: '/assets/finneo.webp',
     link: 'https://finneo.vercel.app',
-    github: 'https://github.com/decodewithdeepak/finneo',
+    github: 'https://github.com/Sarbeswarpanda04/finneo',
     techStack: [
       techStacks.react,
       techStacks.typescript,
