@@ -5,7 +5,7 @@ export function ActionButtons() {
   return (
     <div className="flex flex-wrap gap-4 justify-center">
       <a
-        href="https://resume.sarbeswarpanda.me"
+        href="https://sarbeswar2025.github.io/resume"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-2 px-3 py-2 rounded-md text-sm sm:text-base bg-blue-600 text-white hover:bg-blue-700 transition-transform duration-300 transform hover:scale-105"
