@@ -3,11 +3,1077 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="refresh" content="0; url=portfolio/" />
-  <title>Redirecting…</title>
-  <link rel="canonical" href="portfolio/" />
+  <meta name="description" content="Sarbeswar Panda - AI & Machine Learning Engineer, Computer Science Student specializing in Artificial Intelligence. Explore my portfolio featuring web development projects, ML applications, and software engineering work. Available for internships and entry-level positions." />
+  <meta name="keywords" content="Sarbeswar Panda, AI Engineer, Machine Learning, Computer Science, Web Developer, Software Engineer, Python, JavaScript, React, Next.js, Data Science, Portfolio, Bhubaneswar, Odisha, India" />
+  <meta name="author" content="Sarbeswar Panda" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="google-site-verification" content="3rVTU9YmaXPoO-Yq2PxI3t48RRhULjCF_gdKA9n6WW8" />
+  <link rel="canonical" href="https://sarbeswarpanda.me/" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <title>Sarbeswar Panda - AI/ML Engineer & Full Stack Developer Portfolio</title>
+
+  <!-- Favicons / Site Logo (browser tab, mobile, search) -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="Sarbeswar Panda - AI/ML Engineer & Full Stack Developer" />
+  <meta property="og:description" content="Computer Science student specializing in AI & Machine Learning. Passionate about building intelligent applications and modern web experiences. Open to internships and opportunities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sarbeswarpanda.me/" />
+  <meta property="og:site_name" content="Sarbeswar Panda Portfolio" />
+  <meta property="og:image" content="https://sarbeswarpanda.me/assets/images/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sarbeswar Panda - AI/ML Engineer & Full Stack Developer" />
+  <meta name="twitter:description" content="Computer Science student specializing in AI & Machine Learning. Building intelligent applications." />
+  <meta name="twitter:image" content="https://sarbeswarpanda.me/assets/images/logo.png" />
+
+  <!-- Structured data (helps search engines understand your site/logo) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Sarbeswar Panda — Portfolio",
+      "url": "https://sarbeswarpanda.me",
+      "image": "https://sarbeswarpanda.me/assets/images/logo.png"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sarbeswar Panda",
+      "url": "https://sarbeswarpanda.me",
+      "image": "https://sarbeswarpanda.me/assets/images/sarbeswar.jpg",
+      "jobTitle": "AI/ML Engineer & Computer Science Student",
+      "description": "Computer Science student specializing in Artificial Intelligence and Machine Learning. Passionate about web development, data science, and building intelligent applications.",
+      "gender": "Male",
+      "birthDate": "2005-08-10",
+      "nationality": "Indian",
+      "knowsLanguage": ["English", "Hindi", "Odia"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bhubaneswar",
+        "addressRegion": "Odisha",
+        "postalCode": "752077",
+        "addressCountry": "IN"
+      },
+      "email": "sarbeswarpanda143@gmail.com",
+      "telephone": "+91-8260916384",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "GIFT Autonomous College",
+        "address": "Bhubaneswar, Odisha, India"
+      },
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Web Development",
+        "Python",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Data Science",
+        "Software Engineering"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/sarbeswar-panda/",
+        "https://github.com/Sarbeswarpanda04",
+        "https://www.instagram.com/sarbeswar_panda_/"
+      ]
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <p>Redirecting to <a href="portfolio/">portfolio/</a>…</p>
+  <!-- Page Intro / Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__card" role="status" aria-label="Loading">
+      <div class="loader__spinner"></div>
+      <div class="loader__text">Loading portfolio…</div>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#home" aria-label="Go to Home">
+        <img
+          class="nav__logoImg"
+          src="assets/images/logo.png"
+          alt="Sarbeswar Panda"
+          width="34"
+          height="34"
+          loading="eager"
+          decoding="async"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+        />
+        <span class="nav__logo" aria-hidden="true" style="display:none;">SP</span>
+        <span class="nav__name">Sarbeswar Panda</span>
+      </a>
+
+      <div class="nav__right">
+        <div class="nav__controls" aria-label="Theme and menu">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+            <span class="icon-btn__icon" aria-hidden="true">
+              <svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="2" />
+                <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.93 4.93 3.52 3.52M20.48 20.48l-1.41-1.41M19.07 4.93l1.41-1.41M3.52 20.48l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <svg class="icon icon--moon" viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 13.2A8.4 8.4 0 0 1 10.8 3 7.2 7.2 0 1 0 21 13.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+
+          <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+            <span class="nav__toggleLines" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="nav__links" id="navLinks">
+          <a class="nav__link is-active" href="#home">Home</a>
+          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" href="#skills">Skills</a>
+          <a class="nav__link" href="#projects">Projects</a>
+          <a class="nav__link" href="#experience">Experience</a>
+          <a class="nav__link" href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section hero" id="home" aria-label="Home">
+      <div class="bg-ornaments" aria-hidden="true">
+        <div class="orb orb--a"></div>
+        <div class="orb orb--b"></div>
+        <div class="grid"></div>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__content reveal" data-reveal="fade-up">
+          <div class="hero__badge">Hey! 👋 I'm</div>
+          <h1 class="hero__name">Sarbeswar Panda</h1>
+
+          <p class="hero__subtitle">
+            <span class="type" aria-label="Roles">
+              <span class="type__label">I’m a</span>
+              <span class="type__value" id="typingText"></span>
+              <span class="type__caret" aria-hidden="true"></span>
+            </span>
+          </p>
+
+          <div class="hero__details" aria-label="Contact details">
+            <a class="hero__detail" href="tel:+918260916384" aria-label="Call +91 82609 16384">
+              <img src="assets/icons/phone.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/phone.svg';" />
+              <span>+91 82609 16384</span>
+            </a>
+            <a class="hero__detail" href="mailto:sarbeswarpanda143@gmail.com" aria-label="Email sarbeswarpanda143@gmail.com">
+              <img src="assets/icons/mail.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/mail.svg';" />
+              <span>sarbeswarpanda143@gmail.com</span>
+            </a>
+            <div class="hero__detail" aria-label="Location">
+              <img src="assets/icons/location.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/location.svg';" />
+              <span>Bhubaneswar</span>
+            </div>
+          </div>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="assets/resume.pdf" target="_blank" rel="noreferrer" aria-label="Open resume in a new tab">Resume</a>
+            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="hero__social" aria-label="Social links">
+            <a class="social-btn" href="https://github.com/Sarbeswarpanda04" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <img src="assets/icons/github.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/github.svg';" />
+            </a>
+            <a class="social-btn" href="https://www.linkedin.com/in/sarbeswar-panda/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <img src="assets/icons/linkedin.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/linkedin.svg';" />
+            </a>
+            <a class="social-btn" href="https://www.instagram.com/sarbeswar_panda_/" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <img src="assets/icons/instagram.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/instagram.svg';" />
+            </a>
+            <a class="social-btn" href="https://wa.me/918260916384" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <img src="assets/icons/whatsapp.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/whatsapp.svg';" />
+            </a>
+            <a class="social-btn" href="https://x.com/Sarbeswarpanda04" target="_blank" rel="noreferrer" aria-label="X">
+              <img src="assets/icons/x.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/x.svg';" />
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__card reveal" data-reveal="fade-up" data-delay="120">
+          <div class="hero-portrait">
+            <div class="hero-portrait__shape" aria-hidden="true"></div>
+            <img class="hero-portrait__img" src="assets/images/sarbeswar.jpg" alt="Sarbeswar Panda" width="520" height="660" loading="lazy" onerror="this.onerror=null; this.src='assets/images/profile.svg';" />
+            <div class="hero-portrait__dot hero-portrait__dot--a" aria-hidden="true"></div>
+            <div class="hero-portrait__dot hero-portrait__dot--b" aria-hidden="true"></div>
+            <div class="hero-portrait__dot hero-portrait__dot--c" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <a class="scroll-indicator" href="#about">
+          <span class="scroll-indicator__dot"></span>
+          <span class="scroll-indicator__text">Scroll</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-label="About">
+      <div class="container">
+        <div class="aboutV2">
+          <div class="aboutV2__head reveal" data-reveal="fade-up">
+            <h2 class="aboutV2__title">About Me</h2>
+            <div class="aboutV2__divider" aria-hidden="true">
+              <span class="aboutV2__line"></span>
+              <span class="aboutV2__dot"></span>
+              <span class="aboutV2__dot"></span>
+              <span class="aboutV2__dot"></span>
+              <span class="aboutV2__line"></span>
+            </div>
+            <div class="aboutV2__lead">
+              <p>
+                I belong to Odisha, India, and I am currently a Computer Science student specializing in Artificial Intelligence. My background has taught me the value of hard work, discipline, and consistency, which strongly reflects in both my academic and personal life.
+              </p>
+              <p>
+                From an early stage, I developed an interest in technology and problem-solving, which led me to pursue Computer Science. During my studies, I have built a strong foundation in programming, data structures, and software development, and I enjoy applying this knowledge through projects and practical learning rather than limiting myself to theory alone.
+              </p>
+              <p>
+                Along with technical skills, I focus on developing clear communication, adaptability, and teamwork, as I believe a good engineer must be able to collaborate and explain ideas effectively. I am a self-motivated learner who continuously works on improving both technical and non-technical skills, including time management and responsibility.
+              </p>
+              <p>
+                My goal is to grow as a skilled and ethical software professional, contribute meaningfully to real-world projects, and work in an environment where I can learn, innovate, and create value. I am especially interested in areas like web development, artificial intelligence, and software engineering, and I am committed to long-term growth rather than short-term success.
+              </p>
+            </div>
+          </div>
+
+          <div class="aboutV2__grid">
+            <article class="aboutV2__profile glass card reveal" data-reveal="fade-up">
+              <div class="aboutV2__photo">
+                <img
+                  src="assets/images/sarbeswar.jpg"
+                  alt="Sarbeswar Panda"
+                  width="520"
+                  height="660"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.onerror=null; this.src='assets/images/profile.svg';"
+                />
+              </div>
+              <p class="aboutV2__caption">
+                <span class="aboutV2__captionDots" aria-hidden="true"><span></span><span></span></span>
+
+              </p>
+            </article>
+
+            <div class="aboutV2__cards" aria-label="About cards">
+              <article class="aboutV2__card glass card reveal" data-reveal="fade-up">
+                <div class="aboutV2__cardTop">
+                  <div class="aboutV2__icon aboutV2__icon--a" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" stroke="currentColor" stroke-width="2" />
+                      <path d="M20 21a8 8 0 1 0-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <h3 class="aboutV2__cardTitle">Where I Belong</h3>
+                </div>
+                <ul class="aboutV2__list">
+                  <li>I am from Odisha, India, and currently pursuing Computer Science with a specialization in Artificial Intelligence.</li>
+                  <li>My background has taught me the value of hard work, discipline, and consistency.</li>
+                </ul>
+              </article>
+
+              <article class="aboutV2__card glass card reveal" data-reveal="fade-up" data-delay="80">
+                <div class="aboutV2__cardTop">
+                  <div class="aboutV2__icon aboutV2__icon--b" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18 3 12l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="m15 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M14 4 10 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <h3 class="aboutV2__cardTitle">What I Do</h3>
+                </div>
+                <ul class="aboutV2__list">
+                  <li>Build responsive, user‑focused web applications using modern technologies.</li>
+                  <li>Practice data structures, algorithms, and problem‑solving regularly.</li>
+                  <li>Explore AI/ML concepts and apply them through hands‑on projects.</li>
+                </ul>
+              </article>
+
+              <article class="aboutV2__card glass card reveal" data-reveal="fade-up" data-delay="140">
+                <div class="aboutV2__cardTop">
+                  <div class="aboutV2__icon aboutV2__icon--c" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                      <path d="M9 21h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <h3 class="aboutV2__cardTitle">My Mindset</h3>
+                </div>
+                <ul class="aboutV2__list">
+                  <li>I believe in clear communication, adaptability, and teamwork.</li>
+                  <li>I’m a self‑motivated learner who consistently improves technical and non‑technical skills.</li>
+                </ul>
+              </article>
+
+              <article class="aboutV2__card glass card reveal" data-reveal="fade-up" data-delay="200">
+                <div class="aboutV2__cardTop">
+                  <div class="aboutV2__icon aboutV2__icon--d" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      <path d="M12 17V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      <path d="M7 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <h3 class="aboutV2__cardTitle">My Goals</h3>
+                </div>
+                <ul class="aboutV2__list">
+                  <li>Grow into a skilled and ethical software professional.</li>
+                  <li>Contribute to impactful, real‑world projects and create genuine value.</li>
+                  <li>Commit to long‑term growth and continuous learning.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Details -->
+    <section class="section" id="personal-details" aria-label="Personal Details">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade-up">
+          <h2 class="section__title">Personal Details</h2>
+          <p class="section__subtitle">Basic personal information for professional and verification purposes.</p>
+        </div>
+
+        <div class="glass card personalDetails reveal" data-reveal="fade-up" aria-label="Personal details">
+          <div class="personalDetails__grid" aria-label="Personal details grid">
+            <div class="personalDetails__item">
+              <strong>Full Name:</strong> <span>Sarbeswar Panda</span>
+            </div>
+            <div class="personalDetails__item">
+              <strong>Date of Birth:</strong> <span>10 August 2005</span>
+            </div>
+            <div class="personalDetails__item">
+              <strong>Gender:</strong> <span>Male</span>
+            </div>
+            <div class="personalDetails__item">
+              <strong>Nationality:</strong> <span>Indian</span>
+            </div>
+            <div class="personalDetails__item personalDetails__item--wrap">
+              <strong>Address:</strong> <span>Nayagarh, Odisha, 752077</span>
+            </div>
+            <div class="personalDetails__item">
+              <strong>Marital Status:</strong> <span>Unmarried</span>
+            </div>
+            <div class="personalDetails__item">
+              <strong>Languages Known:</strong> <span>English, Hindi, Odia</span>
+            </div>
+            <div class="personalDetails__item">
+              <strong>Father’s Name:</strong> <span>Mr. Parikshita Panda</span>
+            </div>
+            <div class="personalDetails__item">
+              <strong>Mother’s Name:</strong> <span>Mrs. Jhunarani Panda</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills" aria-label="Skills">
+      <div class="container">
+        <div class="skillsShowcase">
+          <div class="skillsShowcase__head reveal" data-reveal="fade-up">
+            <h2 class="skillsShowcase__title">Skills</h2>
+            <div class="skillsShowcase__divider" aria-hidden="true">
+              <span class="skillsShowcase__line"></span>
+              <span class="skillsShowcase__dots"><span></span><span></span><span></span></span>
+              <span class="skillsShowcase__line"></span>
+            </div>
+          </div>
+
+          <div class="skillsGrid" aria-label="Tech stack">
+            <article class="skillTile reveal" data-reveal="fade-up">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">H5</span>
+              </div>
+              <div class="skillTile__name">HTML</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="20">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">C3</span>
+              </div>
+              <div class="skillTile__name">CSS</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="40">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">JS</span>
+              </div>
+              <div class="skillTile__name">JavaScript</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="60">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">TS</span>
+              </div>
+              <div class="skillTile__name">TypeScript</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="80">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">R</span>
+              </div>
+              <div class="skillTile__name">React</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="100">
+              <div class="skillTile__icon">
+                <img class="skillTile__img is-mono" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">N</span>
+              </div>
+              <div class="skillTile__name">Next.js</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="120">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">TW</span>
+              </div>
+              <div class="skillTile__name">TailwindCSS</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="140">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">Rx</span>
+              </div>
+              <div class="skillTile__name">Redux</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="160">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">NJS</span>
+              </div>
+              <div class="skillTile__name">Node.js</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="180">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">EX</span>
+              </div>
+              <div class="skillTile__name">Express.js</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="200">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">GQL</span>
+              </div>
+              <div class="skillTile__name">GraphQL</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="220">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">MDB</span>
+              </div>
+              <div class="skillTile__name">MongoDB</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="240">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" alt="Prisma" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">PR</span>
+              </div>
+              <div class="skillTile__name">Prisma</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="260">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">FB</span>
+              </div>
+              <div class="skillTile__name">Firebase</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="280">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">C++</span>
+              </div>
+              <div class="skillTile__name">C++</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="300">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">J</span>
+              </div>
+              <div class="skillTile__name">Java</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="320">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">PY</span>
+              </div>
+              <div class="skillTile__name">Python</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="340">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">AWS</span>
+              </div>
+              <div class="skillTile__name">AWS</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="360">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">VS</span>
+              </div>
+              <div class="skillTile__name">VS Code</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="380">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">G</span>
+              </div>
+              <div class="skillTile__name">Git</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="400">
+              <div class="skillTile__icon">
+                <img class="skillTile__img is-mono" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">GH</span>
+              </div>
+              <div class="skillTile__name">GitHub</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="420">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">P</span>
+              </div>
+              <div class="skillTile__name">Postman</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="440">
+              <div class="skillTile__icon">
+                <img class="skillTile__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" alt="Vite" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">V</span>
+              </div>
+              <div class="skillTile__name">Vite</div>
+            </article>
+
+            <article class="skillTile reveal" data-reveal="fade-up" data-delay="460">
+              <div class="skillTile__icon">
+                <img class="skillTile__img is-mono" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" width="34" height="34" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                <span class="skillTile__abbr" style="display:none;">VC</span>
+              </div>
+              <div class="skillTile__name">Vercel</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education" aria-label="Education">
+      <div class="container">
+        <div class="edu">
+          <div class="edu__head reveal" data-reveal="fade-up">
+            <h2 class="edu__title">Education</h2>
+            <div class="edu__divider" aria-hidden="true">
+              <span class="edu__line"></span>
+              <span class="edu__dots"><span></span><span></span><span></span></span>
+              <span class="edu__line"></span>
+            </div>
+            <p class="edu__subtitle">Here’s an overview of my educational background and achievements.</p>
+          </div>
+
+          <div class="eduTimeline" id="eduTimeline" aria-label="Education timeline">
+            <article class="eduItem eduItem--cap reveal" data-reveal="fade-up">
+              <div class="eduItem__marker" aria-hidden="true">
+                <span class="eduItem__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3 2.5 8 12 13l9.5-5L12 3Z" fill="currentColor" opacity="0.95" />
+                    <path d="M6.5 10.2V14c0 2.2 2.5 4 5.5 4s5.5-1.8 5.5-4v-3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M21.5 9.2V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </span>
+              </div>
+              <div class="eduItem__connector" aria-hidden="true"></div>
+              <div class="eduCard2 glass card eduItem__card">
+                <h3 class="eduCard2__title">Pursuing B.Tech in CSE</h3>
+                <ul class="eduCard2__list">
+                  <li>GIFT Autonomous College</li>
+                  <li>B.Tech in Computer Science &amp; Engineering</li>
+                  <li>Affiliated to Biju Patnaik University of Technology</li>
+                  <li><strong>Current CGPA: 7.78</strong></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="eduItem eduItem--check reveal" data-reveal="fade-up" data-delay="80">
+              <div class="eduItem__marker" aria-hidden="true">
+                <span class="eduItem__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 7 10.5 16.5 4 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </div>
+              <div class="eduItem__connector" aria-hidden="true"></div>
+              <div class="eduCard2 glass card eduItem__card">
+                <h3 class="eduCard2__title">Intermediate Science</h3>
+                <ul class="eduCard2__list">
+                  <li>Nayagarh Autonomous College</li>
+                  <li>CHSE Board, Nayagarh</li>
+                  <li>Completed in 2023 with 63%</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="eduItem eduItem--check reveal" data-reveal="fade-up" data-delay="160">
+              <div class="eduItem__marker" aria-hidden="true">
+                <span class="eduItem__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 7 10.5 16.5 4 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </div>
+              <div class="eduItem__connector" aria-hidden="true"></div>
+              <div class="eduCard2 glass card eduItem__card">
+                <h3 class="eduCard2__title">Matriculation</h3>
+                <ul class="eduCard2__list">
+                  <li>Kabiraj Baidyanath High School</li>
+                  <li>BSE Board – Bhapur, Nayagarh</li>
+                  <li>Completed in 2021 with 83%</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects" aria-label="Projects">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade-up">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__subtitle">Selected work with clean UI and practical impact.</p>
+        </div>
+
+        <div class="filters reveal" data-reveal="fade-up" data-delay="80" role="tablist" aria-label="Project filters">
+          <button class="filter is-active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter" type="button" data-filter="web" role="tab" aria-selected="false">Web</button>
+          <button class="filter" type="button" data-filter="ai" role="tab" aria-selected="false">AI/ML</button>
+          <button class="filter" type="button" data-filter="tools" role="tab" aria-selected="false">Tools</button>
+        </div>
+
+        <div class="projects" id="projectGrid">
+          <article class="project reveal" data-reveal="fade-up" data-category="ai">
+            <div class="project__media">
+              <img src="assets/images/project-1.svg" alt="Project preview" loading="lazy" width="800" height="520" />
+              <div class="project__overlay" aria-hidden="true"></div>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">AI Study Companion</h3>
+              <p class="project__desc">Summarizes notes, generates quizzes, and tracks weak areas with a clean dashboard.</p>
+              <div class="badges" aria-label="Tech stack">
+                <span class="badge">Python</span>
+                <span class="badge">NLP</span>
+                <span class="badge">SQLite</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-reveal="fade-up" data-delay="60" data-category="ai">
+            <div class="project__media">
+              <img src="assets/images/project-2.svg" alt="Project preview" loading="lazy" width="800" height="520" />
+              <div class="project__overlay" aria-hidden="true"></div>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Emotion Recognition</h3>
+              <p class="project__desc">Built a machine learning model to classify human emotions from input data for robust emotion recognition.</p>
+              <div class="badges" aria-label="Tech stack">
+                <span class="badge">Python</span>
+                <span class="badge">ML</span>
+                <span class="badge">Classification</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-reveal="fade-up" data-delay="120" data-category="ai">
+            <div class="project__media">
+              <img src="assets/images/project-3.svg" alt="Project preview" loading="lazy" width="800" height="520" />
+              <div class="project__overlay" aria-hidden="true"></div>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Loan Approval Prediction</h3>
+              <p class="project__desc">Built a Python + ML project to predict loan eligibility using applicant data and supervised learning algorithms.</p>
+              <div class="badges" aria-label="Tech stack">
+                <span class="badge">Python</span>
+                <span class="badge">Pandas</span>
+                <span class="badge">ML</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-reveal="fade-up" data-delay="180" data-category="web">
+            <div class="project__media">
+              <img src="assets/images/project-2.svg" alt="Project preview" loading="lazy" width="800" height="520" />
+              <div class="project__overlay" aria-hidden="true"></div>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Portfolio Builder</h3>
+              <p class="project__desc">Generates a clean portfolio from a JSON profile with responsive sections and SEO tags.</p>
+              <div class="badges" aria-label="Tech stack">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-reveal="fade-up" data-delay="240" data-category="tools">
+            <div class="project__media">
+              <img src="assets/images/project-3.svg" alt="Project preview" loading="lazy" width="800" height="520" />
+              <div class="project__overlay" aria-hidden="true"></div>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">CLI Productivity Kit</h3>
+              <p class="project__desc">A fast CLI for scaffolding projects, linting, and automated changelog generation.</p>
+              <div class="badges" aria-label="Tech stack">
+                <span class="badge">Node</span>
+                <span class="badge">Automation</span>
+                <span class="badge">CI</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-reveal="fade-up" data-delay="300" data-category="web">
+            <div class="project__media">
+              <img src="assets/images/project-4.svg" alt="Project preview" loading="lazy" width="800" height="520" />
+              <div class="project__overlay" aria-hidden="true"></div>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Realtime Chat UI</h3>
+              <p class="project__desc">A polished chat interface with message states, accessibility, and smooth micro-interactions.</p>
+              <div class="badges" aria-label="Tech stack">
+                <span class="badge">JavaScript</span>
+                <span class="badge">WebSockets</span>
+                <span class="badge">UI</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience" aria-label="Experience">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade-up">
+          <h2 class="section__title">Experience</h2>
+          <p class="section__subtitle">Internships and hands-on industry learning.</p>
+        </div>
+
+        <div class="timeline" id="expTimeline" aria-label="Internship timeline">
+          <article class="timeline__item reveal" data-reveal="fade-up">
+            <div class="timeline__dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 2h4a2 2 0 0 1 2 2v2h3a2 2 0 0 1 2 2v4H1V10a2 2 0 0 1 2-2h3V4a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M8 6h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M1 14v6a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="glass card timeline__card" aria-label="Internship card">
+              <div class="timeline__top">
+                <div class="timeline__company">
+                  <span class="companyBadge" aria-hidden="true">AC</span>
+                  <h3 class="timeline__title">Data Science &amp; AI/ML Intern</h3>
+                </div>
+                <div class="timeline__meta">Ardent Computech Pvt. Ltd., Kolkata • 2 Jun 2025 – 31 Jul 2025 (2 Months)</div>
+              </div>
+              <ul class="timeline__list" aria-label="Responsibilities">
+                <li>Worked on predictive analytics projects.</li>
+                <li>Gained practical exposure to model building, evaluation, and deployment.</li>
+                <li>Hands-on machine learning experience with real datasets.</li>
+              </ul>
+              <div class="badges" aria-label="Tech stack">
+                <span class="badge">Python</span>
+                <span class="badge">Pandas</span>
+                <span class="badge">Scikit-learn</span>
+                <span class="badge">ML</span>
+              </div>
+              <div class="timeline__actions" aria-label="Links">
+                <a class="btn btn--small btn--ghost" href="assets/certificates/ardent-aiml-internship-2025.pdf" target="_blank" rel="noreferrer">Certificate</a>
+                <a class="btn btn--small btn--ghost" href="assets/reports/ardent-aiml-internship-report-2025.pdf" target="_blank" rel="noreferrer">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal" data-reveal="fade-up" data-delay="90">
+            <div class="timeline__dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 7 10.5 16.5 4 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="glass card timeline__card" aria-label="Internship card">
+              <div class="timeline__top">
+                <div class="timeline__company">
+                  <span class="companyBadge" aria-hidden="true">AC</span>
+                  <h3 class="timeline__title">Data Science &amp; AI/ML Intern</h3>
+                </div>
+                <div class="timeline__meta">Ardent Computech Pvt. Ltd., Kolkata • Jul 2024 (1 Month)</div>
+              </div>
+              <ul class="timeline__list" aria-label="Responsibilities">
+                <li>Learned data preprocessing techniques for ML workflows.</li>
+                <li>Practiced supervised learning models and evaluation basics.</li>
+                <li>Strengthened machine learning fundamentals through hands-on tasks.</li>
+              </ul>
+              <div class="badges" aria-label="Tech stack">
+                <span class="badge">Python</span>
+                <span class="badge">Pandas</span>
+                <span class="badge">Preprocessing</span>
+                <span class="badge">Supervised ML</span>
+              </div>
+              <div class="timeline__actions" aria-label="Links">
+                <a class="btn btn--small btn--ghost" href="assets/certificates/ardent-aiml-internship-2024.pdf" target="_blank" rel="noreferrer">Certificate</a>
+                <a class="btn btn--small btn--ghost" href="assets/reports/ardent-aiml-internship-report-2024.pdf" target="_blank" rel="noreferrer">Report</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade-up">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">Have an opportunity or want to collaborate? Let’s talk.</p>
+        </div>
+
+        <div class="contact">
+          <form class="glass card contact__form reveal" data-reveal="fade-up" id="contactForm" novalidate aria-describedby="formStatus">
+            <div class="field field--float">
+              <input class="field__input" id="name" name="name" type="text" autocomplete="name" placeholder=" " required aria-describedby="nameError" />
+              <label class="field__label" for="name">Name</label>
+              <div class="field__error" id="nameError" aria-live="polite"></div>
+            </div>
+
+            <div class="field field--float">
+              <input class="field__input" id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder=" " required aria-describedby="emailError" />
+              <label class="field__label" for="email">Email</label>
+              <div class="field__error" id="emailError" aria-live="polite"></div>
+            </div>
+
+            <div class="field field--float">
+              <textarea class="field__input field__input--textarea" id="message" name="message" rows="5" placeholder=" " required aria-describedby="messageError"></textarea>
+              <label class="field__label" for="message">Message</label>
+              <div class="field__error" id="messageError" aria-live="polite"></div>
+            </div>
+
+            <button class="btn btn--primary btn--full" type="submit" id="sendBtn" disabled aria-disabled="true">
+              <span class="btn__label">Send Message</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+              <span class="btn__check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 7 10.5 16.5 4 10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </button>
+
+            <div class="form-status" id="formStatus" aria-live="polite" aria-atomic="true"></div>
+          </form>
+
+          <aside class="contact__aside reveal" data-reveal="fade-up" data-delay="120">
+            <div class="contact__cards">
+              <div class="glass card">
+                <h3 class="contact__title">Find me online</h3>
+                <p class="muted">I reply fastest via email or LinkedIn.</p>
+
+                <div class="socials" role="list">
+                  <a class="social" role="listitem" href="https://www.linkedin.com/in/sarbeswar-panda/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                    <img src="assets/icons/linkedin.png" alt="" width="20" height="20" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/linkedin.svg';" />
+                    LinkedIn
+                  </a>
+                  <a class="social" role="listitem" href="https://github.com/Sarbeswarpanda04" target="_blank" rel="noreferrer" aria-label="GitHub">
+                    <img src="assets/icons/github.png" alt="" width="20" height="20" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/github.svg';" />
+                    GitHub
+                  </a>
+                  <a class="social" role="listitem" href="https://www.instagram.com/sarbeswar_panda_/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                    <img src="assets/icons/instagram.png" alt="" width="20" height="20" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/instagram.svg';" />
+                    Instagram
+                  </a>
+
+                  <div class="social social--copy" role="listitem">
+                    <span class="social__left">
+                      <img src="assets/icons/mail.png" alt="" width="20" height="20" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/mail.svg';" />
+                      <span class="social__text" id="contactEmailText">sarbeswarpanda143@gmail.com</span>
+                    </span>
+                    <button class="btn btn--small btn--ghost" type="button" id="copyEmailBtn" aria-label="Copy email">
+                      Copy
+                    </button>
+                  </div>
+
+                  <a class="social" role="listitem" href="tel:+918260916384" aria-label="Phone">
+                    <img src="assets/icons/phone.png" alt="" width="20" height="20" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/phone.svg';" />
+                    +91 82609 16384
+                  </a>
+                </div>
+              </div>
+
+              <div class="glass card">
+                <h3 class="contact__title">Availability</h3>
+                <p class="muted">Open to internships, entry-level roles, and freelance projects.</p>
+                <a class="btn btn--small btn--ghost" href="assets/resume.pdf" target="_blank" rel="noreferrer" aria-label="Download resume">
+                  Download Resume
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+          <div class="toast__content">
+            <span class="toast__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 7 10.5 16.5 4 10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="toast__text" id="toastText">Copied.</span>
+          </div>
+          <button class="toast__close" type="button" id="toastClose" aria-label="Close notification">×</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <div class="footer__grid">
+          <div class="footer__col footer__col--brand">
+            <div class="footer__brand">Sarbeswar Panda</div>
+            <p class="footer__desc">Aspiring Data Scientist &amp; AI/ML Engineer. Building practical, recruiter-ready projects with clean UI and strong fundamentals.</p>
+            <div class="footer__cta">
+              <a class="btn btn--small btn--primary" href="assets/resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+              <a class="btn btn--small btn--ghost" href="#contact">Contact</a>
+            </div>
+          </div>
+
+          <nav class="footer__col" aria-label="Footer quick links">
+            <div class="footer__title">Quick Links</div>
+            <div class="footer__links" role="list">
+              <a class="footer__link" role="listitem" href="#home">Home</a>
+              <a class="footer__link" role="listitem" href="#about">About</a>
+              <a class="footer__link" role="listitem" href="#skills">Skills</a>
+              <a class="footer__link" role="listitem" href="#education">Education</a>
+              <a class="footer__link" role="listitem" href="#projects">Projects</a>
+              <a class="footer__link" role="listitem" href="#experience">Experience</a>
+            </div>
+          </nav>
+
+          <div class="footer__col">
+            <div class="footer__title">Contact</div>
+            <div class="footer__stack">
+              <a class="footer__item" href="mailto:sarbeswarpanda143@gmail.com">sarbeswarpanda143@gmail.com</a>
+              <a class="footer__item" href="tel:+918260916384">+91 82609 16384</a>
+              <div class="footer__item" aria-label="Location">Bhubaneswar, Odisha, India</div>
+            </div>
+            <div class="footer__title footer__title--mt">Social</div>
+            <div class="footer__social" role="list">
+              <a class="footer__chip" role="listitem" href="https://www.linkedin.com/in/sarbeswar-panda/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="footer__chip" role="listitem" href="https://github.com/Sarbeswarpanda04" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="footer__chip" role="listitem" href="https://www.instagram.com/sarbeswar_panda_/" target="_blank" rel="noreferrer">Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__meta">© <span id="year"></span> Sarbeswar Panda. All rights reserved.</div>
+          <a class="footer__back" href="#home" aria-label="Back to top">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="backtop" id="backTop" type="button" aria-label="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <script src="js/script.js" defer></script>
 </body>
 </html>
