@@ -1,0 +1,17 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="120" y1="70" x2="1080" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="44" fill="url(#g)"/>
+  <rect x="120" y="130" width="960" height="460" rx="28" fill="#FFFFFF" fill-opacity="0.20" stroke="#FFFFFF" stroke-opacity="0.25"/>
+  <rect x="170" y="190" width="320" height="22" rx="11" fill="#0B1220" fill-opacity="0.14"/>
+  <rect x="170" y="232" width="520" height="16" rx="8" fill="#0B1220" fill-opacity="0.10"/>
+  <rect x="170" y="260" width="500" height="16" rx="8" fill="#0B1220" fill-opacity="0.10"/>
+  <rect x="170" y="320" width="860" height="76" rx="18" fill="#FFFFFF" fill-opacity="0.14"/>
+  <rect x="170" y="412" width="860" height="76" rx="18" fill="#FFFFFF" fill-opacity="0.14"/>
+  <rect x="170" y="504" width="540" height="60" rx="18" fill="#FFFFFF" fill-opacity="0.14"/>
+  <text x="120" y="660" font-family="Inter, Arial" font-size="28" font-weight="800" fill="#FFFFFF" fill-opacity="0.90">Realtime UI</text>
+</svg>

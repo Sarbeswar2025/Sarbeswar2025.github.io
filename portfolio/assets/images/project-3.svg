@@ -1,0 +1,16 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="80" y1="80" x2="1120" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22C55E" stop-opacity="0.34"/>
+      <stop offset="0.55" stop-color="#3B82F6" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0.40"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="44" fill="url(#g)"/>
+  <rect x="130" y="135" width="940" height="450" rx="28" fill="#FFFFFF" fill-opacity="0.20" stroke="#FFFFFF" stroke-opacity="0.24"/>
+  <rect x="180" y="190" width="280" height="22" rx="11" fill="#0B1220" fill-opacity="0.14"/>
+  <rect x="180" y="232" width="520" height="16" rx="8" fill="#0B1220" fill-opacity="0.10"/>
+  <rect x="180" y="260" width="460" height="16" rx="8" fill="#0B1220" fill-opacity="0.10"/>
+  <rect x="180" y="320" width="840" height="220" rx="22" fill="#0B1220" fill-opacity="0.12"/>
+  <text x="120" y="660" font-family="Inter, Arial" font-size="28" font-weight="800" fill="#FFFFFF" fill-opacity="0.90">Tools Project</text>
+</svg>

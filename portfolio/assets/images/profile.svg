@@ -1,0 +1,37 @@
+<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="80" y1="40" x2="640" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="rg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(280 230) rotate(45) scale(420)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="720" height="720" rx="56" fill="url(#g)"/>
+
+  <circle cx="180" cy="170" r="160" fill="url(#rg)"/>
+  <circle cx="560" cy="520" r="210" fill="url(#rg)"/>
+
+  <g filter="url(#blur)" opacity="0.45">
+    <circle cx="260" cy="250" r="120" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Minimal "profile" silhouette -->
+  <g opacity="0.88">
+    <circle cx="360" cy="310" r="96" fill="#0B1220" fill-opacity="0.28"/>
+    <path d="M210 590c18-92 96-154 150-154s132 62 150 154" fill="#0B1220" fill-opacity="0.22"/>
+  </g>
+
+  <g opacity="0.92">
+    <circle cx="360" cy="300" r="92" fill="#FFFFFF" fill-opacity="0.35"/>
+    <path d="M216 588c20-86 94-146 144-146s124 60 144 146" fill="#FFFFFF" fill-opacity="0.26"/>
+  </g>
+
+  <text x="40" y="660" font-family="Inter, Arial" font-size="26" font-weight="700" fill="#FFFFFF" fill-opacity="0.80">Replace with your photo</text>
+</svg>
