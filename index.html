@@ -203,6 +203,7 @@
           <div class="hero__cta">
             <a class="btn btn--primary" href="assets/resume.pdf" target="_blank" rel="noreferrer" aria-label="Open resume in a new tab">Resume</a>
             <a class="btn btn--ghost" href="#contact">Contact Me</a>
+            <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=sarbeswar-panda" target="_blank" rel="noreferrer" aria-label="Follow on LinkedIn">Follow on LinkedIn</a>
           </div>
 
           <div class="hero__social" aria-label="Social links">
@@ -233,13 +234,6 @@
             <div class="hero-portrait__dot hero-portrait__dot--c" aria-hidden="true"></div>
           </div>
         </div>
-      </div>
-
-      <div class="hero__scroll" aria-hidden="true">
-        <a class="scroll-indicator" href="#about">
-          <span class="scroll-indicator__dot"></span>
-          <span class="scroll-indicator__text">Scroll</span>
-        </a>
       </div>
     </section>
 
@@ -1025,17 +1019,6 @@
             <p class="footer__desc">AI/ML Engineer & Full Stack Developer building innovative solutions with modern technologies.</p>
           </div>
 
-          <nav class="footer__col" aria-label="Footer quick links">
-            <div class="footer__title">Quick Links</div>
-            <div class="footer__links" role="list">
-              <a class="footer__link" role="listitem" href="#home">Home</a>
-              <a class="footer__link" role="listitem" href="#about">About</a>
-              <a class="footer__link" role="listitem" href="#skills">Skills</a>
-              <a class="footer__link" role="listitem" href="#projects">Projects</a>
-              <a class="footer__link" role="listitem" href="#contact">Contact</a>
-            </div>
-          </nav>
-
           <div class="footer__col">
             <div class="footer__title">Connect</div>
             <div class="footer__social" role="list">
@@ -1054,9 +1037,37 @@
     </div>
   </footer>
 
+  <!-- Floating Social Media -->
+  <div class="floating-social" id="floatingSocial">
+    <button class="floating-social__toggle" id="socialToggle" type="button" aria-label="Toggle social media links">
+      <img src="assets/icons/social-media.png" alt="" width="24" height="24" loading="lazy" />
+    </button>
+    <div class="floating-social__menu" id="socialMenu">
+      <a class="floating-social__item" href="https://github.com/Sarbeswarpanda04" target="_blank" rel="noreferrer" aria-label="GitHub" style="--i: 1">
+        <img src="assets/icons/github.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/github.svg';" />
+      </a>
+      <a class="floating-social__item" href="https://www.linkedin.com/in/sarbeswar-panda/" target="_blank" rel="noreferrer" aria-label="LinkedIn" style="--i: 2">
+        <img src="assets/icons/linkedin.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/linkedin.svg';" />
+      </a>
+      <a class="floating-social__item" href="https://www.instagram.com/sarbeswar_panda_/" target="_blank" rel="noreferrer" aria-label="Instagram" style="--i: 3">
+        <img src="assets/icons/instagram.png" alt="" width="18" height="18" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/instagram.svg';" />
+      </a>
+    </div>
+  </div>
+
   <!-- Back to Top -->
   <button class="backtop" id="backTop" type="button" aria-label="Back to top">
-    <span aria-hidden="true">↑</span>
+    <svg class="backtop__progress" width="46" height="46" viewBox="0 0 46 46">
+      <defs>
+        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <circle class="backtop__progress-bg" cx="23" cy="23" r="20"></circle>
+      <circle class="backtop__progress-fill" cx="23" cy="23" r="20" id="progressCircle"></circle>
+    </svg>
+    <span class="backtop__icon" aria-hidden="true">↑</span>
   </button>
 
   <script src="js/script.js" defer></script>

@@ -415,15 +415,40 @@
   // Initialize projects on page load
   initializeProjects();
 
+  // -------- Floating Social Media --------
+  const floatingSocial = $("#floatingSocial");
+  const socialToggle = $("#socialToggle");
+
+  socialToggle?.addEventListener("click", () => {
+    floatingSocial?.classList.toggle("is-open");
+  });
+
+  // Close on click outside
+  document.addEventListener("click", (e) => {
+    if (!floatingSocial?.contains(e.target) && floatingSocial?.classList.contains("is-open")) {
+      floatingSocial.classList.remove("is-open");
+    }
+  });
+
   // -------- Back-to-top --------
   const backTop = $("#backTop");
-  const toggleBackTop = () => {
-    if (!backTop) return;
-    backTop.classList.toggle("is-visible", window.scrollY > 520);
+  const progressCircle = $("#progressCircle");
+  const circleCircumference = 125.6; // 2 * π * radius (20)
+
+  const updateScrollProgress = () => {
+    if (!backTop || !progressCircle) return;
+    
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = window.scrollY;
+    const progress = (scrolled / scrollHeight) * circleCircumference;
+    const offset = circleCircumference - progress;
+    
+    progressCircle.style.strokeDashoffset = offset;
+    backTop.classList.toggle("is-visible", scrolled > 520);
   };
 
-  window.addEventListener("scroll", toggleBackTop, { passive: true });
-  toggleBackTop();
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  updateScrollProgress();
 
   backTop?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
