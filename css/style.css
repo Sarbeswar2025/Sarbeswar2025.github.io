@@ -1685,6 +1685,7 @@ textarea:focus-visible {
 
 .projects {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 
@@ -1696,6 +1697,19 @@ textarea:focus-visible {
   box-shadow: var(--shadow);
   transform: translateY(0);
   transition: transform 280ms var(--ease), box-shadow 280ms var(--ease), opacity 240ms var(--ease);
+}
+
+.project.is-hidden {
+  display: none;
+}
+
+.project__more-wrap {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#showMoreProjects {
+  min-width: 200px;
 }
 
 .project:hover {
@@ -2520,6 +2534,7 @@ textarea:focus-visible {
   }
 
   .projects {
+    grid-template-columns: 1fr;
     gap: 14px;
   }
 

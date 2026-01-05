@@ -343,6 +343,23 @@
   // -------- Project filtering --------
   const filterBtns = $$(".filter");
   const projects = $$(".project");
+  const showMoreBtn = $("#showMoreProjects");
+  const MAX_INITIAL_PROJECTS = 4;
+  let allProjectsVisible = false;
+
+  // Initially hide projects after the 4th one
+  const initializeProjects = () => {
+    projects.forEach((p, index) => {
+      if (index >= MAX_INITIAL_PROJECTS) {
+        p.classList.add("is-hidden");
+      }
+    });
+    
+    // Hide button if 4 or fewer projects
+    if (projects.length <= MAX_INITIAL_PROJECTS && showMoreBtn) {
+      showMoreBtn.style.display = "none";
+    }
+  };
 
   const setFilterActive = (btn) => {
     filterBtns.forEach((b) => {
@@ -353,21 +370,50 @@
   };
 
   const applyProjectFilter = (category) => {
+    let visibleCount = 0;
+    
     projects.forEach((p) => {
       const pCat = p.getAttribute("data-category") || "";
-      const show = category === "all" || pCat === category;
-      p.classList.toggle("is-hidden", !show);
-      p.style.display = show ? "" : "none";
+      const matchesFilter = category === "all" || pCat === category;
+      
+      // Show if it matches filter AND (all projects visible OR within first 4)
+      const shouldShow = matchesFilter && (allProjectsVisible || visibleCount < MAX_INITIAL_PROJECTS);
+      
+      if (matchesFilter) visibleCount++;
+      
+      p.classList.toggle("is-hidden", !shouldShow);
+      p.style.display = shouldShow ? "" : "none";
     });
+
+    // Update show more button visibility
+    if (showMoreBtn) {
+      const hasMoreToShow = visibleCount > MAX_INITIAL_PROJECTS && !allProjectsVisible;
+      showMoreBtn.style.display = hasMoreToShow ? "" : "none";
+      showMoreBtn.textContent = allProjectsVisible ? "Show Less" : "Show More Projects";
+    }
   };
 
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const category = btn.getAttribute("data-filter") || "all";
+      allProjectsVisible = false; // Reset when changing filters
       setFilterActive(btn);
       applyProjectFilter(category);
     });
   });
+
+  // Show more projects button
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener("click", () => {
+      allProjectsVisible = !allProjectsVisible;
+      const activeFilter = $(".filter.is-active");
+      const category = activeFilter?.getAttribute("data-filter") || "all";
+      applyProjectFilter(category);
+    });
+  }
+
+  // Initialize projects on page load
+  initializeProjects();
 
   // -------- Back-to-top --------
   const backTop = $("#backTop");
