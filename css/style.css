@@ -2510,6 +2510,15 @@ textarea:focus-visible {
     gap: 14px;
   }
 
+  .aboutV2__lead {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .aboutV2__lead p {
+    line-height: 1.6;
+  }
+
   .projects {
     gap: 14px;
   }
