@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Sarbeswar Panda Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+</head>
+
+<body>
+    <!-- Sticky Navbar -->
+    <header class="site-header" id="top">
+        <nav class="nav" aria-label="Primary">
+            <a class="nav__brand" href="../index.html#home" aria-label="Go to Home">
+                <img class="nav__logoImg" src="../assets/images/logo.png" alt="Sarbeswar Panda" width="34" height="34"
+                    loading="eager" />
+                <span class="nav__name">Sarbeswar Panda</span>
+            </a>
+
+            <div class="nav__right">
+                <div class="nav__controls" aria-label="Theme and menu">
+                    <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                        <span class="icon-btn__icon" aria-hidden="true">
+                            <svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none">
+                                <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor"
+                                    stroke-width="2" />
+                                <path
+                                    d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.93 4.93 3.52 3.52M20.48 20.48l-1.41-1.41M19.07 4.93l1.41-1.41M3.52 20.48l1.41-1.41"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <svg class="icon icon--moon" viewBox="0 0 24 24" width="20" height="20" fill="none">
+                                <path d="M21 13.2A8.4 8.4 0 0 1 10.8 3 7.2 7.2 0 1 0 21 13.2Z" stroke="currentColor"
+                                    stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                        <span class="nav__toggleLines" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <div class="nav__links" id="navLinks">
+                    <a class="nav__link" href="../index.html#home">Home</a>
+                    <a class="nav__link" href="about.html">About</a>
+                    <a class="nav__link" href="skills.html">Skills</a>
+                    <a class="nav__link" href="projects.html">Projects</a>
+                    <a class="nav__link" href="experience.html">Experience</a>
+                    <a class="nav__link is-active" href="#">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" id="contact" aria-label="Contact" style="padding-top: 120px;">
+            <div class="container">
+                <div class="section__head reveal" data-reveal="fade-up">
+                    <div class="contact-badge">💬 Get In Touch</div>
+                    <h1 class="section__title">Let's Build Something Amazing Together</h1>
+                    <p class="section__subtitle">Whether you have a project idea, job opportunity, or just want to say hello, I'd love to hear from you. I typically respond within 24 hours.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-main">
+                        <form class="glass card contact__form reveal" data-reveal="fade-up" id="contactForm" novalidate>
+                        <div class="field field--float">
+                            <input class="field__input" id="name" name="name" type="text" autocomplete="name"
+                                placeholder=" " required />
+                            <label class="field__label" for="name">Name</label>
+                            <div class="field__error" id="nameError" aria-live="polite"></div>
+                        </div>
+
+                        <div class="field field--float">
+                            <input class="field__input" id="email" name="email" type="email" autocomplete="email"
+                                placeholder=" " required />
+                            <label class="field__label" for="email">Email</label>
+                            <div class="field__error" id="emailError" aria-live="polite"></div>
+                        </div>
+
+                        <div class="field field--float">
+                            <textarea class="field__input field__input--textarea" id="message" name="message" rows="5"
+                                placeholder=" " required></textarea>
+                            <label class="field__label" for="message">Message</label>
+                            <div class="field__error" id="messageError" aria-live="polite"></div>
+                        </div>
+
+                        <button class="btn btn--primary btn--full" type="submit" id="sendBtn" disabled>
+                            <span class="btn__label">Send Message</span>
+                            <span class="btn__spinner" aria-hidden="true"></span>
+                            <span class="btn__check" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                                    <path d="M20 7 10.5 16.5 4 10" stroke="currentColor" stroke-width="2.6"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+
+                        <div class="form-status" id="formStatus" aria-live="polite"></div>
+                    </form>
+                    </div>
+
+                    <aside class="contact-sidebar reveal" data-reveal="fade-up" data-delay="120">
+                        <div class="contact-info-card glass card">
+                            <div class="info-header">
+                                <div class="info-icon">🚀</div>
+                                <div>
+                                    <h3 class="info-title">Quick Response</h3>
+                                    <p class="info-subtitle">Usually within 24 hours</p>
+                                </div>
+                            </div>
+                            <p class="info-description">I'm always excited to discuss new opportunities, collaborations, or just chat about technology and innovation.</p>
+                        </div>
+
+                        <div class="contact-social-card glass card">
+                            <h3 class="social-title">Connect With Me</h3>
+
+                            <div class="socials-grid" role="list">
+                                    <a class="social" href="https://www.linkedin.com/in/sarbeswar-panda/"
+                                        target="_blank" rel="noreferrer">
+                                        <img src="../assets/icons/linkedin.png" alt="" width="20" height="20"
+                                            loading="lazy" />
+                                        LinkedIn
+                                    </a>
+                                    <a class="social" href="https://github.com/Sarbeswarpanda04" target="_blank"
+                                        rel="noreferrer">
+                                        <img src="../assets/icons/github.png" alt="" width="20" height="20"
+                                            loading="lazy" />
+                                        GitHub
+                                    </a>
+                                    <a class="social" href="https://www.instagram.com/sarbeswar_panda_/" target="_blank"
+                                        rel="noreferrer">
+                                        <img src="../assets/icons/instagram.png" alt="" width="20" height="20"
+                                            loading="lazy" />
+                                        Instagram
+                                    </a>
+
+                                    <div class="social social--copy">
+                                        <span class="social__left">
+                                            <img src="../assets/icons/mail.png" alt="" width="20" height="20"
+                                                loading="lazy" />
+                                            <span class="social__text">sarbeswarpanda143@gmail.com</span>
+                                        </span>
+                                        <button class="btn btn--small btn--ghost" type="button"
+                                            id="copyEmailBtn">Copy</button>
+                                    </div>
+
+                                    <a class="social" href="tel:+918260916384">
+                                        <img src="../assets/icons/phone.png" alt="" width="20" height="20"
+                                            loading="lazy" />
+                                        +91 82609 16384
+                                    </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-stats-card glass card">
+                            <h3 class="stats-title">Why Reach Out?</h3>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-icon">💼</div>
+                                    <div class="stat-label">Job Opportunities</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon">🤝</div>
+                                    <div class="stat-label">Collaboration</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon">💡</div>
+                                    <div class="stat-label">Project Ideas</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon">☕</div>
+                                    <div class="stat-label">Just Chat</div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__bottom">
+                    <div class="footer__meta">© 2024 Sarbeswar Panda. All rights reserved.</div>
+                    <a class="footer__back" href="../index.html#home">← Home</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

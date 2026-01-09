@@ -1756,6 +1756,8 @@ textarea:focus-visible {
 
 .project.is-hidden {
   display: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .project__more-wrap {
@@ -1767,14 +1769,33 @@ textarea:focus-visible {
   min-width: 200px;
 }
 
+.more-wrap {
+  margin-top: 32px;
+  text-align: right;
+}
+
+.more-wrap .btn {
+  min-width: 200px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  color: #fff !important;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  font-weight: 550;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.more-wrap .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(139, 92, 246, 0.25);
+  background: linear-gradient(135deg, #340249 0%, #015591 100%);
+}
+
+.more-wrap .btn:active {
+  transform: translateY(0);
+}
+
 .project:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow2);
-}
-
-.project.is-hidden {
-  opacity: 0;
-  pointer-events: none;
 }
 
 .project__media {

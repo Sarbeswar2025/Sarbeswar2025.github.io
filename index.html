@@ -153,11 +153,11 @@
 
         <div class="nav__links" id="navLinks">
           <a class="nav__link is-active" href="#home">Home</a>
-          <a class="nav__link" href="#about">About</a>
-          <a class="nav__link" href="#skills">Skills</a>
-          <a class="nav__link" href="#projects">Projects</a>
-          <a class="nav__link" href="#experience">Experience</a>
-          <a class="nav__link" href="#contact">Contact</a>
+          <a class="nav__link" href="pages/about.html">About</a>
+          <a class="nav__link" href="pages/skills.html">Skills</a>
+          <a class="nav__link" href="pages/projects.html">Projects</a>
+          <a class="nav__link" href="pages/experience.html">Experience</a>
+          <a class="nav__link" href="pages/contact.html">Contact</a>
         </div>
       </div>
     </nav>
@@ -228,7 +228,7 @@
         <div class="hero__card reveal" data-reveal="fade-up" data-delay="120">
           <div class="hero-portrait">
             <div class="hero-portrait__shape" aria-hidden="true"></div>
-            <img class="hero-portrait__img" src="assets/images/sarbeswar.jpg" alt="Sarbeswar Panda" width="520" height="660" loading="lazy" onerror="this.onerror=null; this.src='assets/images/profile.svg';" />
+            <img class="hero-portrait__img" src="assets/images/sarbeswar.png" alt="Sarbeswar Panda" width="520" height="660" loading="lazy" onerror="this.onerror=null; this.src='assets/images/profile.svg';" />
             <div class="hero-portrait__dot hero-portrait__dot--a" aria-hidden="true"></div>
             <div class="hero-portrait__dot hero-portrait__dot--b" aria-hidden="true"></div>
             <div class="hero-portrait__dot hero-portrait__dot--c" aria-hidden="true"></div>
@@ -270,7 +270,7 @@
             <article class="aboutV2__profile glass card reveal" data-reveal="fade-up">
               <div class="aboutV2__photo">
                 <img
-                  src="assets/images/sarbeswar.jpg"
+                  src="assets/images/sarbeswarpassphoto.jpeg"
                   alt="Sarbeswar Panda"
                   width="520"
                   height="660"
@@ -714,131 +714,35 @@
         </div>
 
         <div class="projects" id="projectGrid">
-          <article class="project reveal" data-reveal="fade-up" data-category="ai">
+          <article class="project reveal" data-reveal="fade-up" data-category="web">
             <div class="project__media">
-              <img src="assets/images/project-1.svg" alt="Project preview" loading="lazy" width="800" height="520" />
+              <img src="assets/images/portfolio-website-project.png" alt="Project preview" loading="lazy" width="800" height="520" />
               <div class="project__overlay" aria-hidden="true"></div>
             </div>
             <div class="project__body">
-              <h3 class="project__title">AI Study Companion</h3>
-              <p class="project__desc">Summarizes notes, generates quizzes, and tracks weak areas with a clean dashboard.</p>
+              <h3 class="project__title">Portfolio Website</h3>
+              <p class="project__desc">Built a personal portfolio website to showcase projects and skills with a clean and responsive design.</p>
               <div class="badges" aria-label="Tech stack">
-                <span class="badge">Python</span>
-                <span class="badge">NLP</span>
-                <span class="badge">SQLite</span>
-              </div>
-              <div class="project__actions">
-                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project reveal" data-reveal="fade-up" data-delay="60" data-category="ai">
-            <div class="project__media">
-              <img src="assets/images/project-2.svg" alt="Project preview" loading="lazy" width="800" height="520" />
-              <div class="project__overlay" aria-hidden="true"></div>
-            </div>
-            <div class="project__body">
-              <h3 class="project__title">Emotion Recognition</h3>
-              <p class="project__desc">Built a machine learning model to classify human emotions from input data for robust emotion recognition.</p>
-              <div class="badges" aria-label="Tech stack">
-                <span class="badge">Python</span>
-                <span class="badge">ML</span>
-                <span class="badge">Classification</span>
-              </div>
-              <div class="project__actions">
-                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project reveal" data-reveal="fade-up" data-delay="120" data-category="ai">
-            <div class="project__media">
-              <img src="assets/images/project-3.svg" alt="Project preview" loading="lazy" width="800" height="520" />
-              <div class="project__overlay" aria-hidden="true"></div>
-            </div>
-            <div class="project__body">
-              <h3 class="project__title">Loan Approval Prediction</h3>
-              <p class="project__desc">Built a Python + ML project to predict loan eligibility using applicant data and supervised learning algorithms.</p>
-              <div class="badges" aria-label="Tech stack">
-                <span class="badge">Python</span>
-                <span class="badge">Pandas</span>
-                <span class="badge">ML</span>
-              </div>
-              <div class="project__actions">
-                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project reveal" data-reveal="fade-up" data-delay="180" data-category="web">
-            <div class="project__media">
-              <img src="assets/images/project-2.svg" alt="Project preview" loading="lazy" width="800" height="520" />
-              <div class="project__overlay" aria-hidden="true"></div>
-            </div>
-            <div class="project__body">
-              <h3 class="project__title">Portfolio Builder</h3>
-              <p class="project__desc">Generates a clean portfolio from a JSON profile with responsive sections and SEO tags.</p>
-              <div class="badges" aria-label="Tech stack">
-                <span class="badge">HTML</span>
+                <span class="badge">Html</span>
                 <span class="badge">CSS</span>
                 <span class="badge">JavaScript</span>
               </div>
               <div class="project__actions">
-                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn btn--small btn--primary" href="https://sarbeswarpanda.me" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn--small btn--ghost" href="https://github.com/Sarbeswarpanda04/portfolio" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </div>
           </article>
-
-          <article class="project reveal" data-reveal="fade-up" data-delay="240" data-category="tools">
-            <div class="project__media">
-              <img src="assets/images/project-3.svg" alt="Project preview" loading="lazy" width="800" height="520" />
-              <div class="project__overlay" aria-hidden="true"></div>
-            </div>
-            <div class="project__body">
-              <h3 class="project__title">CLI Productivity Kit</h3>
-              <p class="project__desc">A fast CLI for scaffolding projects, linting, and automated changelog generation.</p>
-              <div class="badges" aria-label="Tech stack">
-                <span class="badge">Node</span>
-                <span class="badge">Automation</span>
-                <span class="badge">CI</span>
-              </div>
-              <div class="project__actions">
-                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project reveal" data-reveal="fade-up" data-delay="300" data-category="web">
-            <div class="project__media">
-              <img src="assets/images/project-4.svg" alt="Project preview" loading="lazy" width="800" height="520" />
-              <div class="project__overlay" aria-hidden="true"></div>
-            </div>
-            <div class="project__body">
-              <h3 class="project__title">Realtime Chat UI</h3>
-              <p class="project__desc">A polished chat interface with message states, accessibility, and smooth micro-interactions.</p>
-              <div class="badges" aria-label="Tech stack">
-                <span class="badge">JavaScript</span>
-                <span class="badge">WebSockets</span>
-                <span class="badge">UI</span>
-              </div>
-              <div class="project__actions">
-                <a class="btn btn--small btn--primary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
-        </div>
 
         <div class="project__more-wrap reveal" data-reveal="fade-up" data-delay="360">
           <button class="btn btn--ghost" id="showMoreProjects" type="button">Show More Projects</button>
         </div>
+      </div>
 
+      <div>
+          <div class="more-wrap reveal" data-reveal="fade-up" data-delay="360">
+            <a class="btn btn--ghost" href="pages/projects.html" target="_blank" rel="noreferrer">See All Projects</a>
+          </div>
       </div>
     </section>
 
@@ -918,6 +822,12 @@
           </article>
 
         </div>
+
+        <div>
+          <div class="more-wrap reveal" data-reveal="fade-up" data-delay="360">
+            <a class="btn btn--ghost" href="pages/experience.html" target="_blank" rel="noreferrer">All Experience</a>
+          </div>
+      </div>
       </div>
     </section>
 
@@ -980,6 +890,10 @@
                   <a class="social" role="listitem" href="https://www.instagram.com/sarbeswar_panda_/" target="_blank" rel="noreferrer" aria-label="Instagram">
                     <img src="assets/icons/instagram.png" alt="" width="20" height="20" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/instagram.svg';" />
                     Instagram
+                  </a>
+                  <a class="social" role="listitem" href="https://www.facebook.com/sarbeswar.panda.104/" target="_blank" rel="noreferrer" aria-label="Facebook">
+                    <img src="assets/icons/facebook.png" alt="" width="20" height="20" loading="lazy" onerror="this.onerror=null; this.src='assets/icons/facebook.svg';" />
+                    Facebook
                   </a>
 
                   <div class="social social--copy" role="listitem">

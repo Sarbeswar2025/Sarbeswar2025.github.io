@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Sarbeswar Panda Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+</head>
+
+<body>
+  <!-- Sticky Navbar -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="../index.html#home" aria-label="Go to Home">
+        <img class="nav__logoImg" src="../assets/images/logo.png" alt="Sarbeswar Panda" width="34" height="34" loading="eager" />
+        <span class="nav__name">Sarbeswar Panda</span>
+      </a>
+
+      <div class="nav__right">
+        <div class="nav__controls" aria-label="Theme and menu">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+            <span class="icon-btn__icon" aria-hidden="true">
+              <svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none">
+                <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="2" />
+                <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.93 4.93 3.52 3.52M20.48 20.48l-1.41-1.41M19.07 4.93l1.41-1.41M3.52 20.48l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <svg class="icon icon--moon" viewBox="0 0 24 24" width="20" height="20" fill="none">
+                <path d="M21 13.2A8.4 8.4 0 0 1 10.8 3 7.2 7.2 0 1 0 21 13.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+
+          <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span class="nav__toggleLines" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="nav__links" id="navLinks">
+          <a class="nav__link" href="../index.html#home">Home</a>
+          <a class="nav__link" href="about.html">About</a>
+          <a class="nav__link" href="skills.html">Skills</a>
+          <a class="nav__link is-active" href="#">Projects</a>
+          <a class="nav__link" href="experience.html">Experience</a>
+          <a class="nav__link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <main>
+        <section class="section" id="projects" style="padding-top: 120px;">
+            <div class="container">
+                <div class="section__head reveal" data-reveal="fade-up">
+                    <h1 class="section__title">My Projects</h1>
+                    <p class="section__subtitle">Selected work with clean UI and practical impact.</p>
+                </div>
+
+                <div class="projects" id="projectGrid">
+                    <article class="project reveal" data-reveal="fade-up" data-category="web">
+                        <div class="project__media">
+                            <img src="../assets/images/portfolio-website-project.png" alt="Project preview" loading="lazy" width="800" height="520" />
+                            <div class="project__overlay" aria-hidden="true"></div>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">Portfolio Website</h3>
+                            <p class="project__desc">Built a personal portfolio website to showcase projects and skills with a clean and responsive design.</p>
+                            <div class="badges" aria-label="Tech stack">
+                                <span class="badge">Html</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+                            <div class="project__actions">
+                                <a class="btn btn--small btn--primary" href="https://sarbeswarpanda.me" target="_blank" rel="noreferrer">Live Demo</a>
+                                <a class="btn btn--small btn--ghost" href="https://github.com/Sarbeswarpanda04/portfolio" target="_blank" rel="noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <div class="footer__bottom">
+          <div class="footer__meta">© 2024 Sarbeswar Panda. All rights reserved.</div>
+          <a class="footer__back" href="../index.html#home">← Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

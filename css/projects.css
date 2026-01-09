@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');   
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.project {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.project:hover {
+    transform: translateY(-5px);
+}
+.project__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.project__content {
+    padding: 15px;
+}
+.project__title {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+}
+.project__description {
+    font-size: 1em;
+    margin: 0 0 15px 0;
+}
+.project__technologies {
+    margin-bottom: 15px;
+}
+.project__technologies .badge {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.project__actions a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+.project__actions .btn--primary {
+    background-color: #28a745;
+    color: #fff;
+}
+.project__actions .btn--primary:hover {
+    background-color: #218838;
+}
+.project__actions .btn--ghost {
+    background-color: transparent;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+}
+.project__actions .btn--ghost:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
