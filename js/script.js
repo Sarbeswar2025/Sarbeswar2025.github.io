@@ -31,6 +31,41 @@
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+  // -------- Visitor counter (static-site friendly) --------
+  const visitorCountEl = $("#visitor-count");
+  const updateVisitorCounter = async () => {
+    if (!visitorCountEl) return;
+
+    const hostname = window.location.hostname || "";
+    const isLocal = !hostname || hostname === "localhost" || hostname === "127.0.0.1";
+    if (isLocal) {
+      visitorCountEl.textContent = "—";
+      return;
+    }
+
+    const namespace = hostname.replace(/[^a-z0-9_.-]/gi, "_");
+    const key = "portfolio_visits";
+    const sessionKey = `vc_hit_${namespace}_${key}`;
+
+    try {
+      const base = "https://api.countapi.xyz";
+      const endpoint = sessionStorage.getItem(sessionKey)
+        ? `${base}/get/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`
+        : `${base}/hit/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`;
+
+      const res = await fetch(endpoint, { cache: "no-store" });
+      const data = await res.json();
+      if (!sessionStorage.getItem(sessionKey)) sessionStorage.setItem(sessionKey, "1");
+
+      const value = typeof data?.value === "number" ? data.value : null;
+      visitorCountEl.textContent = value === null ? "—" : value.toLocaleString();
+    } catch {
+      visitorCountEl.textContent = "—";
+    }
+  };
+
+  updateVisitorCounter();
+
   // -------- Theme (dark mode) --------
   const THEME_KEY = "portfolio-theme";
   const themeToggle = $("#themeToggle");

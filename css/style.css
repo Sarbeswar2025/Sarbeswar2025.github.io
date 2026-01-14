@@ -2674,6 +2674,17 @@ textarea:focus-visible {
   margin-top: 6px;
 }
 
+.footer__visitors {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.footer__visitors #visitor-count {
+  color: var(--text);
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+
 .footer__link {
   color: var(--muted);
   font-weight: 850;
