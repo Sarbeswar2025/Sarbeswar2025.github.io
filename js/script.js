@@ -59,6 +59,149 @@
     setTheme(isDark ? "light" : "dark");
   });
 
+  // -------- Translate (English / Hindi / Odia) --------
+  // Uses Google Website Translator (client-side) so it works on GitHub Pages.
+  const LANG_KEY = "portfolio-lang";
+  const SUPPORTED_LANGS = new Set(["en", "hi", "or"]);
+  let pendingLang = null;
+
+  const langSwitch = $("#langSwitch");
+  const langBtn = $(".langSwitch__btn", langSwitch || document);
+  const langItems = langSwitch ? $$(".langSwitch__item", langSwitch) : [];
+
+  const setGoogTransCookie = (lang) => {
+    const safeLang = SUPPORTED_LANGS.has(lang) ? lang : "en";
+    const value = `/en/${safeLang}`;
+
+    // Host-only cookie
+    document.cookie = `googtrans=${value};path=/;max-age=31536000`;
+
+    // Also try setting an explicit domain cookie (helps on some custom domains)
+    const host = window.location.hostname;
+    if (host && host.includes(".")) {
+      document.cookie = `googtrans=${value};domain=${host};path=/;max-age=31536000`;
+      document.cookie = `googtrans=${value};domain=.${host};path=/;max-age=31536000`;
+    }
+  };
+
+  const setLangUI = (lang) => {
+    if (!langSwitch) return;
+    langItems.forEach((btn) => {
+      const isActive = (btn.getAttribute("data-lang") || "") === lang;
+      btn.classList.toggle("is-active", isActive);
+    });
+  };
+
+  const closeLangMenu = () => {
+    if (!langSwitch || !langBtn) return;
+    langSwitch.classList.remove("is-open");
+    langBtn.setAttribute("aria-expanded", "false");
+  };
+
+  const openLangMenu = () => {
+    if (!langSwitch || !langBtn) return;
+    langSwitch.classList.add("is-open");
+    langBtn.setAttribute("aria-expanded", "true");
+  };
+
+  const setLanguage = (lang) => {
+    const safeLang = SUPPORTED_LANGS.has(lang) ? lang : "en";
+    localStorage.setItem(LANG_KEY, safeLang);
+    setLangUI(safeLang);
+    setGoogTransCookie(safeLang);
+
+    const combo = document.querySelector(".goog-te-combo");
+    if (!combo) {
+      pendingLang = safeLang;
+      return;
+    }
+
+    combo.value = safeLang;
+    combo.dispatchEvent(new Event("change"));
+  };
+
+  const applyLanguageWhenReady = (lang) => {
+    const safeLang = SUPPORTED_LANGS.has(lang) ? lang : "en";
+    let tries = 0;
+    const maxTries = 30;
+    const timer = window.setInterval(() => {
+      tries += 1;
+      const combo = document.querySelector(".goog-te-combo");
+      if (combo) {
+        window.clearInterval(timer);
+        setLanguage(safeLang);
+        return;
+      }
+      if (tries >= maxTries) {
+        window.clearInterval(timer);
+        // Leave cookie/UI set; user can retry by opening the menu.
+      }
+    }, 200);
+  };
+
+  const ensureGoogleTranslateLoaded = () => {
+    if (!document.getElementById("google_translate_element")) return;
+    if (document.querySelector("script[data-gt='1']")) return;
+
+    // Callback required by Google script
+    window.googleTranslateElementInit = () => {
+      // eslint-disable-next-line no-undef
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          includedLanguages: "en,hi,or",
+          autoDisplay: false,
+        },
+        "google_translate_element"
+      );
+
+      const saved = localStorage.getItem(LANG_KEY) || "en";
+      const initial = pendingLang || saved;
+      pendingLang = null;
+      applyLanguageWhenReady(initial);
+    };
+
+    const s = document.createElement("script");
+    s.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    s.async = true;
+    s.defer = true;
+    s.setAttribute("data-gt", "1");
+    document.head.appendChild(s);
+  };
+
+  if (langSwitch && langBtn) {
+    langBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const open = langSwitch.classList.contains("is-open");
+      if (open) closeLangMenu();
+      else openLangMenu();
+    });
+
+    langItems.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const lang = btn.getAttribute("data-lang") || "en";
+        setLanguage(lang);
+        closeLangMenu();
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener("click", (e) => {
+      if (!langSwitch.classList.contains("is-open")) return;
+      if (langSwitch.contains(e.target)) return;
+      closeLangMenu();
+    });
+
+    // Close on Escape
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLangMenu();
+    });
+
+    // Initial UI state
+    setLangUI(localStorage.getItem(LANG_KEY) || "en");
+    ensureGoogleTranslateLoaded();
+  }
+
   // -------- Mobile nav --------
   const navToggle = $("#navToggle");
   const navLinks = $("#navLinks");

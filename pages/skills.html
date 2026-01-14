@@ -21,6 +21,23 @@
 
             <div class="nav__right">
                 <div class="nav__controls" aria-label="Theme and menu">
+                    <div class="langSwitch" id="langSwitch" aria-label="Translate">
+                        <button class="langSwitch__btn" type="button" aria-label="Translate" aria-haspopup="menu" aria-expanded="false" title="Translate">
+                            <img class="langSwitch__icon" src="../assets/icons/translate.svg" alt="" aria-hidden="true" loading="lazy" />
+                        </button>
+
+                        <div class="langSwitch__menu" role="menu" aria-label="Select language">
+                            <button class="langSwitch__item" type="button" data-lang="en" role="menuitem">English</button>
+                            <button class="langSwitch__item" type="button" data-lang="hi" role="menuitem">Hindi</button>
+                            <button class="langSwitch__item" type="button" data-lang="or" role="menuitem">Odia</button>
+
+                            <div class="langSwitch__gtWrap">
+                                <div id="google_translate_element"></div>
+                                <div class="langSwitch__note">Translations powered by Google Translate.</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
                         <span class="icon-btn__icon" aria-hidden="true">
                             <svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none">
