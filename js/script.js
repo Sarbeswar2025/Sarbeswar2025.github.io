@@ -31,66 +31,6 @@
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // -------- Visitor counter (static-site friendly) --------
-  const visitorCountEl = $("#visitor-count");
-  const updateVisitorCounter = async () => {
-    if (!visitorCountEl) return;
-
-    const hostname = window.location.hostname || "";
-    const isLocal = !hostname || hostname === "localhost" || hostname === "127.0.0.1";
-    if (isLocal) {
-      visitorCountEl.textContent = "—";
-      return;
-    }
-
-    const namespace = hostname.replace(/[^a-z0-9_.-]/gi, "_");
-    const key = "portfolio_visits";
-    const sessionKey = `vc_hit_${namespace}_${key}`;
-
-    const tryFetchJson = async (url) => {
-      const res = await fetch(url, { cache: "no-store" });
-      if (!res.ok) throw new Error(`Visitor counter HTTP ${res.status}`);
-      return res.json();
-    };
-
-    const localFallback = () => {
-      const localKey = `vc_local_${namespace}_${key}`;
-      const localSessionKey = `${localKey}_hit`;
-      const current = Number(localStorage.getItem(localKey) || "0") || 0;
-
-      if (!sessionStorage.getItem(localSessionKey)) {
-        const next = current + 1;
-        localStorage.setItem(localKey, String(next));
-        sessionStorage.setItem(localSessionKey, "1");
-        visitorCountEl.textContent = next.toLocaleString();
-      } else {
-        visitorCountEl.textContent = current.toLocaleString();
-      }
-
-      visitorCountEl.title = "Counter offline: showing local estimate on this device";
-    };
-
-    try {
-      const shouldHit = !sessionStorage.getItem(sessionKey);
-      const endpoint = shouldHit
-        ? `https://api.counterapi.dev/v1/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}/up`
-        : `https://api.counterapi.dev/v1/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`;
-
-      const data = await tryFetchJson(endpoint);
-      if (shouldHit) sessionStorage.setItem(sessionKey, "1");
-
-      const value = typeof data?.count === "number" ? data.count : null;
-      if (value === null) return localFallback();
-
-      visitorCountEl.textContent = value.toLocaleString();
-      visitorCountEl.title = "";
-    } catch {
-      localFallback();
-    }
-  };
-
-  updateVisitorCounter();
-
   // -------- Theme (dark mode) --------
   const THEME_KEY = "portfolio-theme";
   const themeToggle = $("#themeToggle");
