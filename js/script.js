@@ -47,20 +47,45 @@
     const key = "portfolio_visits";
     const sessionKey = `vc_hit_${namespace}_${key}`;
 
+    const tryFetchJson = async (url) => {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`Visitor counter HTTP ${res.status}`);
+      return res.json();
+    };
+
+    const localFallback = () => {
+      const localKey = `vc_local_${namespace}_${key}`;
+      const localSessionKey = `${localKey}_hit`;
+      const current = Number(localStorage.getItem(localKey) || "0") || 0;
+
+      if (!sessionStorage.getItem(localSessionKey)) {
+        const next = current + 1;
+        localStorage.setItem(localKey, String(next));
+        sessionStorage.setItem(localSessionKey, "1");
+        visitorCountEl.textContent = next.toLocaleString();
+      } else {
+        visitorCountEl.textContent = current.toLocaleString();
+      }
+
+      visitorCountEl.title = "Counter offline: showing local estimate on this device";
+    };
+
     try {
-      const base = "https://api.countapi.xyz";
-      const endpoint = sessionStorage.getItem(sessionKey)
-        ? `${base}/get/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`
-        : `${base}/hit/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`;
+      const shouldHit = !sessionStorage.getItem(sessionKey);
+      const endpoint = shouldHit
+        ? `https://api.counterapi.dev/v1/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}/up`
+        : `https://api.counterapi.dev/v1/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`;
 
-      const res = await fetch(endpoint, { cache: "no-store" });
-      const data = await res.json();
-      if (!sessionStorage.getItem(sessionKey)) sessionStorage.setItem(sessionKey, "1");
+      const data = await tryFetchJson(endpoint);
+      if (shouldHit) sessionStorage.setItem(sessionKey, "1");
 
-      const value = typeof data?.value === "number" ? data.value : null;
-      visitorCountEl.textContent = value === null ? "—" : value.toLocaleString();
+      const value = typeof data?.count === "number" ? data.count : null;
+      if (value === null) return localFallback();
+
+      visitorCountEl.textContent = value.toLocaleString();
+      visitorCountEl.title = "";
     } catch {
-      visitorCountEl.textContent = "—";
+      localFallback();
     }
   };
 
