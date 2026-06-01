@@ -22,5 +22,17 @@
     "logo": "https://archive.nptel.ac.in/content/storage2/courses/109103024/images/nptel.jpg",
     "image": "../assets/certificates/introduction to Internet of Things NPTEL.png",
     "altText": "Introduction to Internet of Things Certificate issued By NPTEL"
+  },
+  {
+    "id": 3,
+    "title": "Data Analytics with Python",
+    "issuer": "NPTEL",
+    "issuedDate": "Apr 2025",
+    "credentialId": "NPTEL25CS17S124290076804291425",
+    "credentialUrl": "https://nptel.ac.in/noc/E_Certificate/NPTEL25CS17S124290076804291425",
+    "downloadUrl": "https://nptel.ac.in/noc/E_Certificate/NPTEL25CS17S124290076804291425",
+    "logo": "https://archive.nptel.ac.in/content/storage2/courses/109103024/images/nptel.jpg",
+    "image": "../assets/certificates/Data Analytics with Python NPTEL.png",
+    "altText": "Data Analytics with Python Certificate issued By NPTEL"
   }
 ]
