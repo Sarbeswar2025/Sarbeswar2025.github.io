@@ -34,5 +34,29 @@
     "logo": "https://archive.nptel.ac.in/content/storage2/courses/109103024/images/nptel.jpg",
     "image": "../assets/certificates/Data Analytics with Python NPTEL.png",
     "altText": "Data Analytics with Python Certificate issued By NPTEL"
-  }
+  },
+    {
+        "id": 4,
+        "title": "Introduction to Generative AI",
+        "issuer": "Simplilearn",
+        "issuedDate": "Feb 2026",
+        "credentialId": "9827713",
+        "credentialUrl": "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzODA3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvOTgyNzcxM18xMDEyMDIwMV8xNzcwNzM1MzM2NjgxLnBuZyIsInVzZXJuYW1lIjoiU2FyYmVzd2FyIFBhbmRhIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6750%2FIntroduction-to-Generative-AI%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1525779415669552258&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVr8g2yk71c05yNUiyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDABQbdu5BAAAA",
+        "downloadUrl": "../assets/certificates/Introduction to Generative AI Simplilearn.png",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3Nv8kapGFV50MzlbgK8rbT3_aNC4RUdcNg&s",
+        "image": "../assets/certificates/Introduction to Generative AI Simplilearn.png",
+        "altText": "Introduction to Generative AI Certificate issued By Simplilearn"   
+    },
+    {
+        "id": 5,
+        "title": "Getting Started with Firebase Cloud Firestore",
+        "issuer": "Coursera",
+        "issuedDate": "Jan 2026",
+        "credentialId": "IG0SM6LAR2AY",
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/1GQ5MCLAR2AY",
+        "downloadUrl": "../assets/certificates/Getting Started with Firebase Cloud Firestore Coursera.png",
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_200_200/company-logo_200_200/0/1698660876286?e=1781740800&v=beta&t=C48SFQf0KX4tqMeb-8xv7HkhmtqBwj1SJb_nrk-l6k4",
+        "image": "../assets/certificates/Getting Started with Firebase Cloud Firestore Coursera.png",
+        "altText": "Getting Started with Firebase Cloud Firestore Certificate issued By Coursera"   
+    }
 ]
