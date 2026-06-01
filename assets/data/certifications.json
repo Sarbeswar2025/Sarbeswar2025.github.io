@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "Enhancing Soft Skills and Personality",
+    "issuer": "NPTEL",
+    "issuedDate": "Apr 2024",
+    "credentialId": "NPTEL24HS26S45300256430697490",
+    "credentialUrl": "https://nptel.ac.in/nptelhub/verify/?pid=NPTEL24HS26S45300256430697490",
+    "logo": "../assets/certificates/nptel-logo.png",
+    "image": "../assets/certificates/nptel-soft-skills.jpg",
+    "altText": "Enhancing Soft Skills and Personality NPTEL Certificate"
+  },
+  {
+    "id": 2,
+    "title": "Introduction to Internet of Things",
+    "issuer": "NPTEL",
+    "issuedDate": "Oct 2024",
+    "credentialId": "NPTEL24CS115S75010022504275816",
+    "credentialUrl": "https://nptel.ac.in/nptelhub/verify/?pid=NPTEL24CS115S75010022504275816",
+    "logo": "../assets/certificates/nptel-logo.png",
+    "image": "../assets/certificates/nptel-iot.jpg",
+    "altText": "Introduction to Internet of Things Certificate issued By NPTEL"
+  }
+]
