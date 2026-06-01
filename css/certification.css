@@ -1,0 +1,216 @@
+/* Certification Page Styles */
+
+.main {
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+.certification-section {
+    padding: 2rem 0;
+}
+
+.certification-header {
+    margin-bottom: 3rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--color-primary, #6366f1);
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--color-primary-dark, #4f46e5);
+}
+
+.certification-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-text-primary);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.certification-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 12px;
+    background-color: var(--color-bg-secondary, #ffffff);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.certification-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.cert-card__header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cert-card__logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cert-card__info {
+    flex: 1;
+}
+
+.cert-card__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--color-text-primary);
+}
+
+.cert-card__issuer {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.cert-card__details {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cert-card__date,
+.cert-card__credential {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.cert-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--color-primary, #6366f1);
+    border-radius: 25px;
+    background-color: transparent;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.cert-card__link:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.cert-card__link-icon {
+    display: inline-block;
+}
+
+.cert-card__image {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-card__image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e5e7eb);
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .certification-card {
+        background-color: var(--color-bg-secondary, #1f2937);
+        border-color: var(--color-border, #374151);
+    }
+
+    .certification-title {
+        color: var(--color-text-primary, #f3f4f6);
+    }
+
+    .cert-card__title {
+        color: var(--color-text-primary, #f3f4f6);
+    }
+
+    .cert-card__image img {
+        border-color: var(--color-border, #374151);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .certification-title {
+        font-size: 1.75rem;
+    }
+
+    .certification-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .cert-card__image {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+
+    .cert-card__details {
+        grid-column: 1 / 2;
+    }
+
+    .cert-card__header {
+        margin-bottom: 1rem;
+    }
+
+    .cert-card__image img {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certification-section {
+        padding: 1rem 0;
+    }
+
+    .certification-card {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .certification-title {
+        font-size: 1.5rem;
+    }
+
+    .cert-card__title {
+        font-size: 1.1rem;
+    }
+
+    .back-link {
+        font-size: 0.9rem;
+    }
+}
