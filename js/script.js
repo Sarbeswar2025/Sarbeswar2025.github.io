@@ -428,10 +428,8 @@
   // -------- Typing effect --------
   const typingEl = $("#typingText");
   const roles = [
-    "Caffeine‑Powered Developer",
     "AI & CS Student",
     "Full‑Stack Builder",
-    "Problem Solver",
   ];
 
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
