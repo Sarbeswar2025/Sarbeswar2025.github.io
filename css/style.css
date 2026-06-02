@@ -556,6 +556,44 @@ textarea:focus-visible {
   gap: 10px;
 }
 
+/* Education card: place image to right of content on wider screens */
+@media (min-width: 720px) {
+  .eduCard2__grid {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .eduCard2__image img {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: var(--shadow2);
+    border: 1px solid var(--border);
+  }
+
+  .eduCard2__content {
+    min-width: 0;
+  }
+}
+
+/* Mobile: stack image below content */
+@media (max-width: 719px) {
+  .eduCard2__grid {
+    display: block;
+  }
+
+  .eduCard2__image {
+    margin-top: 12px;
+  }
+
+  .eduCard2__image img {
+    height: 160px;
+  }
+}
+
 .eduCard2__list li::before {
   content: "";
   width: 8px;
