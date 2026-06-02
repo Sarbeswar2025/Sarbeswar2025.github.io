@@ -884,7 +884,9 @@ textarea:focus-visible {
 
 .nav__link.is-active {
   color: var(--text);
-  background: color-mix(in oklab, var(--panelSolid) 88%, transparent);
+  /* background color will be gradient light blue and pink light */
+  background : linear-gradient(135deg, rgb(196, 218, 253) 0%, rgb(255, 211, 245) 100%);
+  /* background: color-mix(in oklab, var(--panelSolid) 88%, transparent); */
   border: 1px solid var(--border);
 }
 
