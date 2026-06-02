@@ -1,5 +1,39 @@
 /* Certification Page Styles */
 
+/* Theme variable mappings (map site-wide variables to page-specific ones) */
+:root {
+    --color-primary: var(--accent, #6366f1);
+    --color-primary-dark: #1e40af;
+    --color-text-primary: var(--text, #0b1220);
+    --color-text-secondary: var(--muted, rgba(11, 18, 32, 0.72));
+    --color-border: var(--border, #e5e7eb);
+    --color-bg-secondary: var(--panelSolid, #ffffff);
+    --color-success: #10b981;
+    --color-success-dark: #0d5e3d;
+}
+
+/* Respect system preference and site theme toggle */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg-secondary: var(--panelSolid, #0f172a);
+        --color-border: var(--border, #374151);
+        --color-text-primary: var(--text, #f3f4f6);
+        --color-text-secondary: var(--muted, rgba(245, 247, 255, 0.72));
+        --color-primary-dark: #60a5fa;
+        --color-success: #34d399;
+        --color-success-dark: #166534;
+    }
+}
+
+:root[data-theme="dark"] {
+    --color-bg-secondary: var(--panelSolid, #0f172a);
+    --color-border: var(--border, #374151);
+    --color-text-primary: var(--text, #f3f4f6);
+    --color-text-secondary: var(--muted, rgba(245, 247, 255, 0.72));
+    --color-primary-dark: #60a5fa;
+    --color-success: #34d399;
+    --color-success-dark: #166534;
+}
 .main {
     padding: 2rem 0;
     min-height: calc(100vh - 200px);
@@ -48,6 +82,7 @@
     border-radius: 12px;
     background-color: var(--color-bg-secondary, #ffffff);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* desktop layout preserved; mobile adjustments applied in media queries */
 }
 
 .certification-card:hover {
@@ -125,7 +160,7 @@
 }
 
 .cert-card__link:hover {
-    background-color: #1e40af;
+    background-color: var(--color-primary-dark);
     color: white;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
@@ -153,7 +188,7 @@
 }
 
 .cert-card__download:hover {
-    background-color: #0d5e3d;
+    background-color: var(--color-success-dark);
     color: white;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(13, 94, 61, 0.4);

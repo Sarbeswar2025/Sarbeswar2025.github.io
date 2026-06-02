@@ -58,5 +58,65 @@
         "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_200_200/company-logo_200_200/0/1698660876286?e=1781740800&v=beta&t=C48SFQf0KX4tqMeb-8xv7HkhmtqBwj1SJb_nrk-l6k4",
         "image": "../assets/certificates/Getting Started with Firebase Cloud Firestore Coursera.png",
         "altText": "Getting Started with Firebase Cloud Firestore Certificate issued By Coursera"   
+    },
+    {
+        "id": 6,
+        "title": "Getting Started with Google Cloud",
+        "issuer": "Coursera",
+        "issuedDate": "Jan 2026",
+        "credentialId": "1GQ5MCLAR2AY",
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/1GQ5MCLAR2AY",
+        "downloadUrl": "../assets/certificates/Getting Started with Google Cloud Coursera.png",
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_200_200/company-logo_200_200/0/1698660876286?e=1781740800&v=beta&t=C48SFQf0KX4tqMeb-8xv7HkhmtqBwj1SJb_nrk-l6k4",
+        "image": "../assets/certificates/Getting Started with Google Cloud Coursera.png",
+        "altText": "Getting Started with Google Cloud Certificate issued By Coursera"
+    },
+    {
+        "id": 7,
+        "title": "Getting Started with Google Cloud Platform",
+        "issuer": "Coursera",
+        "issuedDate": "Jan 2026",
+        "credentialId": "1GQ5MCLAR2AY",
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/1GQ5MCLAR2AY",
+        "downloadUrl": "../assets/certificates/Getting Started with Google Cloud Platform Coursera.png",
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_200_200/company-logo_200_200/0/1698660876286?e=1781740800&v=beta&t=C48SFQf0KX4tqMeb-8xv7HkhmtqBwj1SJb_nrk-l6k4",
+        "image": "../assets/certificates/Getting Started with Google Cloud Platform Coursera.png",
+        "altText": "Getting Started with Google Cloud Platform Certificate issued By Coursera"
+    },
+    {
+        "id": 8,
+        "title": "Getting Started with Google Cloud Services",
+        "issuer": "Coursera",
+        "issuedDate": "Jan 2026",
+        "credentialId": "1GQ5MCLAR2AY",
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/1GQ5MCLAR2AY",
+        "downloadUrl": "../assets/certificates/Getting Started with Google Cloud Services Coursera.png",
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_200_200/company-logo_200_200/0/1698660876286?e=1781740800&v=beta&t=C48SFQf0KX4tqMeb-8xv7HkhmtqBwj1SJb_nrk-l6k4",
+        "image": "../assets/certificates/Getting Started with Google Cloud Services Coursera.png",
+        "altText": "Getting Started with Google Cloud Services Certificate issued By Coursera"
+    },
+    {
+        "id": 9,
+        "title": "Getting Started with Google Cloud Storage",
+        "issuer": "Coursera",
+        "issuedDate": "Jan 2026",
+        "credentialId": "1GQ5MCLAR2AY",
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/1GQ5MCLAR2AY",
+        "downloadUrl": "../assets/certificates/Getting Started with Google Cloud Storage Coursera.png",
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_200_200/company-logo_200_200/0/1698660876286?e=1781740800&v=beta&t=C48SFQf0KX4tqMeb-8xv7HkhmtqBwj1SJb_nrk-l6k4",
+        "image": "../assets/certificates/Getting Started with Google Cloud Storage Coursera.png",
+        "altText": "Getting Started with Google Cloud Storage Certificate issued By Coursera"
+    },
+    {
+        "id": 10,
+        "title": "Getting Started with Google Cloud Compute Engine",
+        "issuer": "Coursera",
+        "issuedDate": "Jan 2026",
+        "credentialId": "1GQ5MCLAR2AY",
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/1GQ5MCLAR2AY",
+        "downloadUrl": "../assets/certificates/Getting Started with Google Cloud Compute Engine Coursera.png",
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_200_200/company-logo_200_200/0/1698660876286?e=1781740800&v=beta&t=C48SFQf0KX4tqMeb-8xv7HkhmtqBwj1SJb_nrk-l6k4",
+        "image": "../assets/certificates/Getting Started with Google Cloud Compute Engine Coursera.png",
+        "altText": "Getting Started with Google Cloud Compute Engine Certificate issued By Coursera"
     }
 ]

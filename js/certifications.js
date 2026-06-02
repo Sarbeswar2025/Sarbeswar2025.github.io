@@ -29,6 +29,8 @@ async function loadCertifications() {
             const certCard = createCertificationCard(cert);
             container.appendChild(certCard);
         });
+        // Inject structured data (JSON-LD) generated from the same data source
+        injectJsonLd(certifications);
         
     } catch (error) {
         console.error('Error loading certifications:', error);
@@ -92,3 +94,52 @@ function createCertificationCard(cert) {
 
 // Load certifications when the DOM is ready
 document.addEventListener('DOMContentLoaded', loadCertifications);
+
+/**
+ * Inject JSON-LD (structured data) for search engines using the same certifications data.
+ * @param {Array} certs
+ */
+function injectJsonLd(certs) {
+    if (!Array.isArray(certs) || certs.length === 0) return;
+
+    const monthMap = {
+        Jan: '01', Feb: '02', Mar: '03', Apr: '04', May: '05', Jun: '06',
+        Jul: '07', Aug: '08', Sep: '09', Oct: '10', Nov: '11', Dec: '12'
+    };
+
+    const graph = certs.map(cert => {
+        // normalize dateIssued to YYYY-MM when possible
+        let dateIssued = cert.issuedDate || '';
+        const m = dateIssued.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{4})/i);
+        if (m) {
+            const mm = monthMap[m[1].slice(0,3)] || '01';
+            dateIssued = `${m[2]}-${mm}`;
+        } else {
+            const y = dateIssued.match(/(\d{4})/);
+            if (y) dateIssued = y[1];
+        }
+
+        // Resolve image URL relative to current page
+        let imageUrl = '';
+        try {
+            imageUrl = new URL(cert.image, window.location.href).href;
+        } catch (e) {
+            imageUrl = cert.image || '';
+        }
+
+        return {
+            "@type": "EducationalOccupationalCredential",
+            name: cert.title,
+            issuer: { "@type": "Organization", name: cert.issuer },
+            dateIssued: dateIssued || undefined,
+            identifier: cert.credentialId ? { "@type": "PropertyValue", propertyID: "credentialId", value: cert.credentialId } : undefined,
+            url: cert.credentialUrl || undefined,
+            image: imageUrl || undefined
+        };
+    });
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph.filter(Boolean) }, null, 2);
+    document.head.appendChild(script);
+}
