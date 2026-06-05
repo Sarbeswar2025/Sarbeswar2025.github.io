@@ -1091,10 +1091,36 @@ textarea:focus-visible {
 
 .hero__cta {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 12px;
   margin-top: 18px;
-  overflow-x: auto;
+}
+
+.hero-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-linkedin:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.10);
+}
+
+.hero-linkedin:active {
+  transform: translateY(1px);
+}
+
+.hero-linkedin img {
+  width: auto;
+  height: 44px; /* match .btn min-height */
+  object-fit: contain;
 }
 
 .hero__details {
