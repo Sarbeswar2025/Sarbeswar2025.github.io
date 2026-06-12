@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="404 - Page Not Found. The page you're looking for doesn't exist. Return to Sarbeswar Panda's portfolio.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0b1220">
+  
+  <title>404 - Page Not Found | Sarbeswar Panda</title>
+  
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="canonical" href="https://sarbeswarpanda.me/404.html">
+
+  <style>
+    :root {
+      /* Typography */
+      --font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+      /* Spacing scale */
+      --s-1: 6px;
+      --s0: 10px;
+      --s1: 14px;
+      --s2: 18px;
+      --s3: 24px;
+      --s4: 32px;
+      --s5: 48px;
+      --s6: 72px;
+
+      /* Radii */
+      --r1: 12px;
+      --r2: 18px;
+      --r3: 26px;
+
+      /* Light theme */
+      --bg: #f7f8fb;
+      --panel: rgba(255, 255, 255, 0.7);
+      --panelSolid: #ffffff;
+      --text: #0b1220;
+      --muted: rgba(11, 18, 32, 0.72);
+      --border: rgba(11, 18, 32, 0.10);
+
+      /* Accents */
+      --accent: #3b82f6;
+      --accent2: #8b5cf6;
+
+      /* Shadow */
+      --shadow: 0 18px 40px rgba(11, 18, 32, 0.10);
+      --shadow2: 0 12px 24px rgba(11, 18, 32, 0.12);
+
+      /* Motion */
+      --ease: cubic-bezier(.2,.8,.2,1);
+      --dur: 260ms;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container-404 {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--s3);
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+    }
+
+    .error-content {
+      text-align: center;
+      max-width: 600px;
+      animation: fadeInUp 0.8s var(--ease);
+    }
+
+    .error-code {
+      font-size: 120px;
+      font-weight: 900;
+      letter-spacing: -4px;
+      background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--s2);
+      line-height: 1;
+      animation: floatIn 2s var(--ease) infinite;
+    }
+
+    .error-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: var(--s1);
+      color: var(--text);
+    }
+
+    .error-description {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: var(--s4);
+      line-height: 1.7;
+    }
+
+    .error-illustration {
+      margin: var(--s5) 0;
+      font-size: 100px;
+      animation: bounce 2s var(--ease) infinite;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: var(--s2);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--s4);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: var(--r1);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: -0.011em;
+      transition: all var(--dur) var(--ease);
+      border: none;
+      cursor: pointer;
+      outline: none;
+      min-height: 44px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+      color: white;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--panelSolid);
+      color: var(--text);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow2);
+    }
+
+    .btn-secondary:hover {
+      background: var(--panel);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .nav-links {
+      margin-top: var(--s5);
+      padding-top: var(--s4);
+      border-top: 1px solid var(--border);
+    }
+
+    .nav-links h3 {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: var(--s2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .quick-links {
+      display: flex;
+      gap: var(--s3);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--s3);
+    }
+
+    .quick-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color var(--dur) var(--ease);
+      position: relative;
+    }
+
+    .quick-links a:hover {
+      color: var(--accent2);
+    }
+
+    .quick-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--dur) var(--ease);
+    }
+
+    .quick-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatIn {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .error-code {
+        font-size: 80px;
+      }
+
+      .error-title {
+        font-size: 1.8rem;
+      }
+
+      .error-description {
+        font-size: 1rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .quick-links {
+        gap: var(--s2);
+      }
+
+      .quick-links a {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container-404 {
+        padding: var(--s2);
+      }
+
+      .error-code {
+        font-size: 60px;
+        margin-bottom: var(--s1);
+      }
+
+      .error-title {
+        font-size: 1.5rem;
+      }
+
+      .error-illustration {
+        font-size: 80px;
+        margin: var(--s4) 0;
+      }
+
+      .nav-links {
+        margin-top: var(--s4);
+        padding-top: var(--s3);
+      }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0f1a;
+        --panel: rgba(255, 255, 255, 0.08);
+        --panelSolid: #141925;
+        --text: #f5f6f8;
+        --muted: rgba(245, 246, 248, 0.64);
+        --border: rgba(255, 255, 255, 0.10);
+        --shadow: 0 18px 40px rgba(0, 0, 0, 0.30);
+        --shadow2: 0 12px 24px rgba(0, 0, 0, 0.25);
+      }
+
+      .container-404 {
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-404">
+    <div class="error-content">
+      <div class="error-illustration">🚀</div>
+      
+      <div class="error-code">404</div>
+      
+      <h1 class="error-title">Page Not Found</h1>
+      
+      <p class="error-description">
+        Looks like this page took off to explore the digital cosmos. The page you're looking for doesn't exist or has been moved.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="/" class="btn btn-primary">Go Home</a>
+        <a href="javascript:history.back()" class="btn btn-secondary">Go Back</a>
+      </div>
+
+      <div class="nav-links">
+        <h3>Explore My Work</h3>
+        <div class="quick-links">
+          <a href="/">Home</a>
+          <a href="/pages/projects.html">Projects</a>
+          <a href="/pages/experience.html">Experience</a>
+          <a href="/pages/about.html">About</a>
+          <a href="/pages/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
