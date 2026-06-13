@@ -231,9 +231,50 @@
     }
   };
 
-  const handleSend = () => {
-    const text = input.value.trim();
+  const suggestionList = [
+    "What are your skills?",
+    "Tell me about your experience",
+    "What is your education?",
+    "How can I contact you?",
+    "What are your projects?",
+    "Download resume",
+    "Where are you from?"
+  ];
+
+  const showSuggestions = () => {
+    // Remove if already exists
+    const existing = document.getElementById('chatbotSuggestions');
+    if (existing) existing.remove();
+
+    const suggestionsDiv = document.createElement('div');
+    suggestionsDiv.className = 'chatbot-suggestions';
+    suggestionsDiv.id = 'chatbotSuggestions';
+
+    // Pick 3 random questions
+    const shuffled = [...suggestionList].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 3);
+
+    selected.forEach(q => {
+      const btn = document.createElement('button');
+      btn.className = 'chatbot-suggestion-btn';
+      btn.textContent = q;
+      btn.addEventListener('click', () => {
+        suggestionsDiv.remove();
+        handleSend(q);
+      });
+      suggestionsDiv.appendChild(btn);
+    });
+
+    body.appendChild(suggestionsDiv);
+    body.scrollTop = body.scrollHeight;
+  };
+
+  const handleSend = (textOverride) => {
+    const text = typeof textOverride === 'string' ? textOverride : input.value.trim();
     if (!text) return;
+
+    const existing = document.getElementById('chatbotSuggestions');
+    if (existing) existing.remove();
 
     addMessage(text, 'user');
     input.value = '';
@@ -242,6 +283,7 @@
     setTimeout(() => {
       const response = getBotResponse(text);
       addMessage(response, 'bot', true);
+      showSuggestions();
     }, 500);
   };
 
@@ -249,5 +291,8 @@
   input.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSend();
   });
+  
+  // Initial suggestions
+  showSuggestions();
 
 })();
