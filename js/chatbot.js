@@ -12,12 +12,16 @@
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 5.58 2 10c0 2.08 1.05 3.96 2.75 5.25L4 22l4.16-2.08A11.08 11.08 0 0012 20c5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg>
           Sarbeswar Bot
         </div>
-        <button class="chatbot-close" aria-label="Close Chat">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
+        <div class="chatbot-header-actions">
+          <button class="chatbot-action-btn chatbot-clear" aria-label="Clear Chat" title="Clear Chat">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M15 2H9c-1.1 0-2 .9-2 2v2H3v2h18V6h-4V4c0-1.1-.9-2-2-2zm-4 2h2v2h-2V4zM5 20c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V8H5v12zm2-10h10v10H7V10z"/></svg>
+          </button>
+          <button class="chatbot-action-btn chatbot-close" aria-label="Close Chat" title="Close Chat">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
       </div>
       <div class="chatbot-body" id="chatbotBody">
-        <div class="chatbot-message bot">Hi there! I am Sarbeswar's AI assistant. Ask me anything about his skills, experience, projects, or contact info!</div>
       </div>
       <div class="chatbot-footer">
         <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Ask a question..." autocomplete="off" />
@@ -60,7 +64,7 @@
     },
     {
       keywords: ['contact', 'email', 'phone', 'call', 'reach', 'number', 'hire'],
-      answer: "You can reach Sarbeswar via email at [sarbeswarpanda143@gmail.com](mailto:sarbeswarpanda143@gmail.com) or call him at +91-8260916384."
+      answer: "You can reach Sarbeswar via email at <a href='mailto:sarbeswarpanda143@gmail.com' target='_blank'>sarbeswarpanda143@gmail.com</a> or call him at +91-8260916384."
     },
     {
       keywords: ['education', 'college', 'school', 'study', 'degree', 'btech', 'cgpa', 'university'],
@@ -303,6 +307,20 @@
     type();
   };
 
+  const showTypingIndicator = () => {
+    const indicator = document.createElement('div');
+    indicator.className = 'chatbot-message bot chatbot-typing';
+    indicator.id = 'chatbotTypingIndicator';
+    indicator.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
+    body.appendChild(indicator);
+    body.scrollTop = body.scrollHeight;
+  };
+
+  const removeTypingIndicator = () => {
+    const indicator = document.getElementById('chatbotTypingIndicator');
+    if (indicator) indicator.remove();
+  };
+
   const handleSend = (textOverride) => {
     const text = typeof textOverride === 'string' ? textOverride : input.value.trim();
     if (!text) return;
@@ -313,8 +331,11 @@
     addMessage(text, 'user');
     input.value = '';
 
-    // Small delay before starting to type
+    showTypingIndicator();
+
+    // Simulate thinking delay with dots
     setTimeout(() => {
+      removeTypingIndicator();
       const response = getBotResponse(text);
       
       const msgDiv = document.createElement('div');
@@ -325,7 +346,7 @@
       typeHTML(msgDiv, response, () => {
         showSuggestions();
       });
-    }, 300);
+    }, 1000); // 1s thinking time
   };
 
   sendBtn.addEventListener('click', handleSend);
@@ -333,7 +354,28 @@
     if (e.key === 'Enter') handleSend();
   });
   
-  // Initial suggestions
-  showSuggestions();
+  // Clear chat functionality
+  const clearBtn = document.querySelector('.chatbot-clear');
+  clearBtn.addEventListener('click', () => {
+    body.innerHTML = '';
+    startChat();
+  });
+
+  // Initial chat setup
+  const startChat = () => {
+    showTypingIndicator();
+    setTimeout(() => {
+      removeTypingIndicator();
+      const msgDiv = document.createElement('div');
+      msgDiv.classList.add('chatbot-message', 'bot');
+      body.appendChild(msgDiv);
+      const greeting = "Hi there! I am Sarbeswar's AI assistant. Ask me anything about his skills, experience, projects, or contact info!";
+      typeHTML(msgDiv, greeting, () => {
+        showSuggestions();
+      });
+    }, 800);
+  };
+
+  startChat();
 
 })();
