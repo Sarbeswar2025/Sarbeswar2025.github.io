@@ -269,6 +269,40 @@
     body.scrollTop = body.scrollHeight;
   };
 
+  const typeHTML = (element, htmlString, callback) => {
+    let i = 0;
+    let currentHTML = '';
+    const speed = 20; // typing speed in ms
+
+    const type = () => {
+      if (i < htmlString.length) {
+        // If it's an HTML tag, append the whole tag instantly
+        if (htmlString[i] === '<') {
+          let tag = '';
+          while (htmlString[i] !== '>' && i < htmlString.length) {
+            tag += htmlString[i];
+            i++;
+          }
+          tag += '>';
+          currentHTML += tag;
+          element.innerHTML = currentHTML;
+          i++;
+          type(); // Recursive call without delay
+        } else {
+          // If it's a character, append it with a delay
+          currentHTML += htmlString[i];
+          element.innerHTML = currentHTML;
+          i++;
+          body.scrollTop = body.scrollHeight; // Keep scrolled to bottom
+          setTimeout(type, speed);
+        }
+      } else {
+        if (callback) callback();
+      }
+    };
+    type();
+  };
+
   const handleSend = (textOverride) => {
     const text = typeof textOverride === 'string' ? textOverride : input.value.trim();
     if (!text) return;
@@ -279,12 +313,19 @@
     addMessage(text, 'user');
     input.value = '';
 
-    // Simulate thinking delay
+    // Small delay before starting to type
     setTimeout(() => {
       const response = getBotResponse(text);
-      addMessage(response, 'bot', true);
-      showSuggestions();
-    }, 500);
+      
+      const msgDiv = document.createElement('div');
+      msgDiv.classList.add('chatbot-message', 'bot');
+      body.appendChild(msgDiv);
+      
+      // Animate the bot response
+      typeHTML(msgDiv, response, () => {
+        showSuggestions();
+      });
+    }, 300);
   };
 
   sendBtn.addEventListener('click', handleSend);
