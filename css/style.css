@@ -762,10 +762,98 @@ textarea:focus-visible {
   to { transform: rotate(360deg); }
 }
 
-/* Header / Nav */
+/* Glide-to-Reveal Phone Number Effect */
+.social--glide {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  cursor: grab;
+}
+
+.social--glide:active {
+  cursor: grabbing;
+}
+
+.glide-code {
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: nowrap;
+  color: var(--text);
+  gap: 2px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--accent) 8%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent) 20%, transparent);
+  list-style: none;
+  transition: all var(--dur) var(--ease);
+}
+
+.glide-code:hover {
+  background: color-mix(in oklab, var(--accent) 12%, transparent);
+  border-color: color-mix(in oklab, var(--accent) 35%, transparent);
+}
+
+.glide-digit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 24px;
+  padding: 0 4px;
+}
+
+.glide-digit:focus-visible {
+  outline: 1px solid color-mix(in oklab, var(--accent) 50%, transparent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.glide-digit span {
+  scale: calc(var(--glide-active, 0) + 0.8);
+  filter: blur(calc((1 - var(--glide-active, 0)) * 4px));
+  transition: scale calc(((1 - var(--glide-active, 0)) + 0.15) * 600ms var(--ease)), filter calc(((1 - var(--glide-active, 0)) + 0.15) * 600ms var(--ease));
+  opacity: calc(var(--glide-active, 0) * 0.5 + 0.7);
+}
+
+:root {
+  --glide-lerp-0: 1;
+  --glide-lerp-1: calc(sin(50deg));
+  --glide-lerp-2: calc(sin(45deg));
+  --glide-lerp-3: calc(sin(35deg));
+  --glide-lerp-4: calc(sin(25deg));
+  --glide-lerp-5: calc(sin(15deg));
+}
+
+.glide-digit:is(:hover, :focus-visible) {
+  --glide-active: var(--glide-lerp-0);
+}
+.glide-digit:is(:hover, :focus-visible) + .glide-digit,
+.glide-digit:has(+ .glide-digit:is(:hover, :focus-visible)) {
+  --glide-active: var(--glide-lerp-1);
+}
+.glide-digit:is(:hover, :focus-visible) + .glide-digit + .glide-digit,
+.glide-digit:has(+ .glide-digit + .glide-digit:is(:hover, :focus-visible)) {
+  --glide-active: var(--glide-lerp-2);
+}
+.glide-digit:is(:hover, :focus-visible) + .glide-digit + .glide-digit + .glide-digit,
+.glide-digit:has(+ .glide-digit + .glide-digit + .glide-digit:is(:hover, :focus-visible)) {
+  --glide-active: var(--glide-lerp-3);
+}
+.glide-digit:is(:hover, :focus-visible) + .glide-digit + .glide-digit + .glide-digit + .glide-digit,
+.glide-digit:has(+ .glide-digit + .glide-digit + .glide-digit + .glide-digit:is(:hover, :focus-visible)) {
+  --glide-active: var(--glide-lerp-4);
+}
+.glide-digit:is(:hover, :focus-visible) + .glide-digit + .glide-digit + .glide-digit + .glide-digit + .glide-digit,
+.glide-digit:has(+ .glide-digit + .glide-digit + .glide-digit + .glide-digit + .glide-digit:is(:hover, :focus-visible)) {
+  --glide-active: var(--glide-lerp-5);
+}
+
+/* End Glide-to-Reveal */
+
 .site-header {
   position: sticky;
-  top: 0;
+  top: 0; 
   z-index: 120;
   padding: 10px 0;
   transition: transform 260ms var(--ease);
