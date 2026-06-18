@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".../../../../css/course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src=".../../../../js/course.js"></script>
+    <title>Core Java in One Shot: The Ultimate Core Java Cheat Sheet - Sarbeswar Panda</title>
+
+</head>
+
+<body>
+    <div class="course-header">
+        <div class="nav-container">
+            <a id="back-to-home" href="../../index.html">&larr; Back to home</a>
+            <div class="course-links">
+                <span class="course-nav">Python</span>
+                <span class="course-nav">HTML</span>
+            </div>
+        </div>
+    </div>
+    <div class="course-body">
+
+        <!-- Left Sidebar -->
+        <div class="toc-sidebar">
+            <h3>Table of contents</h3>
+
+            <ul>
+                <li>
+                    <a href="#intro">1. Java Introduction</a>
+                    <ul>
+                        <li><a href="#history">History of Java</a></li>
+                        <li><a href="#features">Features of Java</a></li>
+                        <li><a href="#wora">WORA (Write Once, Run Anywhere)</a></li>
+                        <li><a href="#jdk">JDK, JRE, JVM</a></li>
+                        <li><a href="#structure">Java Program Structure</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#fundamentals">2. Java Fundamentals</a>
+                    <ul>
+                        <li><a href="#datatypes">Data Types</a></li>
+                        <li><a href="#variables">Variables</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <main class="course-content">
+
+            <img id="thumbnail-image" src="../../../assets/Courses/core-java-thumnil.png" alt="Core Java">
+
+            <h2>Core Java in One Shot: The Ultimate Core Java Cheat Sheet</h2>
+
+            <p>
+                A simple and structured revision guide covering all the essential Core Java concepts in one place. From
+                OOP principles, collections, exception handling, multithreading, and file handling to JVM basics — this
+                cheat sheet helps you quickly revise what truly matters.
+            </p>
+
+            <h2 id="intro">1. Java Introduction</h2>
+
+            <h3 id="history">History of Java</h3>
+            <p>
+                Java was created by James Gosling and his team at Sun Microsystems in the early 1990s. Originally named
+                "Oak," it was designed for interactive television, but the project was ahead of its time. The team
+                pivoted, and in 1995, Java 1.0 was officially released. Its timing coincided perfectly with the
+                explosive growth of the World Wide Web, as Java's ability to run small programs (applets) in browsers
+                made web pages dynamic for the first time. Sun Microsystems was later acquired by Oracle Corporation in
+                2010, which now maintains and develops the language.
+            </p>
+
+            <h3 id="features">Features of Java</h3>
+            <p>
+                Java's enduring popularity stems from its robust design principles. It was built from the ground up to
+                be reliable, secure, and portable.
+            </p>
+
+            <ul class="java-features">
+                <li>
+                    <strong>Platform Independent:</strong>
+                    Java code does not run directly on the operating system.
+                    It compiles to an intermediate form called bytecode,
+                    which runs on a virtual machine.
+                </li>
+
+                <li>
+                    <strong>Object-Oriented:</strong>
+                    Java embraces the object-oriented paradigm, allowing developers
+                    to model real-world entities using classes and objects.
+                    Everything except the primitive data types is an object.
+                </li>
+
+                <li>
+                    <strong>Robust:</strong>
+                    The language is designed for reliability.
+                    It has strong memory management, a strict type system,
+                    and comprehensive exception handling to catch and manage errors.
+                </li>
+
+                <li>
+                    <strong>Secure:</strong>
+                    Java runs inside a virtual machine sandbox, which isolates it
+                    from the underlying system. It also lacks explicit pointers,
+                    preventing unauthorized memory access.
+                </li>
+
+                <li>
+                    <strong>Multithreaded:</strong>
+                    Java has built-in support for concurrent programming,
+                    allowing developers to write applications that can perform
+                    multiple tasks simultaneously, improving performance and responsiveness.
+                </li>
+            </ul>
+
+            <h3 id="wora">WORA (Write Once, Run Anywhere)</h3>
+            <p>
+                This is the cornerstone philosophy of Java. When you write and compile Java code, it generates bytecode
+                (.class files). This bytecode is not specific to any one operating system. To run it on a particular
+                machine, you need a Java Virtual Machine (JVM) built for that specific operating system (Windows, Linux,
+                macOS). The JVM acts as an intermediary, interpreting the bytecode into native machine code. This means
+                you can compile your code on a Windows machine and run it without changes on a Linux server, provided a
+                JVM is installed there.
+            </p>
+
+            <h3 id="jdk">JDK, JRE, JVM</h3>
+            <p>Understanding the Java ecosystem starts with these three acronyms. They are nested layers of the Java
+                platform.</p>
+
+            <img class="course-image" src="../../../assets/Courses/jdk-jre-jvm.png" alt="JDK, JRE, JVM">
+
+            <div class="java-table-wrapper">
+                <table class="java-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Full Form</th>
+                            <th>What it Contains</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><strong>JVM</strong></td>
+                            <td>Java Virtual Machine</td>
+                            <td>Runtime engine, Interpreter, JIT Compiler</td>
+                            <td>
+                                Executes the bytecode. It is the runtime
+                                environment's heart.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>JRE</strong></td>
+                            <td>Java Runtime Environment</td>
+                            <td>JVM + Java standard libraries</td>
+                            <td>
+                                Provides the libraries and JVM needed to
+                                <em>run</em> Java applications. It is for end-users.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>JDK</strong></td>
+                            <td>Java Development Kit</td>
+                            <td>JRE + Development Tools (javac, jar, javadoc)</td>
+                            <td>
+                                Provides everything needed to
+                                <em>develop</em> and run Java applications.
+                                It is for developers.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="structure">Java Program Structure</h3>
+            <p>Every Java application has a defined structure. The JVM looks for a specific entry point to start
+                execution.</p>
+
+            <div class="code-container">
+                <button class="copy-btn"><i class="fa fa-copy"></i>
+</button>
+
+                <pre><code class="language-java" >
+// 1. Package declaration (optional, but good practice for organizing classes)
+package com.example.myapp;
+
+// 2. Import statements (optional, for using classes from other packages)
+import java.util.Scanner;
+
+// 3. Class declaration (mandatory - the filename must match this class name)
+public class Main {
+
+    // 4. Main method (the mandatory entry point for any Java application)
+    public static void main(String[] args) {
+
+        // 5. Statements (the actual code to be executed)
+        System.out.println("Hello, World!");
+
+    }
+}
+</code></pre>
+            </div>
+            <h2 id="datatypes">2. Data Types</h2>
+            <h2 id="operators">3. Operators</h2>
+            <h2 id="oop">4. OOP Concepts</h2>
+            <h2 id="inheritance">5. Inheritance</h2>
+            <h2 id="polymorphism">6. Polymorphism</h2>
+            <h2 id="abstraction">7. Abstraction</h2>
+            <h2 id="encapsulation">8. Encapsulation</h2>
+            <h2 id="exception">9. Exception Handling</h2>
+            <h2 id="collections">10. Collections Framework</h2>
+            <h2 id="multithreading">11. Multithreading</h2>
+            <h2 id="filehandling">12. File Handling</h2>
+            <h2 id="jvm">13. JVM, JRE & JDK</h2>
+
+        </main>
+
+    </div>
+</body>
+
+</html>
