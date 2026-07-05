@@ -85,9 +85,16 @@ function createCertificationCard(cert) {
 		</div>
 
 		<div class="cert-card__image">
-			<img src="${cert.image}" alt="${cert.altText}" loading="lazy" />
+			<button class="cert-card__imageTrigger" type="button" aria-label="Preview ${cert.title}" data-preview-src="${cert.image}" data-preview-alt="${cert.altText}" data-preview-title="${cert.title}">
+				<img src="${cert.image}" alt="${cert.altText}" loading="lazy" />
+			</button>
 		</div>
 	`;
+
+	const previewTrigger = article.querySelector('.cert-card__imageTrigger');
+	if (previewTrigger) {
+		previewTrigger.addEventListener('click', handlePreviewOpen);
+	}
 
 	return article;
 }
@@ -96,6 +103,89 @@ if (document.readyState === 'loading') {
 	document.addEventListener('DOMContentLoaded', loadCertifications);
 } else {
 	loadCertifications();
+}
+
+document.addEventListener('DOMContentLoaded', ensureCertificationPreviewModal);
+
+function ensureCertificationPreviewModal() {
+	if (document.getElementById('certificationPreviewModal')) return;
+
+	const modal = document.createElement('div');
+	modal.id = 'certificationPreviewModal';
+	modal.className = 'cert-previewModal';
+	modal.setAttribute('role', 'dialog');
+	modal.setAttribute('aria-modal', 'true');
+	modal.setAttribute('aria-hidden', 'true');
+	modal.innerHTML = `
+		<div class="cert-previewModal__backdrop" data-preview-close></div>
+		<div class="cert-previewModal__panel" role="document">
+			<button class="cert-previewModal__close" type="button" aria-label="Close preview" data-preview-close>
+				<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" aria-hidden="true">
+					<path d="M6 6l12 12M18 6 6 18" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+			<div class="cert-previewModal__mediaWrap">
+				<img class="cert-previewModal__image" alt="" />
+			</div>
+			<div class="cert-previewModal__caption"></div>
+		</div>
+	`;
+	document.body.appendChild(modal);
+
+	modal.addEventListener('click', (event) => {
+		if (event.target.closest('[data-preview-close]')) {
+			closeCertificationPreview();
+		}
+	});
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') {
+			closeCertificationPreview();
+		}
+	});
+}
+
+function handlePreviewOpen(event) {
+	const trigger = event.currentTarget;
+	const src = trigger.dataset.previewSrc;
+	const alt = trigger.dataset.previewAlt || trigger.dataset.previewTitle || 'Certificate preview';
+	const title = trigger.dataset.previewTitle || 'Certificate';
+	openCertificationPreview({ src, alt, title });
+}
+
+function openCertificationPreview({ src, alt, title }) {
+	const modal = document.getElementById('certificationPreviewModal');
+	if (!modal) return;
+
+	const image = modal.querySelector('.cert-previewModal__image');
+	const caption = modal.querySelector('.cert-previewModal__caption');
+
+	if (image) {
+		image.src = src;
+		image.alt = alt;
+	}
+
+	if (caption) {
+		caption.textContent = title;
+	}
+
+	modal.classList.add('is-open');
+	modal.setAttribute('aria-hidden', 'false');
+	document.body.classList.add('is-preview-open');
+
+	const closeButton = modal.querySelector('.cert-previewModal__close');
+	if (closeButton) {
+		closeButton.focus();
+	}
+}
+
+function closeCertificationPreview() {
+	const modal = document.getElementById('certificationPreviewModal');
+	if (!modal) return;
+
+	modal.classList.remove('is-open');
+	modal.setAttribute('aria-hidden', 'true');
+	document.body.classList.remove('is-preview-open');
 }
 
 /**
