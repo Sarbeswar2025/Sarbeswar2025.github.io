@@ -1,13 +1,49 @@
 [
   {
     "id": 1,
+    "title": "AI Fundamentals",
+    "issuer": "Google",
+    "issuedDate": "Jul 2026",
+    "credentialId": "N7JG0VVHVT4M",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/N7JG0VVHVT4M",
+    "downloadUrl": "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~N7JG0VVHVT4M/CERTIFICATE_LANDING_PAGE~N7JG0VVHVT4M.jpeg",
+    "logo": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/92/d0d1ee4a844037be9a2d349ee5f59d/GoogleG_FullColor_RGB.png?auto=format%2Ccompress&dpr=1&w=80&h=80",
+    "image": "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~N7JG0VVHVT4M/CERTIFICATE_LANDING_PAGE~N7JG0VVHVT4M.jpeg",
+    "altText": "AI Fundamentals"
+  },
+  {
+    "id": 1,
+    "title": "Introduction to AI",
+    "issuer": "Google",
+    "issuedDate": "Jul 2026",
+    "credentialId": "WXMK7WOB63ZJ",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/WXMK7WOB63ZJ",
+    "downloadUrl": "https://www.coursera.org/account/accomplishments/certificate/WXMK7WOB63ZJ",
+    "logo": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/92/d0d1ee4a844037be9a2d349ee5f59d/GoogleG_FullColor_RGB.png?auto=format%2Ccompress&dpr=1&w=80&h=80",
+    "image": "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~WXMK7WOB63ZJ/CERTIFICATE_LANDING_PAGE~WXMK7WOB63ZJ.jpeg",
+    "altText": "Introduction to AI"
+  },
+  {
+    "id": 1,
+    "title": "Start Writing Prompts like a Pro",
+    "issuer": "Google",
+    "issuedDate": "Jul 2026",
+    "credentialId": "80IKM8OB556N",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/80IKM8OB556N",
+    "downloadUrl": "https://www.coursera.org/account/accomplishments/certificate/80IKM8OB556N",
+    "logo": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/92/d0d1ee4a844037be9a2d349ee5f59d/GoogleG_FullColor_RGB.png?auto=format%2Ccompress&dpr=1&w=80&h=80",
+    "image": "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~80IKM8OB556N/CERTIFICATE_LANDING_PAGE~80IKM8OB556N.jpeg",
+    "altText": "Start Writing Prompts like a Pro"
+  },
+  {
+    "id": 1,
     "title": "Enhancing Soft Skills and Personality",
     "issuer": "NPTEL",
     "issuedDate": "Apr 2024",
     "credentialId": "NPTEL24HS26S45300256430697490",
     "credentialUrl": "https://archive.nptel.ac.in/noc/E_Certificate/NPTEL24HS26S45300256430697490",
     "downloadUrl": "https://archive.nptel.ac.in/noc/E_Certificate/NPTEL24HS26S45300256430697490",
-    "logo": "https://archive.nptel.ac.in/content/storage2/courses/109103024/images/nptel.jpg",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1QNkjQP-d-JdFVmuKtC_A9KONLv7HyI-Q3j-DZFb3jd0AtDoX5t1uaeiV&s=10",
     "image": "../assets/certificates/Enhancing Soft Skills and Personality NPTEL.png",
     "altText": "Enhancing Soft Skills and Personality NPTEL Certificate"
   },
@@ -19,7 +55,7 @@
     "credentialId": "NPTEL24CS115S75010022504275816",
     "credentialUrl": "https://nptel.ac.in/noc/E_Certificate/NPTEL24CS115S75010022504275816",
     "downloadUrl": "https://nptel.ac.in/noc/E_Certificate/NPTEL24CS115S75010022504275816",
-    "logo": "https://archive.nptel.ac.in/content/storage2/courses/109103024/images/nptel.jpg",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1QNkjQP-d-JdFVmuKtC_A9KONLv7HyI-Q3j-DZFb3jd0AtDoX5t1uaeiV&s=10",
     "image": "../assets/certificates/introduction to Internet of Things NPTEL.png",
     "altText": "Introduction to Internet of Things Certificate issued By NPTEL"
   },
@@ -31,7 +67,7 @@
     "credentialId": "NPTEL25CS17S124290076804291425",
     "credentialUrl": "https://nptel.ac.in/noc/E_Certificate/NPTEL25CS17S124290076804291425",
     "downloadUrl": "https://nptel.ac.in/noc/E_Certificate/NPTEL25CS17S124290076804291425",
-    "logo": "https://archive.nptel.ac.in/content/storage2/courses/109103024/images/nptel.jpg",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1QNkjQP-d-JdFVmuKtC_A9KONLv7HyI-Q3j-DZFb3jd0AtDoX5t1uaeiV&s=10",
     "image": "../assets/certificates/Data Analytics with Python NPTEL.png",
     "altText": "Data Analytics with Python Certificate issued By NPTEL"
   },
@@ -55,7 +91,7 @@
         "credentialId": "IG0SM6LAR2AY",
         "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/1GQ5MCLAR2AY",
         "downloadUrl": "../assets/certificates/Getting Started with Firebase Cloud Firestore Coursera.png",
-        "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_200_200/company-logo_200_200/0/1698660876286?e=1781740800&v=beta&t=C48SFQf0KX4tqMeb-8xv7HkhmtqBwj1SJb_nrk-l6k4",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/960px-Coursera-Logo_600x600.svg.png",
         "image": "../assets/certificates/Getting Started with Firebase Cloud Firestore Coursera.png",
         "altText": "Getting Started with Firebase Cloud Firestore Certificate issued By Coursera"   
     },
@@ -127,8 +163,8 @@
         "credentialId": "13081147",
         "credentialUrl": "https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fwww.cloudskillsboost.google%2Fpublic_profiles%2Fbb9bbed6-3dcc-4052-9393-44b73098d88c%2Fbadges%2F13081147%3Futm_medium%3Dsocial%26utm_source%3Dlinkedin%26utm_campaign%3Dql-social-share&urlhash=n9zZ&mt=WS9GWTc-zYwjfuxZYnEbdze5pAd7-V5hF5ynAzITgczM_QlkVG6ffGt0zy6ycasn1QYNfkqRlajaVQaNR86vxCirrG-H&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BVjW5C1vIQUqrdBQenxxc6g%3D%3D",
         "downloadUrl": "https://media.licdn.com/dms/image/v2/D562DAQHu4A-dj987Xg/profile-treasury-image-shrink_8192_8192/profile-treasury-image-shrink_8192_8192/0/1733059963962?e=1781092800&v=beta&t=V8ToZeTyHnYXtAVoZzgTi57fD5jRTpFFk49uHNIyG6E",
-        "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_200_200/company-logo_200_200/0/1698660876286?e=1781740800&v=beta&t=C48SFQf0KX4tqMeb-8xv7HkhmtqBwj1SJb_nrk-l6k4",
-        "image": "https://media.licdn.com/dms/image/v2/D562DAQHu4A-dj987Xg/profile-treasury-image-shrink_8192_8192/profile-treasury-image-shrink_8192_8192/0/1733059963962?e=1781092800&v=beta&t=V8ToZeTyHnYXtAVoZzgTi57fD5jRTpFFk49uHNIyG6E",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShbllsQwxmF27RBlBBFpnAYXONDSiL-x3xDizPGl9d5Y8zakaIbNSsMFY&s=10",
+        "image": "https://media.licdn.com/dms/image/v2/D562DAQHu4A-dj987Xg/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1733059963960?e=1783868400&v=beta&t=Ug7nQPrix_c5SLLOAUuI8tTOA1YigBFHn-RWKUeYVIw",
         "altText": "Introduction to Generative AI Certificate issued By Google Cloud Skills Boost"
     }
 ]
