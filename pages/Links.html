@@ -1,312 +1,375 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarbeswar Panda | Links, Portfolio & Socials</title>
+    <meta
+      name="description"
+      content="All important links for Sarbeswar Panda – AI/ML and full‑stack developer. Visit portfolio, resume, GitHub, LinkedIn, and social profiles from one place."
+    />
+    <meta name="author" content="Sarbeswar Panda" />
+    <link rel="canonical" href="https://sarbeswarpanda.me/pages/links" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Sarbeswar Panda | Links, Portfolio & Socials</title>
-	<meta name="description"
-		content="All important links for Sarbeswar Panda – AI/ML and full‑stack developer. Visit portfolio, resume, GitHub, LinkedIn, and social profiles from one place." />
-	<meta name="author" content="Sarbeswar Panda" />
-	<link rel="canonical" href="https://sarbeswarpanda.me/pages/links" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Sarbeswar Panda | Links" />
+    <meta
+      property="og:description"
+      content="Single hub for Sarbeswar Panda's portfolio, resume, GitHub, LinkedIn, and social links."
+    />
+    <meta property="og:url" content="https://sarbeswarpanda.me/pages/links" />
+    <meta
+      property="og:image"
+      content="https://sarbeswarpanda.me/assets/images/sarbeswarpassphoto.jpeg"
+    />
 
-	<!-- Open Graph -->
-	<meta property="og:type" content="profile" />
-	<meta property="og:title" content="Sarbeswar Panda | Links" />
-	<meta property="og:description"
-		content="Single hub for Sarbeswar Panda's portfolio, resume, GitHub, LinkedIn, and social links." />
-	<meta property="og:url" content="https://sarbeswarpanda.me/pages/links" />
-	<meta property="og:image" content="https://sarbeswarpanda.me/assets/images/sarbeswarpassphoto.jpeg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sarbeswar Panda | Links" />
+    <meta
+      name="twitter:description"
+      content="Find Sarbeswar Panda's portfolio, resume, projects, and socials in one place."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sarbeswarpanda.me/assets/images/sarbeswarpassphoto.jpeg"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="../assets/images/logo.png" />
 
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Sarbeswar Panda | Links" />
-	<meta name="twitter:description"
-		content="Find Sarbeswar Panda's portfolio, resume, projects, and socials in one place." />
-	<meta name="twitter:image" content="https://sarbeswarpanda.me/assets/images/sarbeswarpassphoto.jpeg" />
-	<link rel="stylesheet" href="../css/style.css" />
-	<link rel="icon" type="image/png" href="../assets/images/logo.png" />
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background: #020617
+          url("https://images.wallpaperscraft.com/image/single/gradient_colorful_abstraction_157486_2160x3840.jpg")
+          no-repeat center center;
+        background-size: cover;
+        color: #f9fafb;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Inter",
+          sans-serif;
+      }
 
-	<style>
-		body {
-			min-height: 100vh;
-			margin: 0;
-			background: #020617 url("https://images.wallpaperscraft.com/image/single/gradient_colorful_abstraction_157486_2160x3840.jpg") no-repeat center center;
-			background-size: cover;
-			color: #f9fafb;
-			font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-		}
+      .links-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 16px;
+        position: relative;
+        overflow: hidden;
+      }
 
-		.links-page {
-			min-height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 40px 16px;
-			position: relative;
-			overflow: hidden;
-		}
+      .links-page::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.75),
+          transparent 32%,
+          transparent 68%,
+          rgba(0, 0, 0, 0.75)
+        );
+        z-index: 0;
+      }
 
-		.links-page::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			pointer-events: none;
-			background: linear-gradient(to bottom,
-				rgba(0, 0, 0, 0.75),
-				transparent 32%,
-				transparent 68%,
-				rgba(0, 0, 0, 0.75));
-			z-index: 0;
-		}
+      .links-card {
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background: transparent;
+        box-shadow: none;
+        border: 0;
+        backdrop-filter: none;
+        position: relative;
+        z-index: 1;
+      }
 
-		.links-card {
-			max-width: 520px;
-			width: 100%;
-			margin: 0 auto;
-			text-align: center;
-			background: transparent;
-			box-shadow: none;
-			border: 0;
-			backdrop-filter: none;
-			position: relative;
-			z-index: 1;
-		}
+      .links-avatar {
+        width: 120px;
+        height: 155px;
+        border-radius: 9px;
+        overflow: hidden;
+        margin: 0 auto 16px;
+        border: 2px solid rgba(255, 255, 255, 0.994);
+      }
 
-		.links-avatar {
-			width: 120px;
-			height: 155px;
-			border-radius: 9px;
-			overflow: hidden;
-			margin: 0 auto 16px;
-			border: 2px solid rgba(255, 255, 255, 0.994);
-		}
+      .links-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
 
-		.links-avatar img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			display: block;
-		}
+      .links-name {
+        font-size: 1.4rem;
+        font-weight: 900;
+        margin-bottom: 6px;
+      }
 
-		.links-name {
-			font-size: 1.4rem;
-			font-weight: 900;
-			margin-bottom: 6px;
-		}
+      .links-tagline {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        opacity: 0.95;
+        margin-bottom: 22px;
+      }
 
-		.links-tagline {
-			font-size: 0.95rem;
-			line-height: 1.5;
-			opacity: 0.95;
-			margin-bottom: 22px;
-		}
+      .links-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
 
-		.links-list {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
-			margin-bottom: 18px;
-		}
+      .links-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.8);
+        background: rgba(15, 23, 42, 0.72);
+        color: inherit;
+        text-decoration: none;
+        font-size: 0.98rem;
+        font-weight: 500;
+        transition:
+          background 0.18s ease,
+          transform 0.12s ease,
+          border-color 0.18s ease,
+          box-shadow 0.18s ease;
+      }
 
-		.links-btn {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 8px;
-			width: 100%;
-			padding: 12px 16px;
-			border-radius: 999px;
-			border: 1px solid rgba(148, 163, 184, 0.8);
-			background: rgba(15, 23, 42, 0.72);
-			color: inherit;
-			text-decoration: none;
-			font-size: 0.98rem;
-			font-weight: 500;
-			transition: background 0.18s ease, transform 0.12s ease, border-color 0.18s ease, box-shadow 0.18s ease;
-		}
+      .links-btn:hover,
+      .links-btn:focus-visible {
+        background: rgba(30, 64, 175, 0.96);
+        border-color: rgba(59, 130, 246, 0.95);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
+        transform: translateY(-1px);
+        outline: none;
+      }
 
-		.links-btn:hover,
-		.links-btn:focus-visible {
-			background: rgba(30, 64, 175, 0.96);
-			border-color: rgba(59, 130, 246, 0.95);
-			box-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
-			transform: translateY(-1px);
-			outline: none;
-		}
+      .links-btn--primary {
+        background: linear-gradient(135deg, #2563eb, #4f46e5);
+        border-color: transparent;
+        color: #f9fafb;
+      }
 
-		.links-btn--primary {
-			background: linear-gradient(135deg, #2563eb, #4f46e5);
-			border-color: transparent;
-			color: #f9fafb;
-		}
+      .links-btn--primary:hover,
+      .links-btn--primary:focus-visible {
+        background: linear-gradient(135deg, #1d4ed8, #4338ca);
+      }
 
-		.links-btn--primary:hover,
-		.links-btn--primary:focus-visible {
-			background: linear-gradient(135deg, #1d4ed8, #4338ca);
-		}
+      .links-btn-icon {
+        width: 18px;
+        height: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-		.links-btn-icon {
-			width: 18px;
-			height: 18px;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-		}
+      .links-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding-bottom: 20px;
+      }
 
-		.links-icons {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 10px;
-            padding-bottom: 20px;
-		}
+      .links-icon {
+        width: 45px;
+        height: 42px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(226, 255, 185);
+        border: 1px solid rgba(197, 4, 240, 0.95);
+        text-decoration: none;
+        transition:
+          background 0.18s ease,
+          transform 0.12s ease,
+          box-shadow 0.18s ease,
+          border-color 0.18s ease;
+      }
 
-		.links-icon {
-			width: 45px;
-			height: 42px;
-			border-radius: 999px;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			background: rgb(226, 255, 185);
-			border: 1px solid rgba(197, 4, 240, 0.95);
-			text-decoration: none;
-			transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-		}
+      .links-icon:hover,
+      .links-icon:focus-visible {
+        background: rgba(252, 253, 255, 0.96);
+        border-color: rgba(13, 121, 228, 0.98);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.7);
+        transform: translateY(-1px);
+        outline: none;
+      }
 
-		.links-icon:hover,
-		.links-icon:focus-visible {
-			background: rgba(252, 253, 255, 0.96);
-			border-color: rgba(13, 121, 228, 0.98);
-			box-shadow: 0 10px 30px rgba(15, 23, 42, 0.7);
-			transform: translateY(-1px);
-			outline: none;
-		}
+      .links-icon img {
+        width: 25px;
+        height: 25px;
+        display: block;
+      }
 
-		.links-icon img {
-			width: 25px;
-			height: 25px;
-			display: block;
-            
-		}
+      .portfolio-resume-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
 
-		.portfolio-resume-button {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 12px;
-			margin-bottom: 20px;
-            
+      .portfolio-resume-button .links-btn {
+        width: 50%;
+      }
 
-		}
+      .portfolio-resume-button .portfolio-btn {
+        background: #2563eb;
+        border-color: #b3ff00;
+        color: #f9fafb;
+      }
 
-		.portfolio-resume-button .links-btn {
-			width: 50%;
-		}
+      .portfolio-resume-button .portfolio-btn:hover,
+      .portfolio-resume-button .portfolio-btn:focus-visible {
+        background: #ffffff;
+        border-color: #ddff00;
+        color: #020617;
+      }
 
-		.portfolio-resume-button .portfolio-btn {
-			background: #2563eb;
-			border-color: #b3ff00;
-			color: #f9fafb;
-            
-		}
+      .portfolio-resume-button .resume-btn {
+        background: #22c55e;
+        border-color: #aaff00;
+        color: #ffffff;
+      }
 
-		.portfolio-resume-button .portfolio-btn:hover,
-		.portfolio-resume-button .portfolio-btn:focus-visible {
-			background: #ffffff;
-			border-color: #ddff00;
-            color: #020617;
-		}
+      .portfolio-resume-button .resume-btn:hover,
+      .portfolio-resume-button .resume-btn:focus-visible {
+        background: #ffffff;
+        border-color: #ccff00;
+        color: #020617;
+      }
 
-		.portfolio-resume-button .resume-btn {
-			background: #22c55e;
-			border-color: #aaff00;
-			color: #ffffff;
-		}
+      @media (max-width: 640px) {
+        .links-page {
+          padding: 32px 16px;
+        }
+      }
+    </style>
 
-		.portfolio-resume-button .resume-btn:hover,
-		.portfolio-resume-button .resume-btn:focus-visible {
-			background: #ffffff;
-			border-color: #ccff00;
-            color: #020617;
-		}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sarbeswar Panda",
+        "url": "https://sarbeswarpanda.me/pages/Links.html",
+        "image": "https://sarbeswarpanda.me/assets/images/sarbeswarpassphoto.jpeg",
+        "jobTitle": "AI/ML Engineer & Full‑Stack Developer",
+        "sameAs": [
+          "https://github.com/Sarbeswarpanda04",
+          "https://www.linkedin.com/in/sarbeswar-panda/",
+          "https://www.instagram.com/sarbeswar_panda_/",
+          "https://x.com/Sarbeswarpanda04"
+        ]
+      }
+    </script>
+  </head>
 
-		@media (max-width: 640px) {
-			.links-page {
-				padding: 32px 16px;
-			}
-		}
-	</style>
+  <body id="top">
+    <main>
+      <section class="section links-page" aria-label="All links">
+        <div class="container">
+          <div class="glass card links-card">
+            <div class="links-avatar" aria-hidden="true">
+              <img
+                src="../assets/images/sarbeswarpassphoto.jpeg"
+                alt="Sarbeswar Panda"
+                loading="lazy"
+              />
+            </div>
 
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "Sarbeswar Panda",
-		"url": "https://sarbeswarpanda.me/pages/Links.html",
-		"image": "https://sarbeswarpanda.me/assets/images/sarbeswarpassphoto.jpeg",
-		"jobTitle": "AI/ML Engineer & Full‑Stack Developer",
-		"sameAs": [
-			"https://github.com/Sarbeswarpanda04",
-			"https://www.linkedin.com/in/sarbeswar-panda/",
-			"https://www.instagram.com/sarbeswar_panda_/",
-			"https://x.com/Sarbeswarpanda04"
-		]
-	}
-	</script>
-</head>
+            <h1 class="links-name">Sarbeswar Panda</h1>
+            <p class="links-tagline">
+              3rd year B.Tech CSE (AI) student, building AI/ML projects and
+              full-stack apps.
+            </p>
 
-<body id="top">
-	<main>
-		<section class="section links-page" aria-label="All links">
-			<div class="container">
-				<div class="glass card links-card">
-					<div class="links-avatar" aria-hidden="true">
-						<img src="../assets/images/sarbeswarpassphoto.jpeg" alt="Sarbeswar Panda" loading="lazy" />
-					</div>
+            <div class="portfolio-resume-button">
+              <a
+                class="links-btn portfolio-btn"
+                href="https://sarbeswarpanda.me/"
+                target="_blank"
+                rel="noreferrer"
+                role="listitem"
+              >
+                <span>Portfolio</span>
+              </a>
+              <a
+                class="links-btn resume-btn"
+                href="https://sarbeswarpanda.me/assets/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                role="listitem"
+              >
+                <span>Resume</span>
+              </a>
+            </div>
 
-					<h1 class="links-name">Sarbeswar Panda</h1>
-					<p class="links-tagline">
-						3rd year B.Tech CSE (AI) student, building AI/ML projects and
-						full-stack apps.
-					</p>
-
-					<div class="portfolio-resume-button">
-						<a class="links-btn portfolio-btn" href="https://sarbeswarpanda.me/" target="_blank" rel="noreferrer"
-							role="listitem">
-							<span>Portfolio</span>
-						</a>
-						<a class="links-btn resume-btn" href="https://sarbeswarpanda.me/assets/resume.pdf" target="_blank" rel="noreferrer"
-							role="listitem">
-							<span>Resume</span>
-						</a>
-					</div>
-
-					<div class="links-icons" aria-label="Social links">
-						<a class="links-icon" href="https://www.instagram.com/sarbeswar_panda_/" target="_blank" rel="noreferrer">
-							<img src="../assets/icons/instagram.png" alt="Instagram" />
-						</a>
-						<a class="links-icon" href="https://wa.me/918260916384" target="_blank" rel="noreferrer">
-							<img src="../assets/icons/whatsapp.png" alt="WhatsApp" />
-						</a>
-						<a class="links-icon" href="mailto:sarbeswarpanda143@gmail.com">
-							<img src="../assets/icons/mail.png" alt="Email" />
-						</a>
-						<a class="links-icon" href="https://x.com/Sarbeswarpanda04" target="_blank" rel="noreferrer">
-							<img src="../assets/icons/x.png" alt="X (Twitter)" />
-						</a>
-						<a class="links-icon" href="https://github.com/Sarbeswarpanda04" target="_blank" rel="noreferrer">
-							<img src="../assets/icons/github.png" alt="GitHub" />
-						</a>
-						<a class="links-icon" href="https://www.linkedin.com/in/sarbeswar-panda/" target="_blank" rel="noreferrer">
-							<img src="../assets/icons/linkedin.png" alt="LinkedIn" />
-						</a>
-					</div>
-<!-- 
+            <div class="links-icons" aria-label="Social links">
+              <a
+                class="links-icon"
+                href="https://www.instagram.com/sarbeswar_panda_/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="../assets/icons/instagram.png" alt="Instagram" />
+              </a>
+              <a
+                class="links-icon"
+                href="https://wa.me/918260916384"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="../assets/icons/whatsapp.png" alt="WhatsApp" />
+              </a>
+              <a class="links-icon" href="mailto:sarbeswarpanda143@gmail.com">
+                <img src="../assets/icons/mail.png" alt="Email" />
+              </a>
+              <a
+                class="links-icon"
+                href="https://x.com/Sarbeswarpanda04"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="../assets/icons/x.png" alt="X (Twitter)" />
+              </a>
+              <a
+                class="links-icon"
+                href="https://github.com/Sarbeswarpanda04"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="../assets/icons/github.png" alt="GitHub" />
+              </a>
+              <a
+                class="links-icon"
+                href="https://www.linkedin.com/in/sarbeswar-panda/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="../assets/icons/linkedin.png" alt="LinkedIn" />
+              </a>
+            </div>
+            <!-- 
 					<div class="links-list" role="list">
 						<a class="links-btn" href="https://github.com/Sarbeswarpanda04" target="_blank" rel="noreferrer"
 							role="listitem">
@@ -364,58 +427,10 @@
 							<span>YouTube Channel</span>
 						</a>
 					</div> -->
-
-					<footer class="footer" style="margin-top: 28px; text-align: left;">
-						<div class="footer__wrap">
-							<div class="footer__grid">
-								<div class="footer__col footer__col--brand">
-									<div class="footer__brand">Sarbeswar Panda</div>
-									<p class="footer__desc">AI/ML Engineer & Full Stack Developer building practical, modern products with clean UI and reliable engineering.</p>
-									<div class="footer__cta">
-										<a class="footer__chip" href="mailto:sarbeswarpanda143@gmail.com">Email</a>
-										<a class="footer__chip" href="tel:+918260916384">Call</a>
-										<a class="footer__chip" href="../assets/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-									</div>
-								</div>
-
-								<div class="footer__col">
-									<div class="footer__title">Quick Links</div>
-									<div class="footer__links">
-										<a class="footer__link" href="../index.html#home">Home</a>
-										<a class="footer__link" href="about.html">About</a>
-										<a class="footer__link" href="skills.html">Skills</a>
-										<a class="footer__link" href="projects.html">Projects</a>
-										<a class="footer__link" href="experience.html">Experience</a>
-										<a class="footer__link" href="contact.html">Contact</a>
-									</div>
-								</div>
-
-								<div class="footer__col">
-									<div class="footer__title">Connect</div>
-									<div class="footer__social" role="list">
-										<a class="footer__chip" role="listitem" href="https://www.linkedin.com/in/sarbeswar-panda/" target="_blank" rel="noreferrer">LinkedIn</a>
-										<a class="footer__chip" role="listitem" href="https://github.com/Sarbeswarpanda04" target="_blank" rel="noreferrer">GitHub</a>
-										<a class="footer__chip" role="listitem" href="https://x.com/Sarbeswarpanda04" target="_blank" rel="noreferrer">X</a>
-										<a class="footer__chip" role="listitem" href="mailto:sarbeswarpanda143@gmail.com">Email</a>
-									</div>
-									<div class="footer__links">
-										<a class="footer__link" href="Certification.html" target="_blank" rel="noreferrer">Certifications</a>
-										<a class="footer__link" href="#top">Back to top</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="footer__bottom">
-								<div class="footer__meta">© 2026 Sarbeswar Panda. All rights reserved.</div>
-								<a class="footer__back" href="#top">Back to top</a>
-							</div>
-						</div>
-					</footer>
-				</div>
-			</div>
-		</section>
-	</main>
-	<script src="../js/script.js"></script>
-</body>
-
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../js/script.js"></script>
+  </body>
 </html>

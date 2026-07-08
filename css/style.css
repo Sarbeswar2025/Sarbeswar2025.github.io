@@ -2627,87 +2627,6 @@ textarea:focus-visible {
   gap: 8px;
 }
 
-/* Footer */
-.footer {
-  padding: 24px 0 36px;
-  background: rgb(164, 214, 255);
-}
-
-.footer__wrap {
-  border-top: 1px solid color-mix(in oklab, var(--border) 80%, #000 20%);
-  padding-top: 16px;
-  position: relative;
-}
-
-.footer__wrap::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--accent) 55%, transparent), color-mix(in oklab, var(--accent2) 55%, transparent), transparent);
-  opacity: 0.75;
-}
-
-.footer__grid {
-  display: grid;
-  gap: 12px;
-  align-items: start;
-  padding-top: 12px;
-}
-
-.footer__col {
-  padding: 16px;
-  border-radius: 16px;
-  border: 1px solid color-mix(in oklab, var(--border) 85%, transparent);
-  background: color-mix(in oklab, var(--panel) 92%, transparent);
-}
-
-.footer__col--brand {
-  display: grid;
-  align-content: start;
-}
-
-.footer__brand {
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
-}
-
-.footer__desc {
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-weight: 650;
-  line-height: 1.6;
-  max-width: 52ch;
-  font-size: clamp(0.9rem, 2vw, 0.95rem);
-}
-
-.footer__cta {
-  margin-top: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.footer__title {
-  font-weight: 950;
-  letter-spacing: -0.02em;
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
-}
-
-.footer__title--mt {
-  margin-top: 14px;
-}
-
-.footer__links {
-  margin-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
 /* Mobile tweaks */
 @media (max-width: 420px) {
   :root {
@@ -2720,83 +2639,6 @@ textarea:focus-visible {
 
   .nav {
     width: min(1120px, calc(100% - 2 * 14px));
-  }
-
-  .footer {
-    padding: 20px 0 28px;
-  }
-
-  .footer__wrap {
-    padding-top: 14px;
-  }
-
-  .footer__grid {
-    gap: 10px;
-    padding-top: 10px;
-  }
-
-  .footer__col {
-    padding: 13px;
-  }
-
-  .footer__brand {
-    font-size: 1rem;
-  }
-
-  .footer__desc {
-    font-size: 0.82rem;
-    line-height: 1.65;
-    margin-top: 8px;
-  }
-
-  .footer__title {
-    font-size: 0.88rem;
-    margin-bottom: -2px;
-  }
-
-  .footer__links {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-
-  .footer__link,
-  .footer__item {
-    padding: 8px 9px;
-    font-size: 0.8rem;
-    font-weight: 700;
-  }
-
-  .footer__chip {
-    padding: 6px 9px;
-    font-size: 0.78rem;
-    font-weight: 750;
-  }
-
-  .footer__stack {
-    gap: 5px;
-  }
-
-  .footer__social {
-    gap: 6px;
-    margin-top: 7px;
-  }
-
-  .footer__title--mt {
-    margin-top: 11px;
-  }
-
-  .footer__bottom {
-    margin-top: 14px;
-    padding-top: 12px;
-  }
-
-  .footer__meta,
-  .footer__back {
-    font-size: 0.78rem;
-  }
-
-  .footer__back {
-    padding: 6px 10px;
   }
 
   .hero__name {
@@ -2832,11 +2674,6 @@ textarea:focus-visible {
   }
 }
 
-.footer__stack {
-  margin-top: 10px;
-  display: grid;
-  gap: 6px;
-}
 
 /* Medium mobile breakpoint */
 @media (max-width: 640px) {
