@@ -6,9 +6,15 @@
 
 
 #footer{
-    background:#0f172a;
+  margin: 20px;
+    /* background:#0f172a; */
+    background-image: url(../assets/images/footer-bg.png);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     color:#fff;
     padding:60px 8% 20px;
+    border-radius: 20px;
 }
 
 .footer-container{
@@ -46,7 +52,8 @@
 }
 
 .role{
-    color:#03b3ff;
+    color:#b6ff0c;
+    -webkit-text-stroke: 0.5px rgb(255, 253, 253);
     font-size:1.1rem;
     margin-bottom:25px;
     font-weight:600;
@@ -54,15 +61,15 @@
 
 .contact-info p{
     margin:12px 0;
-    color:#d1d5db;
+    color:#ffffff;
     display:flex;
     align-items:center;
     gap:12px;
 }
 
 .contact-info i{
-    color:#38bdf8;
-    width:22px;
+    color:#ace4fb;
+    width:22px; 
 }
 
 /* Right */
