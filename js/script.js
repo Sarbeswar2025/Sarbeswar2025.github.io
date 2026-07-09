@@ -762,7 +762,7 @@
     setSendEnabled(false);
     setSendState("loading");
 
-    const to = "sarbeswarpanda143@gmail.com";
+    const to = "sarbeswar@sarbeswarpanda.me";
     const subject = `Portfolio contact from ${res.nameVal}`;
     const body =
       `Name: ${res.nameVal}\n` +

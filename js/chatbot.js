@@ -64,7 +64,7 @@
     },
     {
       keywords: ['contact', 'email', 'phone', 'call', 'reach', 'number', 'hire'],
-      answer: "You can reach Sarbeswar via email at <a href='mailto:sarbeswarpanda143@gmail.com' target='_blank'>sarbeswarpanda143@gmail.com</a> or call him at +91-8260916384."
+      answer: "You can reach Sarbeswar via email at <a href='mailto:sarbeswar@sarbeswarpanda.me' target='_blank'>sarbeswar@sarbeswarpanda.me</a> or call him at +91-8260916384."
     },
     {
       keywords: ['education', 'college', 'school', 'study', 'degree', 'btech', 'cgpa', 'university'],
