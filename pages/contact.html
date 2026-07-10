@@ -11,7 +11,7 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sarbeswarpanda.me/pages/contact" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/contact.css" />
+    <!-- <link rel="stylesheet" href="../css/contact.css" /> -->
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3555315139718336"
@@ -21,7 +21,708 @@
 
     <link rel="stylesheet" href="../css/footer.css" />
   </head>
+  <style>
+    /* ==========================================================
+   CONTACT SECTION
+========================================================== */
 
+    #contact {
+      position: relative;
+      padding: 7rem 0;
+    }
+
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      padding: 0.55rem 1rem;
+
+      border-radius: 999px;
+
+      background: rgba(99, 102, 241, 0.12);
+
+      color: var(--primary, #6366f1);
+
+      font-weight: 600;
+
+      margin-bottom: 1rem;
+    }
+
+    .section__head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 4rem;
+    }
+
+    .section__title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .section__subtitle {
+      margin-top: 1rem;
+      color: #8b8b95;
+      line-height: 1.8;
+    }
+
+    /* ==========================================================
+GRID
+========================================================== */
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns: 1.3fr 0.9fr;
+
+      gap: 2rem;
+
+      align-items: start;
+    }
+
+    /* ==========================================================
+GLASS CARD
+========================================================== */
+
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+
+      backdrop-filter: blur(20px);
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+      border-radius: 22px;
+    }
+
+    .card {
+      padding: 2rem;
+    }
+
+    /* ==========================================================
+FORM
+========================================================== */
+
+    .contact__form {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 1.2rem;
+    }
+
+    /* ==========================================================
+FIELDS
+========================================================== */
+
+    .field {
+      position: relative;
+    }
+
+    .field__input {
+      width: 100%;
+
+      padding: 1.35rem 1rem 0.65rem;
+
+      border-radius: 14px;
+
+      border: 1px solid rgba(42, 41, 41, 0.885);
+
+      background: rgba(255, 255, 255, 0.04);
+
+      color: #000000;
+
+      font-size: 1rem;
+
+      transition: 0.3s;
+
+      outline: none;
+    }
+
+    .field__input::placeholder {
+      color: transparent;
+    }
+
+    .field__input:focus {
+      border-color: #6366f1;
+
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+    }
+
+    .field__input--textarea {
+      resize: vertical;
+
+      min-height: 180px;
+    }
+
+    /* ==========================================================
+FLOAT LABEL
+========================================================== */
+
+    .field__label {
+      position: absolute;
+
+      left: 1rem;
+
+      top: 1rem;
+
+      pointer-events: none;
+
+      color: #8f8f9a;
+
+      transition: 0.25s;
+
+      background: transparent;
+    }
+
+    .field__input:focus + .field__label,
+    .field__input:not(:placeholder-shown) + .field__label {
+      top: 0.45rem;
+
+      font-size: 0.78rem;
+
+      color: #6366f1;
+    }
+
+    /* ==========================================================
+ERROR
+========================================================== */
+
+    .field__error {
+      margin-top: 0.45rem;
+
+      font-size: 0.82rem;
+
+      color: #720000;
+
+      min-height: 18px;
+    }
+
+    .field__input.is-invalid {
+      border-color: #860505;
+
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+    }
+
+    /* ==========================================================
+BUTTON
+========================================================== */
+
+    .btn {
+      cursor: pointer;
+
+      border: none;
+
+      outline: none;
+
+      transition: 0.3s;
+
+      font-weight: 600;
+    }
+
+    .btn--full {
+      width: 100%;
+    }
+
+    .btn--primary {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 0.75rem;
+
+      padding: 1rem 1.2rem;
+
+      border-radius: 14px;
+
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+
+      color: white;
+
+      font-size: 1rem;
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+    .btn--primary:hover {
+      transform: translateY(-2px);
+
+      box-shadow: 0 15px 35px rgba(99, 102, 241, 0.35);
+    }
+
+    .btn:disabled {
+      opacity: 0.65;
+
+      cursor: not-allowed;
+
+      transform: none;
+
+      box-shadow: none;
+    }
+
+    /* ==========================================================
+BUTTON STATES
+========================================================== */
+
+    .btn__spinner {
+      display: none;
+
+      width: 18px;
+
+      height: 18px;
+
+      border: 2px solid rgba(255, 255, 255, 0.4);
+
+      border-top-color: #fff;
+
+      border-radius: 50%;
+
+      animation: spin 0.8s linear infinite;
+    }
+
+    .btn__check {
+      display: none;
+    }
+
+    .btn.is-loading .btn__spinner {
+      display: block;
+    }
+
+    .btn.is-loading .btn__label {
+      display: none;
+    }
+
+    .btn.is-success {
+      background: linear-gradient(135deg, #10b981, #22c55e);
+    }
+
+    .btn.is-success .btn__label {
+      display: none;
+    }
+
+    .btn.is-success .btn__check {
+      display: block;
+    }
+
+    /* ==========================================================
+STATUS
+========================================================== */
+
+    .form-status {
+      margin-top: 0.5rem;
+
+      padding: 0.8rem 1rem;
+
+      border-radius: 12px;
+
+      display: none;
+
+      font-size: 0.92rem;
+    }
+
+    .form-status.is-visible {
+      display: block;
+    }
+
+    .form-status.is-success {
+      background: rgba(16, 185, 129, 0.12);
+
+      color: #22c55e;
+
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .form-status.is-error {
+      background: rgba(239, 68, 68, 0.12);
+
+      color: #ef4444;
+
+      border: 1px solid rgba(239, 68, 68, 0.25);
+    }
+
+    /* ==========================================================
+SIDEBAR
+========================================================== */
+
+    .contact-sidebar {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 1.5rem;
+    }
+
+    .info-header {
+      display: flex;
+
+      align-items: center;
+
+      gap: 1rem;
+
+      margin-bottom: 1rem;
+    }
+
+    .info-icon {
+      width: 60px;
+
+      height: 60px;
+
+      border-radius: 16px;
+
+      display: grid;
+
+      place-items: center;
+
+      font-size: 1.5rem;
+
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    }
+
+    .info-title {
+      font-size: 1.15rem;
+
+      font-weight: 700;
+    }
+
+    .info-subtitle {
+      color: #999;
+
+      font-size: 0.9rem;
+    }
+
+    .info-description {
+      line-height: 1.8;
+
+      color: #9a9a9f;
+    }
+
+    /* ==========================================================
+ANIMATION
+========================================================== */
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ==========================================================
+RESPONSIVE
+========================================================== */
+
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 1.5rem;
+      }
+
+      .section__title {
+        font-size: 2.3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section__title {
+        font-size: 2rem;
+      }
+
+      .btn--primary {
+        font-size: 0.95rem;
+      }
+    }
+    /* ==========================================================
+   SOCIAL CARD
+========================================================== */
+
+    .social-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .socials-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+
+      padding: 1rem 1.2rem;
+
+      border-radius: 14px;
+
+      background-color: #e9f1f5;
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      color: inherit;
+      text-decoration: none;
+
+      transition: 0.3s ease;
+    }
+
+    .social:hover {
+      transform: translateY(-3px);
+      border-color: #6366f1;
+      background: rgba(99, 102, 241, 0.08);
+      box-shadow: 0 12px 25px rgba(99, 102, 241, 0.15);
+    }
+
+    .social img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .social__left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex: 1;
+    }
+
+    .social__text {
+      overflow-wrap: anywhere;
+      font-size: 0.95rem;
+    }
+
+    .social--copy {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ==========================================================
+   SMALL BUTTON
+========================================================== */
+
+    .btn--small {
+      padding: 0.55rem 1rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+    }
+
+    .btn--ghost {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: inherit;
+    }
+
+    .btn--ghost:hover {
+      background: #6366f1;
+      border-color: #6366f1;
+      color: #fff;
+    }
+
+    /* ==========================================================
+   TOAST
+========================================================== */
+
+    .toast {
+      position: fixed;
+
+      right: 30px;
+
+      bottom: 30px;
+
+      min-width: 280px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 1rem;
+
+      padding: 1rem 1.25rem;
+
+      border-radius: 14px;
+
+      background: #111827;
+
+      color: #fff;
+
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+      transform: translateY(120px);
+
+      opacity: 0;
+
+      transition: 0.35s ease;
+
+      z-index: 9999;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+
+      opacity: 1;
+    }
+
+    #toastClose {
+      background: none;
+
+      border: none;
+
+      color: white;
+
+      cursor: pointer;
+
+      font-size: 1.1rem;
+    }
+
+    /* ==========================================================
+   CARD HOVER
+========================================================== */
+
+    .glass {
+      transition:
+        transform 0.35s,
+        box-shadow 0.35s,
+        border-color 0.35s;
+    }
+
+    .glass:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(99, 102, 241, 0.4);
+
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    /* ==========================================================
+   INPUT PLACEHOLDER
+========================================================== */
+
+    .field__input {
+      transition:
+        border-color 0.3s,
+        background 0.3s,
+        box-shadow 0.3s;
+    }
+
+    .field__input:hover {
+      border-color: rgba(99, 102, 241, 0.25);
+    }
+
+    /* ==========================================================
+   REVEAL ANIMATION
+========================================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(35px);
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+
+      transform: none;
+    }
+
+    /* ==========================================================
+   FOCUS
+========================================================== */
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid rgba(99, 102, 241, 0.35);
+
+      outline-offset: 4px;
+    }
+
+    /* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+    textarea::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    textarea::-webkit-scrollbar-thumb {
+      background: #6366f1;
+
+      border-radius: 10px;
+    }
+
+    /* ==========================================================
+   MOBILE
+========================================================== */
+
+    @media (max-width: 768px) {
+      .social {
+        padding: 0.9rem;
+      }
+
+      .social--copy {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1rem;
+      }
+
+      .btn--small {
+        width: 100%;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .toast {
+        right: 15px;
+
+        left: 15px;
+
+        bottom: 15px;
+
+        min-width: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-badge {
+        font-size: 0.85rem;
+      }
+
+      .section__subtitle {
+        font-size: 0.95rem;
+      }
+
+      .info-header {
+        flex-direction: column;
+
+        text-align: center;
+      }
+
+      .social {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
   <body>
     <!-- Sticky Navbar -->
     <header class="site-header" id="top">
@@ -181,41 +882,45 @@
       <section
         class="section"
         id="contact"
-        aria-label="Contact"
+        aria-labelledby="contact-title"
         style="padding-top: 120px"
       >
         <div class="container">
+          <!-- Section Header -->
           <div class="section__head reveal" data-reveal="fade-up">
-            <div class="contact-badge">💬 Get In Touch</div>
-            <h1 class="section__title">
+            <span class="contact-badge">💬 Get In Touch</span>
+
+            <h1 class="section__title" id="contact-title">
               Let's Build Something Amazing Together
             </h1>
+
             <p class="section__subtitle">
-              Whether you have a project idea, job opportunity, or just want to
-              say hello, I'd love to hear from you. I typically respond within
-              24 hours.
+              Have a project idea, internship opportunity, or simply want to
+              connect? I'd love to hear from you. I usually respond within 24
+              hours.
             </p>
           </div>
 
           <div class="contact-grid">
+            <!-- Contact Form -->
             <div class="contact-main">
               <form
+                id="contactForm"
                 class="glass card contact__form reveal"
                 data-reveal="fade-up"
-                id="contactForm"
                 novalidate
               >
                 <div class="field field--float">
                   <input
-                    class="field__input"
+                    type="text"
                     id="name"
                     name="name"
-                    type="text"
-                    autocomplete="name"
+                    class="field__input"
                     placeholder=" "
+                    autocomplete="name"
                     required
                   />
-                  <label class="field__label" for="name">Name</label>
+                  <label class="field__label" for="name">Full Name</label>
                   <div
                     class="field__error"
                     id="nameError"
@@ -225,15 +930,15 @@
 
                 <div class="field field--float">
                   <input
-                    class="field__input"
+                    type="email"
                     id="email"
                     name="email"
-                    type="email"
-                    autocomplete="email"
+                    class="field__input"
                     placeholder=" "
+                    autocomplete="email"
                     required
                   />
-                  <label class="field__label" for="email">Email</label>
+                  <label class="field__label" for="email">Email Address</label>
                   <div
                     class="field__error"
                     id="emailError"
@@ -243,14 +948,18 @@
 
                 <div class="field field--float">
                   <textarea
-                    class="field__input field__input--textarea"
                     id="message"
                     name="message"
-                    rows="5"
+                    class="field__input field__input--textarea"
+                    rows="6"
                     placeholder=" "
                     required
                   ></textarea>
-                  <label class="field__label" for="message">Message</label>
+
+                  <label class="field__label" for="message">
+                    Your Message
+                  </label>
+
                   <div
                     class="field__error"
                     id="messageError"
@@ -259,17 +968,19 @@
                 </div>
 
                 <button
+                  id="sendBtn"
                   class="btn btn--primary btn--full"
                   type="submit"
-                  id="sendBtn"
                   disabled
                 >
-                  <span class="btn__label">Send Message</span>
+                  <span class="btn__label"> Send Message </span>
+
                   <span class="btn__spinner" aria-hidden="true"></span>
+
                   <span class="btn__check" aria-hidden="true">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
                       <path
-                        d="M20 7 10.5 16.5 4 10"
+                        d="M20 7L10.5 16.5L4 10"
                         stroke="currentColor"
                         stroke-width="2.6"
                         stroke-linecap="round"
@@ -280,99 +991,102 @@
                 </button>
 
                 <div
-                  class="form-status"
                   id="formStatus"
+                  class="form-status"
                   aria-live="polite"
                 ></div>
               </form>
             </div>
 
+            <!-- Contact Sidebar -->
             <aside
               class="contact-sidebar reveal"
               data-reveal="fade-up"
-              data-delay="120"
+              data-delay="150"
             >
-              <div class="contact-info-card glass card">
-                <div class="info-header">
-                  <div class="info-icon">🚀</div>
-                  <div>
-                    <h3 class="info-title">Quick Response</h3>
-                    <p class="info-subtitle">Usually within 24 hours</p>
-                  </div>
-                </div>
-                <p class="info-description">
-                  I'm always excited to discuss new opportunities,
-                  collaborations, or just chat about technology and innovation.
-                </p>
-              </div>
-
+              <!-- Social Card -->
               <div class="contact-social-card glass card">
                 <h3 class="social-title">Connect With Me</h3>
 
-                <div class="socials-grid" role="list">
+                <div class="socials-grid">
                   <a
                     class="social"
                     href="https://www.linkedin.com/in/sarbeswar-panda/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     <img
                       src="../assets/icons/linkedin.png"
-                      alt=""
                       width="20"
                       height="20"
-                      loading="lazy"
+                      alt="LinkedIn"
                     />
                     LinkedIn
                   </a>
+
                   <a
                     class="social"
                     href="https://github.com/Sarbeswarpanda04"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     <img
                       src="../assets/icons/github.png"
-                      alt=""
                       width="20"
                       height="20"
-                      loading="lazy"
+                      alt="GitHub"
                     />
                     GitHub
                   </a>
+
                   <a
                     class="social"
                     href="https://www.instagram.com/sarbeswar_panda_/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     <img
                       src="../assets/icons/instagram.png"
-                      alt=""
                       width="20"
                       height="20"
-                      loading="lazy"
+                      alt="Instagram"
                     />
                     Instagram
+                  </a>
+
+                  <a
+                    class="social"
+                    href="https://wa.me/918260916384?text=Hello%20Sarbeswar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="../assets/icons/whatsapp.png"
+                      width="20"
+                      height="20"
+                      alt="WhatsApp"
+                    />
+                    WhatsApp
                   </a>
 
                   <div class="social social--copy">
                     <span class="social__left">
                       <img
                         src="../assets/icons/mail.png"
-                        alt=""
                         width="20"
                         height="20"
-                        loading="lazy"
+                        alt="Email"
                       />
-                      <span class="social__text"
-                        >sarbeswar@sarbeswarpanda.me</span
-                      >
+
+                      <span class="social__text" id="contactEmailText">
+                        sarbeswar@sarbeswarpanda.me
+                      </span>
                     </span>
+
                     <button
-                      class="btn btn--small btn--ghost"
-                      type="button"
                       id="copyEmailBtn"
+                      type="button"
+                      class="btn btn--small btn--ghost"
                     >
                       Copy
                     </button>
@@ -381,35 +1095,12 @@
                   <a class="social" href="tel:+918260916384">
                     <img
                       src="../assets/icons/phone.png"
-                      alt=""
                       width="20"
                       height="20"
-                      loading="lazy"
+                      alt="Phone"
                     />
                     +91 82609 16384
                   </a>
-                </div>
-              </div>
-
-              <div class="contact-stats-card glass card">
-                <h3 class="stats-title">Why Reach Out?</h3>
-                <div class="stats-grid">
-                  <div class="stat-item">
-                    <div class="stat-icon">💼</div>
-                    <div class="stat-label">Job Opportunities</div>
-                  </div>
-                  <div class="stat-item">
-                    <div class="stat-icon">🤝</div>
-                    <div class="stat-label">Collaboration</div>
-                  </div>
-                  <div class="stat-item">
-                    <div class="stat-icon">💡</div>
-                    <div class="stat-label">Project Ideas</div>
-                  </div>
-                  <div class="stat-item">
-                    <div class="stat-icon">☕</div>
-                    <div class="stat-label">Just Chat</div>
-                  </div>
                 </div>
               </div>
             </aside>
@@ -417,6 +1108,15 @@
         </div>
       </section>
     </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" hidden role="status" aria-live="polite">
+      <span id="toastText"></span>
+
+      <button id="toastClose" type="button" aria-label="Close notification">
+        ✕
+      </button>
+    </div>
 
     <!-- Footer -->
     <footer id="footer">
@@ -492,5 +1192,6 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script src="../js/contact.js"></script>
   </body>
 </html>
