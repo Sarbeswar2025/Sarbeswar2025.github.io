@@ -1,4 +1,5 @@
 import { protectPage, logout } from "./auth.js";
+import { getDocument } from "./firestore.js";
 
 // ======================================
 // Protect Dashboard
@@ -170,6 +171,27 @@ if (closeDrawer && projectDrawer) {
 
 }
 
+
+//======================================
+// Visitor count
+//======================================
+async function loadAnalytics(){
+
+    const stats =
+    await getDocument(
+        "analytics",
+        "stats"
+    );
+
+    if(!stats) return;
+
+    document.getElementById(
+        "visitorCount"
+    ).innerText =
+    stats.totalVisitors ?? 0;
+
+}
+loadAnalytics();
 // ======================================
 // Logout
 // ======================================
