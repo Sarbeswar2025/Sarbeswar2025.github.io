@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio CMS | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../../css/admin.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="../../assets/images/logo.png" alt="Logo" />
+
+        <div>
+          <h2>Portfolio CMS</h2>
+          <small>Admin Panel</small>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#" class="nav-link active" data-page="dashboard">
+          <i class="fas fa-house"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="#" class="nav-link" data-page="profile">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </a>
+
+        <a href="#" class="nav-link" data-page="projects">
+          <i class="fas fa-code"></i>
+          <span>Projects</span>
+        </a>
+
+        <a href="#" class="nav-link" data-page="skills">
+          <i class="fas fa-lightbulb"></i>
+          <span>Skills</span>
+        </a>
+
+        <a href="#" class="nav-link" data-page="experience">
+          <i class="fas fa-briefcase"></i>
+          <span>Experience</span>
+        </a>
+
+        <a href="#" class="nav-link" data-page="certificates">
+          <i class="fas fa-certificate"></i>
+          <span>Certificates</span>
+        </a>
+
+        <a href="#" class="nav-link" data-page="courses">
+          <i class="fas fa-book-open"></i>
+          <span>Courses</span>
+        </a>
+
+        <a href="#" class="nav-link" data-page="blogs">
+          <i class="fas fa-blog"></i>
+          <span>Blogs</span>
+        </a>
+
+        <a href="#" class="nav-link" data-page="messages">
+          <i class="fas fa-envelope"></i>
+          <span>Messages</span>
+        </a>
+
+        <a href="#" class="nav-link" data-page="settings">
+          <i class="fas fa-gear"></i>
+          <span>Settings</span>
+        </a>
+
+        <a href="#" id="logoutBtn">
+          <i class="fas fa-right-from-bracket"></i>
+
+          <span>Logout</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <div class="main">
+      <!-- ========= Topbar ========= -->
+
+      <header class="topbar">
+        <button id="menuBtn" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="page-title">Dashboard</div>
+
+        <div class="top-right">
+          <button class="icon-btn">
+            <i class="fas fa-bell"></i>
+          </button>
+
+          <button class="icon-btn" id="themeBtn">
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <div class="admin-profile">
+            <img src="../../assets/images/sarbeswar.jpg" />
+
+            <div>
+              <h4 id="adminName">Sarbeswar Panda</h4>
+
+              <small>Administrator</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ========= Content ========= -->
+
+      <main class="content">
+        <!-- Dashboard -->
+
+        <section id="dashboard" class="page active">
+          <div class="welcome">
+            <div>
+              <h1>Welcome Back 👋</h1>
+
+              <p>Manage your portfolio from one place.</p>
+            </div>
+          </div>
+
+          <!-- Statistics -->
+
+          <div class="cards">
+            <div class="card">
+              <i class="fas fa-code"></i>
+
+              <h2 id="projectCount">0</h2>
+
+              <p>Projects</p>
+            </div>
+
+            <div class="card">
+              <i class="fas fa-certificate"></i>
+
+              <h2 id="certificateCount">0</h2>
+
+              <p>Certificates</p>
+            </div>
+
+            <div class="card">
+              <i class="fas fa-envelope"></i>
+
+              <h2 id="messageCount">0</h2>
+
+              <p>Messages</p>
+            </div>
+
+            <div class="card">
+              <i class="fas fa-eye"></i>
+
+              <h2 id="visitorCount">0</h2>
+
+              <p>Visitors</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Profile -->
+
+        <section id="profile" class="page">
+          <div class="section-header">
+            <h2>Profile Management</h2>
+
+            <button class="primary-btn" id="saveProfile">
+              <i class="fas fa-floppy-disk"></i>
+
+              Save Changes
+            </button>
+          </div>
+
+          <div class="profile-grid">
+            <!-- Left -->
+
+            <div class="profile-card">
+              <img
+                src="../../assets/images/sarbeswar.jpg"
+                id="profilePreview"
+                class="profile-preview"
+              />
+
+              <input type="file" id="profileImage" hidden />
+
+              <button class="secondary-btn" id="changePhoto">
+                Change Photo
+              </button>
+
+              <button class="secondary-btn" id="uploadResume">
+                Upload Resume
+              </button>
+            </div>
+
+            <!-- Right -->
+
+            <div class="panel">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Full Name</label>
+
+                  <input id="name" type="text" />
+                </div>
+
+                <div class="form-group">
+                  <label>Professional Title</label>
+
+                  <input id="title" type="text" />
+                </div>
+
+                <div class="form-group">
+                  <label>Email</label>
+
+                  <input id="email" type="email" />
+                </div>
+
+                <div class="form-group">
+                  <label>Phone</label>
+
+                  <input id="phone" type="text" />
+                </div>
+
+                <div class="form-group">
+                  <label>Location</label>
+
+                  <input id="location" type="text" />
+                </div>
+
+                <div class="form-group">
+                  <label>Website</label>
+
+                  <input id="website" type="text" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label> About Me </label>
+
+                <textarea id="about" rows="7"> </textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social -->
+
+          <div class="panel">
+            <h3>Social Links</h3>
+
+            <br />
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label> GitHub </label>
+
+                <input id="github" />
+              </div>
+
+              <div class="form-group">
+                <label> LinkedIn </label>
+
+                <input id="linkedin" />
+              </div>
+
+              <div class="form-group">
+                <label> Instagram </label>
+
+                <input id="instagram" />
+              </div>
+
+              <div class="form-group">
+                <label> X </label>
+
+                <input id="twitter" />
+              </div>
+
+              <div class="form-group">
+                <label> Peerlist </label>
+
+                <input id="peerlist" />
+              </div>
+
+              <div class="form-group">
+                <label> Facebook </label>
+
+                <input id="facebook" />
+              </div>
+
+              <div class="form-group">
+                <label> WhatsApp </label>
+
+                <input id="whatsapp" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+
+        <section id="projects" class="page">
+          <div class="section-header">
+            <h2>Project Management</h2>
+
+            <button class="primary-btn" id="addProjectBtn">
+              <i class="fas fa-plus"></i>
+
+              Add Project
+            </button>
+          </div>
+
+          <div class="project-toolbar">
+            <div class="search-box">
+              <input
+                type="text"
+                id="projectSearch"
+                placeholder="Search projects..."
+              />
+
+              <i class="fas fa-search"></i>
+            </div>
+
+            <select id="projectFilter">
+              <option value="all">All</option>
+
+              <option>Featured</option>
+
+              <option>Web</option>
+
+              <option>AI/ML</option>
+
+              <option>Mobile</option>
+            </select>
+          </div>
+
+          <div id="projectGrid" class="project-grid"></div>
+
+          <!-- ===================================== -->
+          <!-- Project Statistics -->
+          <!-- ===================================== -->
+
+          <div class="project-stats">
+            <div class="stat-card">
+              <h3 id="totalProjects">0</h3>
+
+              <p>Total Projects</p>
+            </div>
+
+            <div class="stat-card">
+              <h3 id="featuredProjects">0</h3>
+
+              <p>Featured</p>
+            </div>
+
+            <div class="stat-card">
+              <h3 id="webProjects">0</h3>
+
+              <p>Web Projects</p>
+            </div>
+
+            <div class="stat-card">
+              <h3 id="aiProjects">0</h3>
+
+              <p>AI / ML</p>
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Project Table -->
+          <!-- ===================================== -->
+
+          <div class="table-card">
+            <div class="table-header">
+              <h3>All Projects</h3>
+
+              <span id="projectCount">0 Project(s)</span>
+            </div>
+
+            <div class="table-responsive">
+              <table class="project-table">
+                <thead>
+                  <tr>
+                    <th>Preview</th>
+
+                    <th>Title</th>
+
+                    <th>Technology</th>
+
+                    <th>Category</th>
+
+                    <th>Featured</th>
+
+                    <th>Created</th>
+
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody id="projectTableBody">
+                  <!-- Firestore Projects -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Empty State -->
+          <!-- ===================================== -->
+
+          <div class="empty-projects" id="emptyProjects">
+            <div class="empty-icon">
+              <i class="fas fa-folder-open"></i>
+            </div>
+
+            <h2>No Projects Found</h2>
+
+            <p>Start building your portfolio by adding your first project.</p>
+
+            <button class="primary-btn" id="emptyAddProject">
+              <i class="fas fa-plus"></i>
+
+              Add Project
+            </button>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Pagination -->
+          <!-- ===================================== -->
+
+          <div class="pagination" id="pagination">
+            <button id="prevPage">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <span id="pageNumber"> Page 1 </span>
+
+            <button id="nextPage">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+<!-- Skills -->
+<!-- ========================= -->
+
+<section class="page" id="skills">
+
+  <!-- Page Header -->
+  <div class="page-header">
+
+    <h1 class="page-title">
+      Skills
+    </h1>
+
+    <button class="primary-btn" id="addSkillBtn">
+      <i class="fas fa-plus"></i>
+      Add Skill
+    </button>
+
+  </div>
+
+  <!-- Search & Filter -->
+  <div class="toolbar">
+
+    <input
+      type="text"
+      id="skillSearch"
+      placeholder="Search Skill..."
+    />
+
+    <select id="skillCategoryFilter">
+
+      <option value="All">All Categories</option>
+
+      <option value="Programming">Programming</option>
+
+      <option value="Frontend">Frontend</option>
+
+      <option value="Backend">Backend</option>
+
+      <option value="Database">Database</option>
+
+      <option value="AI/ML">AI / ML</option>
+
+      <option value="Tools">Tools</option>
+
+      <option value="Cloud">Cloud</option>
+
+      <option value="DevOps">DevOps</option>
+
+      <option value="Other">Other</option>
+
+    </select>
+
+  </div>
+
+  <!-- Statistics -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+
+      <h2 id="totalSkills">0</h2>
+
+      <p>Total Skills</p>
+
+    </div>
+
+    <div class="stat-card">
+
+      <h2 id="featuredSkills">0</h2>
+
+      <p>Featured</p>
+
+    </div>
+
+    <div class="stat-card">
+
+      <h2 id="programmingSkills">0</h2>
+
+      <p>Programming</p>
+
+    </div>
+
+    <div class="stat-card">
+
+      <h2 id="toolSkills">0</h2>
+
+      <p>Tools</p>
+
+    </div>
+
+  </div>
+
+  <!-- Skills Table -->
+  <div class="table-card">
+
+    <table>
+
+      <thead>
+
+        <tr>
+
+          <th>Logo</th>
+
+          <th>Skill</th>
+
+          <th>Category</th>
+
+          <th>Featured</th>
+
+          <th>Order</th>
+
+          <th>Actions</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody id="skillTableBody">
+
+      </tbody>
+
+    </table>
+
+    <div class="empty-state" id="emptySkills">
+
+      No Skills Found
+
+    </div>
+
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+
+    <button id="prevSkillPage">
+
+      Previous
+
+    </button>
+
+    <span id="skillPageNumber">
+
+      Page 1 of 1
+
+    </span>
+
+    <button id="nextSkillPage">
+
+      Next
+
+    </button>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Skill Drawer -->
+<!-- ========================= -->
+
+<div class="drawer" id="skillDrawer">
+
+  <div class="drawer-header">
+
+    <h2>
+
+      Add Skill
+
+    </h2>
+
+    <button id="closeSkillDrawer">
+
+      <i class="fas fa-times"></i>
+
+    </button>
+
+  </div>
+
+  <div class="drawer-body">
+
+    <!-- Skill Name -->
+
+    <div class="form-group">
+
+      <label>
+
+        Skill Name
+
+      </label>
+
+      <input
+        type="text"
+        id="skillName"
+        placeholder="Enter Skill Name"
+      />
+
+    </div>
+
+    <!-- Category -->
+
+    <div class="form-group">
+
+      <label>
+
+        Category
+
+      </label>
+
+      <select id="skillCategory">
+
+        <option value="Programming">Programming</option>
+
+        <option value="Frontend">Frontend</option>
+
+        <option value="Backend">Backend</option>
+
+        <option value="Database">Database</option>
+
+        <option value="AI/ML">AI / ML</option>
+
+        <option value="Tools">Tools</option>
+
+        <option value="Cloud">Cloud</option>
+
+        <option value="DevOps">DevOps</option>
+
+        <option value="Other">Other</option>
+
+      </select>
+
+    </div>
+
+    <!-- Skill Level -->
+
+    <div class="form-group">
+
+      <label>
+
+        Skill Level
+
+      </label>
+
+      <select id="skillLevel">
+
+        <option value="Beginner">Beginner</option>
+
+        <option value="Intermediate">Intermediate</option>
+
+        <option value="Advanced">Advanced</option>
+
+        <option value="Expert">Expert</option>
+
+      </select>
+
+    </div>
+
+    <!-- Display Order -->
+
+    <div class="form-group">
+
+      <label>
+
+        Display Order
+
+      </label>
+
+      <input
+        type="number"
+        id="skillOrder"
+        value="1"
+        min="1"
+      />
+
+    </div>
+
+    <!-- Image Source -->
+
+    <div class="form-group">
+
+      <label>
+
+        Image Source
+
+      </label>
+
+      <select id="skillImageType">
+
+        <option value="upload">
+
+          Upload Image
+
+        </option>
+
+        <option value="url">
+
+          Image URL
+
+        </option>
+
+      </select>
+
+    </div>
+
+    <!-- Upload Image -->
+
+    <div class="form-group" id="uploadContainer">
+
+      <label>
+
+        Upload Skill Icon
+
+      </label>
+
+      <input
+        type="file"
+        id="skillImage"
+        accept="image/*"
+      />
+
+    </div>
+
+    <!-- Image URL -->
+
+    <div class="form-group" id="urlContainer">
+
+      <label>
+
+        Image URL
+
+      </label>
+
+      <input
+        type="url"
+        id="skillImageUrl"
+        placeholder="https://..."
+      />
+
+    </div>
+
+    <!-- Preview -->
+
+    <div class="form-group">
+
+      <label>
+
+        Preview
+
+      </label>
+
+      <div id="skillPreview">
+
+        <img
+          id="skillPreviewImage"
+          src=""
+          alt="Skill Preview"
+          style="display:none;"
+        >
+
+        <span id="previewText">
+
+          No Preview
+
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- Featured -->
+
+    <div class="form-group">
+
+      <label>
+
+        <input
+          type="checkbox"
+          id="skillFeatured"
+        />
+
+        Featured Skill
+
+      </label>
+
+    </div>
+
+    <!-- Save -->
+
+    <button
+      class="primary-btn"
+      id="saveSkill">
+
+      Save Skill
+
+    </button>
+
+  </div>
+
+</div>
+
+        <!-- Experience -->
+
+        <section id="experience" class="page">
+          <h2>Experience</h2>
+        </section>
+
+        <!-- Certificates -->
+
+        <section id="certificates" class="page">
+          <h2>Certificates</h2>
+        </section>
+
+        <!-- Courses -->
+
+        <section id="courses" class="page">
+          <h2>Courses</h2>
+        </section>
+
+        <!-- Blogs -->
+
+        <section id="blogs" class="page">
+          <h2>Blogs</h2>
+        </section>
+
+        <!-- Messages -->
+
+        <section id="messages" class="page">
+          <h2>Contact Messages</h2>
+        </section>
+
+        <!-- Settings -->
+
+        <section id="settings" class="page">
+          <h2>Settings</h2>
+        </section>
+      </main>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <!-- 
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="projectModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add Project</h2>
+
+          <button id="closeModal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label> Project Title </label>
+
+            <input id="projectTitle" />
+          </div>
+
+          <div class="form-group">
+            <label> Technology </label>
+
+            <input id="technology" />
+          </div>
+
+          <div class="form-group">
+            <label> GitHub URL </label>
+
+            <input id="githubLink" />
+          </div>
+
+          <div class="form-group">
+            <label> Live Demo </label>
+
+            <input id="liveDemo" />
+          </div>
+
+          <div class="form-group">
+            <label> Category </label>
+
+            <select id="category">
+              <option>AI/ML</option>
+
+              <option>Web</option>
+
+              <option>Android</option>
+
+              <option>Python</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label> Featured </label>
+
+            <select id="featured">
+              <option>Yes</option>
+
+              <option>No</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label> Description </label>
+
+          <textarea id="description"> </textarea>
+        </div>
+
+        <div class="upload-box">
+          <i class="fas fa-image"></i>
+
+          <p>Upload Project Image</p>
+
+          <input type="file" id="projectImage" hidden />
+        </div>
+
+        <br />
+
+        <button class="primary-btn" id="saveProject">Save Project</button>
+      </div>
+    </div> -->
+
+    <!-- Project Drawer -->
+
+    <div class="drawer" id="projectDrawer">
+      <div class="drawer-header">
+        <h2>Add Project</h2>
+
+        <button id="closeDrawer">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <div class="form-group">
+          <label>Project Title</label>
+
+          <input type="text" id="projectTitle" />
+        </div>
+
+        <div class="form-group">
+          <label>Technology</label>
+
+          <input type="text" id="technology" />
+        </div>
+
+        <div class="form-group">
+          <label>GitHub URL</label>
+
+          <input type="url" id="github" />
+        </div>
+
+        <div class="form-group">
+          <label>Live Demo</label>
+
+          <input type="url" id="demo" />
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+
+          <select id="category">
+            <option value="All">All</option>
+
+            <option value="Web">Web</option>
+
+            <option value="AI/ML">AI/ML</option>
+
+            <option value="Python">Python</option>
+
+            <option value="Android">Android</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+
+          <textarea id="description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Project Image</label>
+
+          <input type="file" id="projectImage" />
+        </div>
+
+        <button class="primary-btn" id="saveProject">Save Project</button>
+      </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <script type="module" src="../../js/dashboard.js"></script>
+    <script type="module" src="../../js/project.js"></script>
+  </body>
+</html>

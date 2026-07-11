@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Sarbeswar Panda</title>
+
+    <link rel="stylesheet" href="../../css/admin.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape shape1"></div>
+      <div class="shape shape2"></div>
+    </div>
+
+    <div class="container">
+      <form id="loginForm" autocomplete="on">
+        <h1>Welcome Back</h1>
+        <p>Login to continue</p>
+
+        <div class="input-box">
+          <i class="fa-solid fa-envelope"></i>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="input-box password-box">
+          <i class="fa-solid fa-lock"></i>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            autocomplete="current-password"
+            required
+          />
+
+          <span id="togglePassword">
+            <i class="fa-solid fa-eye"></i>
+          </span>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div id="message"></div>
+      </form>
+    </div>
+
+    <script type="module" src="../../js/login.js"></script>
+  </body>
+</html>

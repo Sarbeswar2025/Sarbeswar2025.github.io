@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firestore Test</title>
+</head>
+<body>
+
+<button id="testBtn">Test Firestore</button>
+
+<script type="module">
+
+import { db } from "./js/firebase.js";
+
+import {
+    collection,
+    addDoc
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
+document.getElementById("testBtn").onclick = async () => {
+
+    try {
+
+        console.log("Adding...");
+        console.log(db);
+
+        const doc = await addDoc(
+            collection(db,"test"),
+            {
+                name:"Sarbeswar"
+            }
+        );
+
+        console.log(doc.id);
+
+        alert("SUCCESS");
+
+    }
+
+    catch(e){
+
+        console.error(e);
+
+        alert(e.message);
+
+    }
+
+};
+
+</script>
+
+</body>
+</html>
