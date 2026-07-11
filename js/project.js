@@ -8,6 +8,7 @@ import {
 
 import { uploadProjectImage, deleteProjectImage } from "./upload.js";
 
+
 let currentImage = "";
 let currentImagePath = "";
 

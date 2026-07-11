@@ -7,6 +7,7 @@
     <title>Portfolio CMS | Admin Dashboard</title>
 
     <link rel="stylesheet" href="../../css/admin.css" />
+    <link rel="stylesheet" href="../../css/admin-skill.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700&display=swap"
@@ -456,403 +457,255 @@
         </section>
 
         <!-- ========================= -->
-<!-- Skills -->
-<!-- ========================= -->
+        <!-- Skills -->
+        <!-- ========================= -->
 
-<section class="page" id="skills">
+        <section class="page" id="skills">
+          <!-- Page Header -->
+          <div class="page-header">
+            <h1 class="page-title">Skills</h1>
 
-  <!-- Page Header -->
-  <div class="page-header">
+            <button class="primary-btn" id="addSkillBtn">
+              <i class="fas fa-plus"></i>
+              Add Skill
+            </button>
+          </div>
 
-    <h1 class="page-title">
-      Skills
-    </h1>
+          <!-- Search & Filter -->
+          <div class="toolbar">
+            <div class="search-box">
+              <input
+                type="text"
+                id="skillSearch"
+                placeholder="Search Skill..."
+              />
+              <i class="fas fa-search"></i>
+            </div>
 
-    <button class="primary-btn" id="addSkillBtn">
-      <i class="fas fa-plus"></i>
-      Add Skill
-    </button>
+            <select id="skillCategoryFilter">
+              <option value="All">All Categories</option>
 
-  </div>
+              <option value="Programming">Programming</option>
 
-  <!-- Search & Filter -->
-  <div class="toolbar">
+              <option value="Frontend">Frontend</option>
 
-    <input
-      type="text"
-      id="skillSearch"
-      placeholder="Search Skill..."
-    />
+              <option value="Backend">Backend</option>
 
-    <select id="skillCategoryFilter">
+              <option value="Database">Database</option>
 
-      <option value="All">All Categories</option>
+              <option value="AI/ML">AI / ML</option>
 
-      <option value="Programming">Programming</option>
+              <option value="Tools">Tools</option>
 
-      <option value="Frontend">Frontend</option>
+              <option value="Cloud">Cloud</option>
 
-      <option value="Backend">Backend</option>
+              <option value="DevOps">DevOps</option>
 
-      <option value="Database">Database</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-      <option value="AI/ML">AI / ML</option>
+          <!-- Statistics -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <h2 id="totalSkills">0</h2>
 
-      <option value="Tools">Tools</option>
+              <p>Total Skills</p>
+            </div>
 
-      <option value="Cloud">Cloud</option>
+            <div class="stat-card">
+              <h2 id="featuredSkills">0</h2>
 
-      <option value="DevOps">DevOps</option>
+              <p>Featured</p>
+            </div>
 
-      <option value="Other">Other</option>
+            <div class="stat-card">
+              <h2 id="programmingSkills">0</h2>
 
-    </select>
+              <p>Programming</p>
+            </div>
 
-  </div>
+            <div class="stat-card">
+              <h2 id="toolSkills">0</h2>
 
-  <!-- Statistics -->
-  <div class="stats-grid">
+              <p>Tools</p>
+            </div>
+          </div>
 
-    <div class="stat-card">
+          <!-- Skills Table -->
+          <div class="table-card">
+            <table>
+              <thead>
+                <tr>
+                  <th>Logo</th>
 
-      <h2 id="totalSkills">0</h2>
+                  <th>Skill</th>
 
-      <p>Total Skills</p>
+                  <th>Category</th>
 
-    </div>
+                  <th>Featured</th>
 
-    <div class="stat-card">
+                  <th>Order</th>
 
-      <h2 id="featuredSkills">0</h2>
+                  <th>Actions</th>
+                </tr>
+              </thead>
 
-      <p>Featured</p>
+              <tbody id="skillTableBody"></tbody>
+            </table>
 
-    </div>
+            <div class="empty-state" id="emptySkills">No Skills Found</div>
+          </div>
 
-    <div class="stat-card">
+          <!-- Pagination -->
+          <div class="pagination">
+            <button id="prevSkillPage">
+              <i class="fas fa-chevron-left"></i>
+            </button>
 
-      <h2 id="programmingSkills">0</h2>
+            <span id="skillPageNumber"> Page 1 of 1 </span>
 
-      <p>Programming</p>
+            <button id="nextSkillPage">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
 
-    </div>
+        <!-- ========================= -->
+        <!-- Skill Drawer -->
+        <!-- ========================= -->
 
-    <div class="stat-card">
+        <div class="drawer" id="skillDrawer">
+          <div class="drawer-header">
+            <h2>Add Skill</h2>
 
-      <h2 id="toolSkills">0</h2>
+            <button id="closeSkillDrawer">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
 
-      <p>Tools</p>
+          <div class="drawer-body">
+            <!-- Skill Name -->
 
-    </div>
+            <div class="form-group">
+              <label> Skill Name </label>
 
-  </div>
+              <input
+                type="text"
+                id="skillName"
+                placeholder="Enter Skill Name"
+              />
+            </div>
 
-  <!-- Skills Table -->
-  <div class="table-card">
+            <!-- Category -->
 
-    <table>
+            <div class="form-group">
+              <label> Category </label>
 
-      <thead>
+              <select id="skillCategory">
+                <option value="Programming">Programming</option>
 
-        <tr>
+                <option value="Frontend">Frontend</option>
 
-          <th>Logo</th>
+                <option value="Backend">Backend</option>
 
-          <th>Skill</th>
+                <option value="Database">Database</option>
 
-          <th>Category</th>
+                <option value="AI/ML">AI / ML</option>
 
-          <th>Featured</th>
+                <option value="Tools">Tools</option>
 
-          <th>Order</th>
+                <option value="Cloud">Cloud</option>
 
-          <th>Actions</th>
+                <option value="DevOps">DevOps</option>
 
-        </tr>
+                <option value="Other">Other</option>
+              </select>
+            </div>
 
-      </thead>
+            <!-- Skill Level -->
 
-      <tbody id="skillTableBody">
+            <div class="form-group">
+              <label> Skill Level </label>
 
-      </tbody>
+              <select id="skillLevel">
+                <option value="Beginner">Beginner</option>
 
-    </table>
+                <option value="Intermediate">Intermediate</option>
 
-    <div class="empty-state" id="emptySkills">
+                <option value="Advanced">Advanced</option>
 
-      No Skills Found
+                <option value="Expert">Expert</option>
+              </select>
+            </div>
 
-    </div>
+            <!-- Display Order -->
 
-  </div>
+            <div class="form-group">
+              <label> Display Order </label>
 
-  <!-- Pagination -->
-  <div class="pagination">
+              <input type="number" id="skillOrder" value="1" min="1" />
+            </div>
 
-    <button id="prevSkillPage">
+            <!-- Image Source -->
 
-      Previous
+            <div class="form-group">
+              <label> Image Source </label>
 
-    </button>
+              <select id="skillImageType">
+                <option value="upload">Upload Image</option>
 
-    <span id="skillPageNumber">
+                <option value="url">Image URL</option>
+              </select>
+            </div>
 
-      Page 1 of 1
+            <!-- Upload Image -->
 
-    </span>
+            <div class="form-group" id="uploadContainer">
+              <label> Upload Skill Icon </label>
 
-    <button id="nextSkillPage">
+              <input type="file" id="skillImage" accept="image/*" />
+            </div>
 
-      Next
+            <!-- Image URL -->
 
-    </button>
+            <div class="form-group" id="urlContainer">
+              <label> Image URL </label>
 
-  </div>
+              <input type="url" id="skillImageUrl" placeholder="https://..." />
+            </div>
 
-</section>
+            <!-- Preview -->
 
-<!-- ========================= -->
-<!-- Skill Drawer -->
-<!-- ========================= -->
+            <div class="form-group">
+              <label> Preview </label>
 
-<div class="drawer" id="skillDrawer">
+              <div id="skillPreview">
+                <img
+                  id="skillPreviewImage"
+                  src=""
+                  alt="Skill Preview"
+                  style="display: none"
+                />
 
-  <div class="drawer-header">
+                <span id="previewText"> No Preview </span>
+              </div>
+            </div>
 
-    <h2>
+            <!-- Featured -->
 
-      Add Skill
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="skillFeatured" />
+                <span>Featured Skill</span>
+              </label>
+            </div>
 
-    </h2>
+            <!-- Save -->
 
-    <button id="closeSkillDrawer">
-
-      <i class="fas fa-times"></i>
-
-    </button>
-
-  </div>
-
-  <div class="drawer-body">
-
-    <!-- Skill Name -->
-
-    <div class="form-group">
-
-      <label>
-
-        Skill Name
-
-      </label>
-
-      <input
-        type="text"
-        id="skillName"
-        placeholder="Enter Skill Name"
-      />
-
-    </div>
-
-    <!-- Category -->
-
-    <div class="form-group">
-
-      <label>
-
-        Category
-
-      </label>
-
-      <select id="skillCategory">
-
-        <option value="Programming">Programming</option>
-
-        <option value="Frontend">Frontend</option>
-
-        <option value="Backend">Backend</option>
-
-        <option value="Database">Database</option>
-
-        <option value="AI/ML">AI / ML</option>
-
-        <option value="Tools">Tools</option>
-
-        <option value="Cloud">Cloud</option>
-
-        <option value="DevOps">DevOps</option>
-
-        <option value="Other">Other</option>
-
-      </select>
-
-    </div>
-
-    <!-- Skill Level -->
-
-    <div class="form-group">
-
-      <label>
-
-        Skill Level
-
-      </label>
-
-      <select id="skillLevel">
-
-        <option value="Beginner">Beginner</option>
-
-        <option value="Intermediate">Intermediate</option>
-
-        <option value="Advanced">Advanced</option>
-
-        <option value="Expert">Expert</option>
-
-      </select>
-
-    </div>
-
-    <!-- Display Order -->
-
-    <div class="form-group">
-
-      <label>
-
-        Display Order
-
-      </label>
-
-      <input
-        type="number"
-        id="skillOrder"
-        value="1"
-        min="1"
-      />
-
-    </div>
-
-    <!-- Image Source -->
-
-    <div class="form-group">
-
-      <label>
-
-        Image Source
-
-      </label>
-
-      <select id="skillImageType">
-
-        <option value="upload">
-
-          Upload Image
-
-        </option>
-
-        <option value="url">
-
-          Image URL
-
-        </option>
-
-      </select>
-
-    </div>
-
-    <!-- Upload Image -->
-
-    <div class="form-group" id="uploadContainer">
-
-      <label>
-
-        Upload Skill Icon
-
-      </label>
-
-      <input
-        type="file"
-        id="skillImage"
-        accept="image/*"
-      />
-
-    </div>
-
-    <!-- Image URL -->
-
-    <div class="form-group" id="urlContainer">
-
-      <label>
-
-        Image URL
-
-      </label>
-
-      <input
-        type="url"
-        id="skillImageUrl"
-        placeholder="https://..."
-      />
-
-    </div>
-
-    <!-- Preview -->
-
-    <div class="form-group">
-
-      <label>
-
-        Preview
-
-      </label>
-
-      <div id="skillPreview">
-
-        <img
-          id="skillPreviewImage"
-          src=""
-          alt="Skill Preview"
-          style="display:none;"
-        >
-
-        <span id="previewText">
-
-          No Preview
-
-        </span>
-
-      </div>
-
-    </div>
-
-    <!-- Featured -->
-
-    <div class="form-group">
-
-      <label>
-
-        <input
-          type="checkbox"
-          id="skillFeatured"
-        />
-
-        Featured Skill
-
-      </label>
-
-    </div>
-
-    <!-- Save -->
-
-    <button
-      class="primary-btn"
-      id="saveSkill">
-
-      Save Skill
-
-    </button>
-
-  </div>
-
-</div>
+            <button class="primary-btn" class="primary-btn" id="saveSkill">Save Skill</button>
+          </div>
+        </div>
 
         <!-- Experience -->
 
@@ -1047,5 +900,6 @@
 
     <script type="module" src="../../js/dashboard.js"></script>
     <script type="module" src="../../js/project.js"></script>
+    <script type="module" src="../../js/skills.js"></script>
   </body>
 </html>
