@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="../../css/admin.css" />
     <link rel="stylesheet" href="../../css/admin-skill.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/admin-blog.css" />
+
+    
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700&display=swap"
@@ -69,10 +73,10 @@
           <span>Courses</span>
         </a>
 
-        <a href="#" class="nav-link" data-page="blogs">
+        <!-- <a href="#" class="nav-link" data-page="blogs">
           <i class="fas fa-blog"></i>
           <span>Blogs</span>
-        </a>
+        </a> -->
 
         <a href="#" class="nav-link" data-page="messages">
           <i class="fas fa-envelope"></i>
@@ -726,11 +730,247 @@
           <h2>Courses</h2>
         </section>
 
-        <!-- Blogs -->
+        <!-- =====================================================
+     BLOGS
+====================================================== -->
 
-        <section id="blogs" class="page">
-          <h2>Blogs</h2>
-        </section>
+<section class="page" id="blogs">
+
+    <!-- ==========================
+         Page Header
+    ========================== -->
+
+    <div class="page-header">
+
+        <h1 class="page-title">Blog Management</h1>
+
+        <button class="primary-btn" id="addBlogBtn">
+
+            <i class="fas fa-plus"></i>
+
+            New Blog
+
+        </button>
+
+    </div>
+
+    <!-- ==========================
+         Statistics
+    ========================== -->
+
+    <div class="blog-stats-grid">
+
+        <div class="blog-stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fas fa-newspaper"></i>
+
+            </div>
+
+            <h2 id="totalBlogs">0</h2>
+
+            <p>Total Blogs</p>
+
+        </div>
+
+        <div class="blog-stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fas fa-globe"></i>
+
+            </div>
+
+            <h2 id="publishedBlogs">0</h2>
+
+            <p>Published</p>
+
+        </div>
+
+        <div class="blog-stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fas fa-file"></i>
+
+            </div>
+
+            <h2 id="draftBlogs">0</h2>
+
+            <p>Drafts</p>
+
+        </div>
+
+        <div class="blog-stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fas fa-star"></i>
+
+            </div>
+
+            <h2 id="featuredBlogs">0</h2>
+
+            <p>Featured</p>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================
+         Toolbar
+    ========================== -->
+
+    <div class="blog-toolbar">
+
+        <input
+            type="text"
+            id="blogSearch"
+            placeholder="Search blog..."
+        >
+
+        <select id="blogCategoryFilter">
+
+            <option value="All">All Categories</option>
+
+            <option value="AI & ML">AI & ML</option>
+
+            <option value="Python">Python</option>
+
+            <option value="Java">Java</option>
+
+            <option value="JavaScript">JavaScript</option>
+
+            <option value="React">React</option>
+
+            <option value="Node.js">Node.js</option>
+
+            <option value="Flask">Flask</option>
+
+            <option value="Django">Django</option>
+
+            <option value="Cloud">Cloud</option>
+
+            <option value="AWS">AWS</option>
+
+            <option value="Firebase">Firebase</option>
+
+            <option value="Supabase">Supabase</option>
+
+            <option value="Tutorial">Tutorial</option>
+
+            <option value="Career">Career</option>
+
+            <option value="Interview">Interview</option>
+
+            <option value="Other">Other</option>
+
+        </select>
+
+        <select id="blogStatusFilter">
+
+            <option value="All">All Status</option>
+
+            <option value="Published">Published</option>
+
+            <option value="Draft">Draft</option>
+
+            <option value="Scheduled">Scheduled</option>
+
+            <option value="Archived">Archived</option>
+
+        </select>
+
+        <select id="blogSort">
+
+            <option value="newest">Newest First</option>
+
+            <option value="oldest">Oldest First</option>
+
+            <option value="title">Title A-Z</option>
+
+            <option value="views">Most Viewed</option>
+
+        </select>
+
+    </div>
+
+    <!-- ==========================
+         Blog Table
+    ========================== -->
+
+    <div class="blog-table-card">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Cover</th>
+
+                    <th>Title</th>
+
+                    <th>Category</th>
+
+                    <th>Status</th>
+
+                    <th>Views</th>
+
+                    <th>Featured</th>
+
+                    <th>Published</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="blogTableBody"></tbody>
+
+        </table>
+
+        <div
+            class="empty-state"
+            id="emptyBlogs"
+        >
+
+            No Blogs Found
+
+        </div>
+
+    </div>
+
+    <!-- ==========================
+         Pagination
+    ========================== -->
+
+    <div class="blog-pagination">
+
+        <button id="prevBlogPage">
+
+            <i class="fas fa-chevron-left"></i>
+
+        </button>
+
+        <span id="blogPageNumber">
+
+            Page 1 of 1
+
+        </span>
+
+        <button id="nextBlogPage">
+
+            <i class="fas fa-chevron-right"></i>
+
+        </button>
+
+    </div>
+
+</section>
+
 
         <!-- Messages -->
 

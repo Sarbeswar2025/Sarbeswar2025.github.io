@@ -171,6 +171,21 @@ if (closeDrawer && projectDrawer) {
 
 }
 
+// ==========================
+// New Blog
+// ==========================
+
+// const addBlogBtn = document.getElementById("addBlogBtn");
+
+// if (addBlogBtn) {
+
+//     addBlogBtn.addEventListener("click", () => {
+
+//         window.open("../../editor/editor.html", "_blank");
+
+//     });
+
+// }
 
 //======================================
 // Visitor count

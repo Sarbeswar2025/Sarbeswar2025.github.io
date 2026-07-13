@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#2563eb" />
+
+    <title>Blog Editor | Sarbeswar CMS</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- CKEditor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/admin.css" />
+
+    <!-- Editor CSS -->
+    <link rel="stylesheet" href="editor.css" />
+  </head>
+
+  <body>
+    <div class="editor-page">
+      <!-- ==========================
+         Header
+    ========================== -->
+
+      <header class="editor-header">
+        <div class="editor-left">
+          <button type="button" id="backBlog" class="secondary-btn">
+            <i class="fas fa-arrow-left"></i>
+
+            Back
+          </button>
+
+          <div>
+            <h2 id="editorTitle">Create Blog</h2>
+
+            <small id="saveStatus"> Draft </small>
+          </div>
+        </div>
+
+        <div class="editor-right">
+          <button type="button" id="previewBlog" class="secondary-btn">
+            <i class="fas fa-eye"></i>
+
+            Preview
+          </button>
+
+          <button type="button" id="saveDraft" class="secondary-btn">
+            <i class="fas fa-save"></i>
+
+            Save Draft
+          </button>
+
+          <button type="button" id="publishBlog" class="primary-btn">
+            <i class="fas fa-paper-plane"></i>
+
+            Publish
+          </button>
+        </div>
+      </header>
+
+      <!-- ==========================
+         Status Bar
+    ========================== -->
+
+      <div class="editor-status-bar">
+        <span>
+          <i class="fas fa-circle"></i>
+
+          <span id="blogStatusText"> Draft </span>
+        </span>
+
+        <span>
+          <i class="fas fa-book-reader"></i>
+
+          <span id="readingTime"> 0 min read </span>
+        </span>
+
+        <span>
+          <i class="fas fa-file-word"></i>
+
+          <span id="wordCount"> 0 Words </span>
+        </span>
+
+        <span>
+          <i class="fas fa-clock"></i>
+
+          <span id="lastSaved"> Never Saved </span>
+        </span>
+      </div>
+
+      <!-- ==========================
+         Main Layout
+    ========================== -->
+
+      <main class="editor-main">
+        <!-- =====================================
+             Left Content
+        ====================================== -->
+
+        <section class="editor-content">
+          <!-- Hidden Blog ID -->
+
+          <input type="hidden" id="blogId" />
+
+          <!-- ==========================
+                 Cover Image
+            ========================== -->
+
+          <div class="editor-card">
+            <h3>Cover Image</h3>
+
+            <div class="blog-upload" id="blogUploadBox">
+              <input type="file" id="blogCover" accept="image/*" hidden />
+
+              <i class="fas fa-cloud-upload-alt"></i>
+
+              <h4>Upload Cover Image</h4>
+
+              <p>Click or Drag & Drop</p>
+            </div>
+
+            <div id="blogPreview">
+              <span> No Image Selected </span>
+            </div>
+
+            <div class="upload-progress" id="uploadProgress">
+              <div class="upload-bar" id="uploadBar"></div>
+            </div>
+          </div>
+
+          <!-- ==========================
+                 Blog Information
+            ========================== -->
+
+          <div class="editor-card">
+            <h3>Blog Information</h3>
+
+            <div class="form-group">
+              <label> Blog Title </label>
+
+              <input
+                type="text"
+                id="blogHeading"
+                autocomplete="off"
+                placeholder="Write your blog title..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label> URL Slug </label>
+
+              <input type="text" id="blogSlug" placeholder="Auto Generated" />
+
+              <small class="slug-preview">
+                https://sarbeswarpanda.me/blog/
+
+                <span id="slugPreview"> your-blog </span>
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label> Short Description </label>
+
+              <textarea
+                id="blogExcerpt"
+                rows="4"
+                placeholder="Write a short description..."
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label> Category </label>
+
+                <select id="blogCategory">
+                  <option value="">Select Category</option>
+
+                  <option>AI & ML</option>
+
+                  <option>Python</option>
+
+                  <option>Java</option>
+
+                  <option>JavaScript</option>
+
+                  <option>React</option>
+
+                  <option>Node.js</option>
+
+                  <option>Flask</option>
+
+                  <option>Django</option>
+
+                  <option>Firebase</option>
+
+                  <option>Supabase</option>
+
+                  <option>AWS</option>
+
+                  <option>Cloud</option>
+
+                  <option>Cyber Security</option>
+
+                  <option>Interview</option>
+
+                  <option>Career</option>
+
+                  <option>Tutorial</option>
+
+                  <option>News</option>
+
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label> Tags </label>
+
+                <input
+                  type="text"
+                  id="blogTags"
+                  placeholder="firebase, python, ai"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================
+                 SEO
+            ========================== -->
+
+          <div class="editor-card">
+            <h3>SEO Settings</h3>
+
+            <div class="form-group">
+              <label> Meta Title </label>
+
+              <input type="text" id="metaTitle" />
+            </div>
+
+            <div class="form-group">
+              <label> Meta Description </label>
+
+              <textarea id="metaDescription" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label> Keywords </label>
+
+              <input
+                type="text"
+                id="metaKeywords"
+                placeholder="seo, javascript, firebase"
+              />
+            </div>
+          </div>
+          <!-- ==========================
+                 Blog Content
+            ========================== -->
+
+          <div class="editor-card">
+            <h3>Blog Content</h3>
+
+            <div id="editorLoading">
+              <i class="fas fa-spinner fa-spin"></i>
+
+              Loading Editor...
+            </div>
+
+            <textarea id="editor"></textarea>
+          </div>
+        </section>
+
+        <!-- =====================================
+             Right Sidebar
+        ====================================== -->
+
+        <aside class="editor-sidebar">
+          <!-- Publish -->
+
+          <div class="editor-card">
+            <h3>Publish Settings</h3>
+
+            <div class="form-group">
+              <label> Status </label>
+
+              <select id="blogStatus">
+                <option value="Draft">Draft</option>
+
+                <option value="Published">Published</option>
+
+                <option value="Scheduled">Scheduled</option>
+
+                <option value="Archived">Archived</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label> Publish Date </label>
+
+              <input type="datetime-local" id="publishDate" />
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="blogFeatured" />
+
+                Featured Blog
+              </label>
+            </div>
+          </div>
+
+          <!-- Statistics -->
+
+          <div class="editor-card">
+            <h3>Blog Statistics</h3>
+
+            <div class="stats-list">
+              <div class="stat-item">
+                <span> Reading Time </span>
+
+                <strong id="sidebarReadingTime"> 0 min </strong>
+              </div>
+
+              <div class="stat-item">
+                <span> Words </span>
+
+                <strong id="sidebarWordCount"> 0 </strong>
+              </div>
+
+              <div class="stat-item">
+                <span> Characters </span>
+
+                <strong id="characterCount"> 0 </strong>
+              </div>
+
+              <div class="stat-item">
+                <span> Views </span>
+
+                <strong id="blogViews"> 0 </strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Author -->
+
+          <div class="editor-card">
+            <h3>Author</h3>
+
+            <div class="author-box">
+              <img
+                src="../assets/images/sarbeswar.jpg"
+                alt="Author"
+                id="authorImage"
+              />
+
+              <div>
+                <h4 id="authorName">Sarbeswar Panda</h4>
+
+                <small> Administrator </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+
+          <div class="editor-card">
+            <h3>Quick Actions</h3>
+
+            <button
+              type="button"
+              class="secondary-btn w-100"
+              id="saveDraftSidebar"
+            >
+              <i class="fas fa-save"></i>
+
+              Save Draft
+            </button>
+
+            <button
+              type="button"
+              class="secondary-btn w-100"
+              id="previewSidebar"
+            >
+              <i class="fas fa-eye"></i>
+
+              Preview
+            </button>
+
+            <button type="button" class="primary-btn w-100" id="publishSidebar">
+              <i class="fas fa-paper-plane"></i>
+
+              Publish Blog
+            </button>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <!-- Hidden Image Upload -->
+
+    <input type="file" id="editorImageUpload" accept="image/*" hidden />
+
+    <!-- =====================================
+     Scripts
+====================================== -->
+
+    <script type="module" src="../js/firebase.js"></script>
+
+    <script type="module" src="../js/firestore.js"></script>
+
+    <script type="module" src="../js/supabase.js"></script>
+
+    <script type="module" src="blog-upload.js"></script>
+
+    <script type="module" src="editor.js"></script>
+
+    <script type="module" src="editor-autosave.js"></script>
+
+    <script type="module" src="editor-toolbar.js"></script>
+
+    <script type="module" src="editor-upload.js"></script>
+  </body>
+</html>

@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blogs | Sarbeswar Panda</title>
+
+    <meta
+      name="description"
+      content="Explore AI, Machine Learning, Web Development, Cloud Computing and Programming articles written by Sarbeswar Panda."
+    />
+
+    <meta
+      name="keywords"
+      content="AI, Machine Learning, Python, Java, Web Development, Cloud Computing, Blogs"
+    />
+
+    <meta name="author" content="Sarbeswar Panda" />
+
+    <!-- Font Awesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Website CSS -->
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Blog CSS -->
+
+    <link rel="stylesheet" href="blogs.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         Navbar
+    ====================================================== -->
+
+    <header class="navbar">
+      <div class="container">
+        <a href="../index.html" class="logo">
+          <i class="fas fa-code"></i>
+
+          Sarbeswar Panda
+        </a>
+
+        <nav>
+          <a href="../index.html">Home</a>
+
+          <a href="../projects.html">Projects</a>
+
+          <a href="../skills.html">Skills</a>
+
+          <a href="blogs.html" class="active"> Blogs </a>
+
+          <a href="../contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         Hero Section
+    ====================================================== -->
+
+    <section class="blogs-hero">
+      <div class="container">
+        <span class="section-badge"> BLOG </span>
+
+        <h1>Latest Articles & Tutorials</h1>
+
+        <p>
+          Read practical articles on Artificial Intelligence, Machine Learning,
+          Web Development, Cloud Computing, Programming, Career Guidance and
+          Technology.
+        </p>
+
+        <div class="hero-stats">
+          <div>
+            <h3 id="totalBlogs">0</h3>
+
+            <span> Articles </span>
+          </div>
+
+          <div>
+            <h3 id="totalViews">0</h3>
+
+            <span> Readers </span>
+          </div>
+
+          <div>
+            <h3 id="totalCategories">0</h3>
+
+            <span> Categories </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Search & Filter
+    ====================================================== -->
+
+    <section class="blog-toolbar">
+      <div class="container">
+        <div class="toolbar-left">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+
+            <input type="text" id="blogSearch" placeholder="Search blogs..." />
+          </div>
+        </div>
+
+        <div class="toolbar-right">
+          <select id="categoryFilter">
+            <option value="All">All Categories</option>
+
+            <option value="Artificial Intelligence">
+              Artificial Intelligence
+            </option>
+
+            <option value="Machine Learning">Machine Learning</option>
+
+            <option value="Deep Learning">Deep Learning</option>
+
+            <option value="Python">Python</option>
+
+            <option value="Java">Java</option>
+
+            <option value="JavaScript">JavaScript</option>
+
+            <option value="Web Development">Web Development</option>
+
+            <option value="Cloud">Cloud Computing</option>
+
+            <option value="Database">Database</option>
+
+            <option value="Career">Career</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Featured Blog
+    ====================================================== -->
+
+    <section class="featured-blog-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Article</h2>
+        </div>
+
+        <div id="featuredBlog" class="featured-blog-card">
+          <!-- Loaded from Firestore -->
+        </div>
+      </div>
+    </section>
+    <!-- =====================================================
+         Latest Blogs
+    ====================================================== -->
+
+    <section class="blogs-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge"> ARTICLES </span>
+
+            <h2>Latest Blogs</h2>
+          </div>
+
+          <div class="blog-count">
+            <span id="showingBlogs"> Showing 0 Blogs </span>
+          </div>
+        </div>
+
+        <!-- ==========================
+                 Loading Skeleton
+            ========================== -->
+
+        <div id="blogSkeleton" class="blog-grid">
+          <div class="blog-card skeleton-card"></div>
+
+          <div class="blog-card skeleton-card"></div>
+
+          <div class="blog-card skeleton-card"></div>
+
+          <div class="blog-card skeleton-card"></div>
+
+          <div class="blog-card skeleton-card"></div>
+
+          <div class="blog-card skeleton-card"></div>
+        </div>
+
+        <!-- ==========================
+                 Blog Grid
+            ========================== -->
+
+        <div id="blogGrid" class="blog-grid">
+          <!-- ==========================
+                     Blog Cards
+                     Loaded from blogs.js
+                ========================== -->
+        </div>
+
+        <!-- ==========================
+                 Empty State
+            ========================== -->
+
+        <div id="emptyBlogs" class="empty-state">
+          <i class="fas fa-newspaper"></i>
+
+          <h3>No Blogs Found</h3>
+
+          <p>No articles match your search or selected category.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Categories
+    ====================================================== -->
+
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Browse Categories</h2>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-chip active" data-category="All">All</button>
+
+          <button class="category-chip" data-category="Artificial Intelligence">
+            AI
+          </button>
+
+          <button class="category-chip" data-category="Machine Learning">
+            Machine Learning
+          </button>
+
+          <button class="category-chip" data-category="Deep Learning">
+            Deep Learning
+          </button>
+
+          <button class="category-chip" data-category="Python">Python</button>
+
+          <button class="category-chip" data-category="Java">Java</button>
+
+          <button class="category-chip" data-category="JavaScript">
+            JavaScript
+          </button>
+
+          <button class="category-chip" data-category="Web Development">
+            Web Development
+          </button>
+
+          <button class="category-chip" data-category="Cloud">Cloud</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Pagination
+    ====================================================== -->
+
+    <section class="pagination-section">
+      <div class="container">
+        <div class="pagination">
+          <button id="prevPage">
+            <i class="fas fa-angle-left"></i>
+
+            Previous
+          </button>
+
+          <div id="paginationNumbers">
+            <!-- Generated by blogs.js -->
+          </div>
+
+          <button id="nextPage">
+            Next
+
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- =====================================================
+         Newsletter
+    ====================================================== -->
+
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <span class="section-badge"> NEWSLETTER </span>
+
+          <h2>Stay Updated</h2>
+
+          <p>
+            Subscribe to receive the latest tutorials, AI articles, programming
+            tips and technology updates.
+          </p>
+
+          <form id="newsletterForm" class="newsletter-form">
+            <input
+              type="email"
+              id="subscriberEmail"
+              placeholder="Enter your email address"
+            />
+
+            <button type="submit" class="primary-btn">
+              <i class="fas fa-paper-plane"></i>
+
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Popular Tags
+    ====================================================== -->
+
+    <section class="popular-tags">
+      <div class="container">
+        <div class="section-header">
+          <h2>Popular Topics</h2>
+        </div>
+
+        <div class="tag-list">
+          <a href="#" class="tag"> #ArtificialIntelligence </a>
+
+          <a href="#" class="tag"> #MachineLearning </a>
+
+          <a href="#" class="tag"> #DeepLearning </a>
+
+          <a href="#" class="tag"> #Python </a>
+
+          <a href="#" class="tag"> #Java </a>
+
+          <a href="#" class="tag"> #JavaScript </a>
+
+          <a href="#" class="tag"> #React </a>
+
+          <a href="#" class="tag"> #CloudComputing </a>
+
+          <a href="#" class="tag"> #AWS </a>
+
+          <a href="#" class="tag"> #Programming </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Scroll To Top
+    ====================================================== -->
+
+    <button id="scrollTopBtn" class="scroll-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- =====================================================
+         Footer
+    ====================================================== -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>Sarbeswar Panda</h3>
+
+            <p>
+              AI & Machine Learning Developer passionate about building
+              intelligent applications and sharing knowledge through blogs.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <a href="../index.html"> Home </a>
+
+            <a href="../projects.html"> Projects </a>
+
+            <a href="../skills.html"> Skills </a>
+
+            <a href="blogs.html"> Blogs </a>
+
+            <a href="../contact.html"> Contact </a>
+          </div>
+
+          <div class="footer-social">
+            <a href="#">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-github"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Sarbeswar Panda. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         Scripts
+    ====================================================== -->
+
+    <script type="module" src="blogs.js"></script>
+  </body>
+</html>
