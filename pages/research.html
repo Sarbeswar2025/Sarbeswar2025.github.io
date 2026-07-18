@@ -1,0 +1,1437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Research | Sarbeswar Panda</title>
+    <!-- Favicons / Site Logo (browser tab, mobile, search) -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/logo.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/logo.png"
+      sizes="16x16"
+    />
+    <link rel="apple-touch-icon" href="assets/images/logo.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="icon" href="assets/images/favicon.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/research.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <!-- Sticky Navbar -->
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__brand" href="#home" aria-label="Go to Home">
+          <img
+            class="nav__logoImg"
+            src="../assets/images/logo.png"
+            alt="Sarbeswar Panda"
+            width="34"
+            height="34"
+            loading="eager"
+            decoding="async"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'grid';
+            "
+          />
+          <span class="nav__logo" aria-hidden="true" style="display: none"
+            >SP</span
+          >
+          <span class="nav__name">Sarbeswar Panda</span>
+        </a>
+
+        <div class="nav__right">
+          <div class="nav__controls" aria-label="Theme and menu">
+            <div class="langSwitch" id="langSwitch" aria-label="Translate">
+              <button
+                class="langSwitch__btn"
+                type="button"
+                aria-label="Translate"
+                aria-haspopup="menu"
+                aria-expanded="false"
+                title="Translate"
+              >
+                <img
+                  class="langSwitch__icon"
+                  src="../assets/icons/translate.svg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </button>
+
+              <div
+                class="langSwitch__menu"
+                role="menu"
+                aria-label="Select language"
+              >
+                <button
+                  class="langSwitch__item"
+                  type="button"
+                  data-lang="en"
+                  role="menuitem"
+                >
+                  English
+                </button>
+                <button
+                  class="langSwitch__item"
+                  type="button"
+                  data-lang="hi"
+                  role="menuitem"
+                >
+                  Hindi
+                </button>
+                <button
+                  class="langSwitch__item"
+                  type="button"
+                  data-lang="or"
+                  role="menuitem"
+                >
+                  Odia
+                </button>
+
+                <div class="langSwitch__gtWrap">
+                  <div id="google_translate_element"></div>
+                  <div class="langSwitch__note">
+                    Translations powered by Google Translate.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="icon-btn"
+              id="themeToggle"
+              type="button"
+              aria-label="Toggle dark mode"
+              title="Toggle theme"
+            >
+              <span class="icon-btn__icon" aria-hidden="true">
+                <svg
+                  class="icon icon--sun"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.93 4.93 3.52 3.52M20.48 20.48l-1.41-1.41M19.07 4.93l1.41-1.41M3.52 20.48l1.41-1.41"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <svg
+                  class="icon icon--moon"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 13.2A8.4 8.4 0 0 1 10.8 3 7.2 7.2 0 1 0 21 13.2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <button
+              class="nav__toggle"
+              id="navToggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="navLinks"
+            >
+              <span class="nav__toggleLines" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="nav__links" id="navLinks">
+            <a class="nav__link" href="../index.html">Home</a>
+            <a class="nav__link" href="about.html">About</a>
+            <a class="nav__link" href="skills.html">Skills</a>
+            <a class="nav__link" href="projects.html">Projects</a>
+            <a class="nav__link" href="experience.html">Experience</a>
+            <a
+              class="nav__link"
+              href="Links.html"
+              target="_blank"
+              rel="noreferrer"
+              >Links</a
+            >
+            <a class="nav__link" href="contact.html">Contact</a>
+            <a class="nav__link is-active" href="#">Researh</a>
+            <a
+              class="nav__link"
+              href="Certification.html"
+              target="_blank"
+              rel="noreferrer"
+              >Certification</a
+            >
+            <a
+              class="nav__link"
+              href="../assets/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              >Resume</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ==========================================
+            HERO SECTION
+=========================================== -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <span class="hero-badge">
+              <i class="fa-solid fa-microscope"></i>
+              AI Research Portfolio
+            </span>
+
+            <h1 class="mt-4">Research Publications</h1>
+
+            <p class="hero-text mt-4">
+              Exploring Artificial Intelligence, Deep Learning, Computer Vision,
+              and Machine Learning through practical research, innovative
+              solutions, and academic publications.
+            </p>
+
+            <div class="hero-buttons mt-5">
+              <a href="#featured-paper" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-book-open"></i>
+                Explore Research
+              </a>
+
+              <a href="#timeline" class="btn btn-outline-light btn-lg ms-3">
+                <i class="fa-solid fa-arrow-down"></i>
+                Research Journey
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+        FEATURED RESEARCH PAPER
+=========================================== -->
+
+    <section id="featured-paper">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <span class="subtitle"> Featured Publication </span>
+
+          <h2>Research Paper</h2>
+
+          <p>
+            A lightweight deep learning solution for real-time facial emotion
+            recognition using CNN and Haar Cascade.
+          </p>
+        </div>
+
+        <div class="row align-items-center gy-5">
+          <!-- LEFT -->
+
+          <div class="col-lg-5">
+            <div class="paper-preview text-center">
+              <img
+                src="../assets/images/research-paper.png"
+                class="paper-cover img-fluid"
+                alt="Research Paper"
+              />
+
+              <div class="publication-status mt-4">
+                <span class="badge bg-success">
+                  <i class="fa-solid fa-circle-check"></i>
+
+                  Published
+                </span>
+
+                <span class="badge bg-primary"> 2026 </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="col-lg-7">
+            <div class="paper-card">
+              <h2 class="paper-title">
+                Real-Time Facial Emotion Recognition Using Computationally
+                Efficient CNN and Haar Cascade Face Detection
+              </h2>
+
+              <p class="paper-domain">
+                Artificial Intelligence • Deep Learning • Computer Vision
+              </p>
+
+              <!-- Research Metrics -->
+
+              <div class="row g-3 mt-4">
+                <div class="col-md-6 col-lg-3">
+                  <div class="metric-card">
+                    <h3>60.98%</h3>
+
+                    <p>Accuracy</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="metric-card">
+                    <h3>FER2013</h3>
+
+                    <p>Dataset</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="metric-card">
+                    <h3>CNN</h3>
+
+                    <p>Model</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="metric-card">
+                    <h3>2026</h3>
+
+                    <p>Published</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Paper Details -->
+
+              <div class="paper-info mt-5">
+                <div class="info-item">
+                  <span> Author </span>
+
+                  <p>Sarbeswar Panda</p>
+                </div>
+
+                <div class="info-item">
+                  <span> Department </span>
+
+                  <p>Computer Science & Engineering (AI)</p>
+                </div>
+
+                <div class="info-item">
+                  <span> Institution </span>
+
+                  <p>GIFT Autonomous College, Bhubaneswar</p>
+                </div>
+
+                <div class="info-item">
+                  <span> Framework </span>
+
+                  <p>TensorFlow • Keras • Flask</p>
+                </div>
+
+                <div class="info-item">
+                  <span> Language </span>
+
+                  <p>Python</p>
+                </div>
+
+                <div class="info-item">
+                  <span> Dataset </span>
+
+                  <p>FER-2013</p>
+                </div>
+              </div>
+
+              <!-- Technology Chips -->
+
+              <div class="tech-stack mt-5">
+                <span>
+                  <i class="fa-brands fa-python"></i>
+                  Python
+                </span>
+
+                <span> TensorFlow </span>
+
+                <span> Keras </span>
+
+                <span> OpenCV </span>
+
+                <span> Flask </span>
+
+                <span> CNN </span>
+
+                <span> Computer Vision </span>
+
+                <span> Deep Learning </span>
+              </div>
+
+              <!-- Buttons -->
+
+              <div class="paper-buttons mt-5">
+                <a href="https://zenodo.org/records/21416753" target="_blank" class="btn paper-btn">
+                  <i class="fa-solid fa-file-pdf"></i>
+
+                  Read Paper
+                </a>
+
+                <a href="#" class="btn paper-btn">
+                  <i class="fa-brands fa-github"></i>
+
+                  GitHub
+                </a>
+
+                <a href="../assets/research-paper/research1.pdf" target="_blank" class="btn paper-btn">
+                  <i class="fa-solid fa-download"></i>
+
+                  Download PDF
+                </a>
+
+                <a href="https://zenodo.org/records/21416753" class="btn paper-btn">
+                  <i class="fa-solid fa-quote-right"></i>
+
+                  Citation
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+            RESEARCH METRICS
+=========================================== -->
+
+    <section class="research-overview">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <span class="subtitle"> Research Overview </span>
+
+          <h2>Research Statistics</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="overview-card">
+              <i class="fa-solid fa-book-open"></i>
+
+              <h3>01</h3>
+
+              <p>Published Paper</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="overview-card">
+              <i class="fa-solid fa-flask"></i>
+
+              <h3>07+</h3>
+
+              <p>AI Projects</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="overview-card">
+              <i class="fa-solid fa-code"></i>
+
+              <h3>12+</h3>
+
+              <p>Technologies</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="overview-card">
+              <i class="fa-solid fa-award"></i>
+
+              <h3>2026</h3>
+
+              <p>Research Started</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+            ABSTRACT SECTION
+=========================================== -->
+
+<section id="abstract" class="py-5">
+
+    <div class="container">
+
+        <div class="section-title text-center mb-5">
+
+            <span class="subtitle">
+                Research Summary
+            </span>
+
+            <h2>
+                Abstract
+            </h2>
+
+            <p>
+                Overview of the proposed facial emotion recognition system.
+            </p>
+
+        </div>
+
+        <div class="abstract-card">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h3>
+                        Facial Emotion Recognition Using Deep Learning
+                    </h3>
+
+                    <p class="mt-4">
+
+                        Human emotion recognition plays a significant role in
+                        human-computer interaction, healthcare, education,
+                        surveillance, and intelligent systems. This research
+                        presents a lightweight Convolutional Neural Network
+                        (CNN) integrated with Haar Cascade face detection for
+                        real-time facial emotion recognition.
+
+                    </p>
+
+                    <p>
+
+                        The proposed model was trained using the FER-2013
+                        dataset containing seven emotional classes:
+                        Angry, Disgust, Fear, Happy, Sad, Surprise, and
+                        Neutral. The trained model was deployed as a Flask
+                        web application, allowing users to upload images
+                        and receive instant emotion predictions.
+
+                    </p>
+
+                    <p>
+
+                        The experimental results achieved approximately
+                        <strong>60.98% test accuracy</strong>, demonstrating
+                        that lightweight CNN models can provide effective
+                        emotion recognition while maintaining fast inference
+                        suitable for real-world applications.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="abstract-side">
+
+                        <div class="mini-card">
+
+                            <i class="fa-solid fa-brain"></i>
+
+                            <h4>
+
+                                AI Powered
+
+                            </h4>
+
+                        </div>
+
+                        <div class="mini-card">
+
+                            <i class="fa-solid fa-camera"></i>
+
+                            <h4>
+
+                                Computer Vision
+
+                            </h4>
+
+                        </div>
+
+                        <div class="mini-card">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            <h4>
+
+                                60.98% Accuracy
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+        KEY CONTRIBUTIONS
+=========================================== -->
+
+<section id="contributions">
+
+    <div class="container">
+
+        <div class="section-title text-center mb-5">
+
+            <span class="subtitle">
+
+                Research Highlights
+
+            </span>
+
+            <h2>
+
+                Key Contributions
+
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="contribution-card">
+
+                    <i class="fa-solid fa-face-smile"></i>
+
+                    <h4>
+
+                        Seven Emotion Detection
+
+                    </h4>
+
+                    <p>
+
+                        Detects Angry, Happy, Sad, Fear, Surprise,
+                        Neutral and Disgust emotions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="contribution-card">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    <h4>
+
+                        Lightweight CNN
+
+                    </h4>
+
+                    <p>
+
+                        Optimized CNN architecture for efficient
+                        prediction and reduced computational cost.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="contribution-card">
+
+                    <i class="fa-solid fa-camera-retro"></i>
+
+                    <h4>
+
+                        Haar Cascade
+
+                    </h4>
+
+                    <p>
+
+                        Accurate face localization before emotion
+                        classification.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="contribution-card">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <h4>
+
+                        Flask Deployment
+
+                    </h4>
+
+                    <p>
+
+                        Developed a responsive web application
+                        for real-time emotion prediction.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="contribution-card">
+
+                    <i class="fa-solid fa-database"></i>
+
+                    <h4>
+
+                        FER-2013 Dataset
+
+                    </h4>
+
+                    <p>
+
+                        Trained and evaluated using one of the
+                        most widely accepted emotion datasets.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="contribution-card">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                    <h4>
+
+                        Real-Time Prediction
+
+                    </h4>
+
+                    <p>
+
+                        Fast inference suitable for practical
+                        AI applications and demonstrations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+        TECHNOLOGY STACK
+=========================================== -->
+
+<section id="technology">
+
+    <div class="container">
+
+        <div class="section-title text-center mb-5">
+
+            <span class="subtitle">
+
+                Development Stack
+
+            </span>
+
+            <h2>
+
+                Technologies Used
+
+            </h2>
+
+        </div>
+
+        <div class="tech-grid">
+
+            <div class="tech-item">
+                <i class="fa-brands fa-python"></i>
+                <span>Python</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-solid fa-brain"></i>
+                <span>TensorFlow</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-solid fa-network-wired"></i>
+                <span>Keras</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-solid fa-camera"></i>
+                <span>OpenCV</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-solid fa-fire"></i>
+                <span>Flask</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-brands fa-git-alt"></i>
+                <span>Git</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>NumPy</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Matplotlib</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            RESEARCH TIMELINE
+=========================================== -->
+
+<section id="timeline" class="research-timeline py-5">
+
+    <div class="container">
+
+        <div class="section-title text-center mb-5">
+
+            <span class="subtitle">
+                Research Journey
+            </span>
+
+            <h2>
+                Research Timeline
+            </h2>
+
+            <p>
+                My journey from learning Artificial Intelligence to publishing my first research paper.
+            </p>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item left">
+
+                <div class="timeline-content">
+
+                    <span class="timeline-year">2025</span>
+
+                    <h4>Started Research</h4>
+
+                    <p>
+                        Began studying Deep Learning, Computer Vision,
+                        TensorFlow, and Facial Emotion Recognition.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item right">
+
+                <div class="timeline-content">
+
+                    <span class="timeline-year">2025</span>
+
+                    <h4>Dataset Preparation</h4>
+
+                    <p>
+                        Explored the FER-2013 dataset, image preprocessing,
+                        and data augmentation techniques.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item left">
+
+                <div class="timeline-content">
+
+                    <span class="timeline-year">2026</span>
+
+                    <h4>Model Development</h4>
+
+                    <p>
+                        Designed and trained a lightweight CNN integrated
+                        with Haar Cascade for facial emotion detection.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item right">
+
+                <div class="timeline-content">
+
+                    <span class="timeline-year">2026</span>
+
+                    <h4>Web Application</h4>
+
+                    <p>
+                        Built and deployed a Flask-based web application
+                        capable of predicting seven emotions in real time.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item left">
+
+                <div class="timeline-content">
+
+                    <span class="timeline-year">2026</span>
+
+                    <h4>Research Publication</h4>
+
+                    <p>
+                        Successfully published the research paper on
+                        Facial Emotion Recognition using Deep Learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+            RESEARCH INTERESTS
+=========================================== -->
+
+<section id="interests" class="py-5">
+
+    <div class="container">
+
+        <div class="section-title text-center mb-5">
+
+            <span class="subtitle">
+                Areas of Interest
+            </span>
+
+            <h2>
+                Research Interests
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="interest-card">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <h4>
+                        Artificial Intelligence
+                    </h4>
+
+                    <p>
+                        Building intelligent systems that solve
+                        real-world problems.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="interest-card">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <h4>
+                        Machine Learning
+                    </h4>
+
+                    <p>
+                        Developing predictive models using
+                        supervised and unsupervised learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="interest-card">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    <h4>
+                        Computer Vision
+                    </h4>
+
+                    <p>
+                        Image classification, object detection,
+                        and facial analysis.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="interest-card">
+
+                    <i class="fa-solid fa-network-wired"></i>
+
+                    <h4>
+                        Deep Learning
+                    </h4>
+
+                    <p>
+                        CNNs, Transfer Learning,
+                        and Neural Networks.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+            RESEARCH GALLERY
+=========================================== -->
+
+<section id="gallery" class="py-5">
+
+    <div class="container">
+
+        <div class="section-title text-center mb-5">
+
+            <span class="subtitle">
+                Research Gallery
+            </span>
+
+            <h2>
+                Research Showcase
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img src="assets/images/research-paper.png"
+                        class="img-fluid"
+                        alt="Research Paper">
+
+                    <div class="gallery-overlay">
+
+                        <h5>Published Paper</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img src="assets/images/model-training.png"
+                        class="img-fluid"
+                        alt="Training">
+
+                    <div class="gallery-overlay">
+
+                        <h5>Model Training</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img src="assets/images/web-app.png"
+                        class="img-fluid"
+                        alt="Web Application">
+
+                    <div class="gallery-overlay">
+
+                        <h5>Flask Web Application</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+            FUTURE RESEARCH
+=========================================== -->
+
+<section id="future-research" class="py-5">
+
+    <div class="container">
+
+        <div class="section-title text-center mb-5">
+
+            <span class="subtitle">
+                Looking Ahead
+            </span>
+
+            <h2>
+                Future Research Plans
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="future-card">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <h4>Higher Studies</h4>
+
+                    <p>
+
+                        Pursue a fully funded Ph.D. in Artificial
+                        Intelligence with a focus on Computer Vision.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="future-card">
+
+                    <i class="fa-solid fa-file-circle-plus"></i>
+
+                    <h4>More Publications</h4>
+
+                    <p>
+
+                        Publish research papers in high-impact
+                        international journals and conferences.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="future-card">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <h4>Open Source AI</h4>
+
+                    <p>
+
+                        Build and release AI research projects
+                        that benefit developers worldwide.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+            COLLABORATION
+=========================================== -->
+
+<section id="collaboration" class="collaboration-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9 text-center">
+
+                <span class="subtitle">
+
+                    Collaboration
+
+                </span>
+
+                <h2>
+
+                    Let's Build AI Together
+
+                </h2>
+
+                <p class="mt-4">
+
+                    I am always interested in collaborating on Artificial
+                    Intelligence, Machine Learning, Deep Learning, and
+                    Computer Vision research. Feel free to reach out for
+                    research collaborations, academic discussions,
+                    internships, or open-source AI projects.
+
+                </p>
+
+                <div class="mt-5">
+
+                    <a href="mailto:contact@sarbeswarpanda.me"
+                        class="btn paper-btn">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        Contact Me
+
+                    </a>
+
+                    <a href="https://github.com/Sarbeswarpanda04"
+                        class="btn paper-btn ms-3">
+
+                        <i class="fa-brands fa-github"></i>
+
+                        GitHub
+
+                    </a>
+
+                    <a href="https://linkedin.com/in/sarbeswar-panda"
+                        class="btn paper-btn ms-3">
+
+                        <i class="fa-brands fa-linkedin"></i>
+
+                        LinkedIn
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="footer-container">
+        <!-- Left -->
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d425.46009455655104!2d85.25743650771271!3d20.28185763616506!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a188b2fac1abf53%3A0xe37f8846cd1fcff9!2sSarbeswar%20Panda!5e1!3m2!1sen!2sin!4v1783524770675!5m2!1sen!2sin"
+            loading="lazy"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+
+        <!-- Center -->
+        <div class="footer-info">
+          <h2>Sarbeswar panda</h2>
+          <p class="role">Software Developer</p>
+
+          <div class="contact-info">
+            <p>
+              <i class="fa-solid fa-envelope"></i> sarbeswar@sarbeswarpanda.me
+            </p>
+            <p><i class="fa-solid fa-phone"></i> +91 8260916394</p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> Nayagarh, Odisha, India
+            </p>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="footer-links">
+          <div class="quick-links">
+            <a href="pages/about.html">About</a>
+            <a href="pages/experience.html">Experience</a>
+            <a href="pages/skills.html">Skills</a>
+            <a href="pages/projects.html">Projects</a>
+            <a href="pages/contact.html">Contact</a>
+            <a href="pages/Certification.html">Certification</a>
+            <a href="pages/resume.html">Resume</a>
+            <!-- <a href="pages/blogs.html">Blog</a> -->
+            <a href="pages/Admin/dashboard.html">Admin</a>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://github.com/Sarbeswarpanda04" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/sarbeswar-panda/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a
+              href="https://www.instagram.com/sarbeswar._.panda/"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://x.com/Sarbeswarpanda04" target="_blank">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+
+            <a href="mailto:sarbeswar@sarbeswarpanda.me">
+              <i class="fas fa-envelope"></i>
+            </a>
+
+            <a
+              href="https://wa.me/918260916384?text=Hello%20Sarbeswar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Sarbeswar Panda | Designed & Developed by Sarbeswar Panda
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/research.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
