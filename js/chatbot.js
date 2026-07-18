@@ -48,7 +48,7 @@
   toggler.addEventListener('click', toggleChat);
   closeBtn.addEventListener('click', () => chatWindow.classList.remove('is-open'));
 
-  // Q&A Database based on portfolio contents
+  // Merged Q&A Database
   const qaDatabase = [
     {
       keywords: ['name', 'who are you', 'who is this'],
@@ -173,8 +173,44 @@
     {
       keywords: ['bye', 'goodbye', 'see you', 'thanks', 'thank you'],
       answer: "You're welcome! Feel free to explore the portfolio and connect with Sarbeswar anytime. Have a great day!"
+    },
+    // Research Q&A
+    {
+      keywords: ['research', 'paper', 'about', 'topic'],
+      answer: "The research paper is about a lightweight deep learning solution for real-time facial emotion recognition using a Convolutional Neural Network (CNN) and Haar Cascade face detection."
+    },
+    {
+        keywords: ['title', 'paper name'],
+        answer: "The title of the paper is 'Real-Time Facial Emotion Recognition Using Computationally Efficient CNN and Haar Cascade Face Detection'."
+    },
+    {
+        keywords: ['author', 'who wrote', 'researcher'],
+        answer: "The research paper was authored by Sarbeswar Panda."
+    },
+    {
+        keywords: ['accuracy', 'performance', 'result'],
+        answer: "The model achieved a test accuracy of approximately 60.98%."
+    },
+    {
+        keywords: ['dataset', 'data'],
+        answer: "The model was trained and evaluated using the FER-2013 dataset, which includes seven emotional classes."
+    },
+    {
+        keywords: ['technology', 'stack', 'framework', 'tools'],
+        answer: "The project was developed using Python, TensorFlow, Keras, OpenCV, and Flask."
+    },
+    {
+        keywords: ['published', 'publication', 'where'],
+        answer: "The paper was published on Zenodo in 2026. You can read it <a href='https://zenodo.org/records/21416753' target='_blank'>here</a>."
+    },
+    {
+        keywords: ['contributions', 'key features', 'main points'],
+        answer: "The key contributions are: detection of seven emotions, a lightweight and efficient CNN model, use of Haar Cascade for accurate face localization, and a Flask web app for real-time predictions."
+    },
+    {
+        keywords: ['abstract', 'summary'],
+        answer: "The research presents a lightweight CNN integrated with Haar Cascade for real-time facial emotion recognition. Trained on the FER-2013 dataset, the model identifies seven emotions and is deployed as a Flask web application. It achieved ~60.98% accuracy, showing its effectiveness for real-world applications."
     }
-
   ];
 
   // Helper to add message
@@ -201,7 +237,7 @@
       let matches = 0;
       for (const kw of qa.keywords) {
         // use regex or simple includes for matching
-        const regex = new RegExp('\\b' + kw + '\\b', 'i');
+        const regex = new RegExp('\b' + kw + '\b', 'i');
         if (regex.test(text)) {
           matches++;
         }
@@ -242,7 +278,8 @@
     "How can I contact you?",
     "What are your projects?",
     "Download resume",
-    "Where are you from?"
+    "Where are you from?",
+    "What is the research paper about?"
   ];
 
   const showSuggestions = () => {
@@ -256,7 +293,7 @@
 
     // Pick 3 random questions
     const shuffled = [...suggestionList].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 3);
+    const selected = shuffled.slice(0, 4);
 
     selected.forEach(q => {
       const btn = document.createElement('button');
