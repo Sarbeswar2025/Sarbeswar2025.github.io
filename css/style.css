@@ -560,6 +560,20 @@ textarea:focus-visible {
   border-radius: 20px;
 }
 
+.edu__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px; /* Add some top margin to separate from list items */
+}
+
+.edu__actions .btn--small {
+  flex: 1 1 0; /* Make them take equal width */
+  min-width: 100px; /* Ensure a minimum width */
+  max-width: 200px; /* Optional: set a max width if they get too big */
+  white-space: nowrap; /* Prevent text wrapping inside buttons */
+}
+
 /* Education card: place image to right of content on wider screens */
 @media (min-width: 720px) {
   .eduCard2__grid {
