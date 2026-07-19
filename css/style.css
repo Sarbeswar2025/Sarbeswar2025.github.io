@@ -868,7 +868,7 @@ textarea:focus-visible {
 }
 
 .nav {
-  width: min(1200px, calc(100% - 2 * 18px));
+  width: min(1300px, calc(100% - 2 * 18px));
   margin-inline: auto;
   display: grid;
   grid-template-columns: 1fr auto;
